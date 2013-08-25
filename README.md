@@ -12,7 +12,7 @@ XXX Post display
   title stubs in post creation option? NO, edit only.
 Mimic UI template
   SEO titles 
-Static pages
+XXX Static pages
 Add categories
 Add markdown rendering engine
 Add pagination
