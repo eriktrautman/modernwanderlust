@@ -1,0 +1,12 @@
+
+<%= simple_form_for post do |f| %>
+
+  <%= f.input :title %>
+  <%= f.input :body %>
+
+  <%= f.submit %>
+  <% unless f.object.new_record? %>
+    <%= link_to "Delete Post", post_path(post), :method => "DELETE" %>
+  <% end %>
+
+<% end %>

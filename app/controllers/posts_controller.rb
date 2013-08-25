@@ -44,6 +44,19 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy
+    @post = Post.find_by_id(params[:id])
+    if @post
+      if @post.delete
+        flash[:success] = "Your @post has been deleted"
+        redirect_to posts_path
+      else
+        flash[:error] = "Your @post could not be deleted, errors are #{ error_messages_for @post}"
+        render :edit
+      end
+    end
+  end
+
 
   private
 
