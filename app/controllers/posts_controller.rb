@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(params[:post])
+    post = Post.new(post_params)
     if post.save
       flash[:success] = "Your post has saved successfully"
       redirect_to post
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find_by_id(params[:id])
     if post
-      if post.update_attributes(params[:post])
+      if post.update_attributes(post_params)
         flash[:succes] = "Your post has been updated"
         redirect_to post
       else
@@ -45,5 +45,10 @@ class PostsController < ApplicationController
   end
 
 
+  private
+
+    def post_params
+      params.require(:post).permit(:body,:title)
+    end
 
 end
