@@ -1,0 +1,50 @@
+
+
+html{
+  font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif !important;
+  color: #333 !important;
+  font-weight: 300 !important;
+  line-height: 125% !important;
+}
+
+#titlebar{
+  h1{
+    font-size: 46px;
+    font-weight: bold;
+    font-family: 'Adobe Garamond Pro', Garamond, Palatino, 'Palatino Linotype', serif;
+    color: #111;
+    margin-bottom: -15px;
+  }
+  h2{
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Adobe Garamond Pro', Garamond, Palatino, 'Palatino Linotype', serif;
+    color: #111;
+  }
+}
+
+#tagline{
+  h3{
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 300;
+    margin-top: 0px;
+  }
+}
+
+.post{
+  h2{
+    font-size: 18px;
+    font-weight: bold;
+  }
+  h4{
+    color: #aaa;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 300;
+  }
+  .post-body{
+    font-size: 15px;
+    line-height: 24px;
+  }
+}

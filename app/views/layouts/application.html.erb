@@ -7,13 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= render "shared/titlebar" %>
-<%= render "shared/topnav" %>
-<%= yield %>
-<%= render "shared/photo_box" %>
-<%= render "shared/tags" %>
-<%= render "shared/archives" %>
+  <div class="container">
+    <%= render "shared/titlebar" %>
+    <div class="row">
+      <div class="col-md-8">
+        <%= render "shared/tagline" %>
+        <%= render "shared/topnav" %>
+        <div id="content">
+          <%= yield %>
+        </div>
+      </div>
+      <div id="sidebar">
+        <div class="col-md-4">
+          <%= render "shared/photo_box" %>
+          <hr>
+          <%= render "shared/tags" %>
+          <hr>
+          <%= render "shared/archives" %>
+        </div>
+      </div>
+    </div>
 
 </body>
 </html>
