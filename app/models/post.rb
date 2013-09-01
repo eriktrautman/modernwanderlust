@@ -6,4 +6,18 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
+  # When editing an existing post or creating a new
+  # post, we replace the whole tags
+  # collection with the existing or newly created tags
+  def replace_or_build_tags(tags_string)
+    tags = tags_string.split(",")
+    self.tags = tags.map do |tag|
+      tag = Tag.find_or_create_by_name(tag.strip)
+    end
+  end
+
+  def tag_list
+    self.tags.map(&:name).join(", ")
+  end
+
 end

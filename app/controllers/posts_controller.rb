@@ -14,28 +14,31 @@ class PostsController < ApplicationController
   end
 
   def create
-    post = Post.new(post_params)
-    if post.save
+    @post = Post.new(post_params)
+    if @post.save
+      @post.replace_or_build_tags(tag_params[:tags])
       flash[:success] = "Your post has saved successfully"
-      redirect_to post
+      redirect_to @post
     else
-      flash.now[:error] = "There was a problem creating your post, error messages: #{ error_messages_for post }!"
+      flash.now[:error] = "There was a problem creating your post, error messages: #{ @post.errors.full_messages }!"
       render :new
     end
   end
 
   def edit
     @post = Post.find_by_id(params[:id])
+    @tags = @post.tag_list
   end
 
   def update
     post = Post.find_by_id(params[:id])
     if post
       if post.update_attributes(post_params)
+        post.replace_or_build_tags(tag_params[:tags])
         flash[:succes] = "Your post has been updated"
         redirect_to post
       else
-        flash.now[:error] = "There was a propblem updating your post, error messages: #{ error_messages_for post }!"
+        flash.now[:error] = "There was a propblem updating your post, error messages: #{ post.errors.full_messages }!"
         render :edit
       end
     else
@@ -62,6 +65,10 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit(:body,:title)
+    end
+
+    def tag_params
+      params.permit(:tags)
     end
 
 end

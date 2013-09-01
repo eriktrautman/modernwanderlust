@@ -4,6 +4,16 @@
   <%= f.input :title %>
   <%= f.input :body %>
 
+  <label for="tags">
+    Enter Tags (separated by commas)
+  </label>
+  <br>
+  <input type="text" name="tags" value="<%= @tags %>">
+  <br>
+<!--   <%= f.simple_fields_for :tag do |tag_form| %>
+    <%= tag_form.input :name, :label => "Tags" %>
+  <% end %> -->
+
   <%= f.submit %>
   <% unless f.object.new_record? %>
     <%= link_to "Delete Post", post_path(post), :method => "DELETE" %>
