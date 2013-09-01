@@ -1,4 +1,4 @@
 <div id="posts">
   <%= link_to "New Post", new_post_path %>
-  <%= render @posts %>
+  <%= render :partial => "post", :collection => @posts, :locals => { :show => false } %>
 </div>
