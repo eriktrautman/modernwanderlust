@@ -32,6 +32,10 @@ html{
   }
 }
 
+#footer{
+  padding-bottom: 20px;
+}
+
 .post{
   h2{
     font-size: 18px;
@@ -48,3 +52,8 @@ html{
     line-height: 24px;
   }
 }
+
+  .align-right{
+    display: block;
+    text-align: right;
+  }
