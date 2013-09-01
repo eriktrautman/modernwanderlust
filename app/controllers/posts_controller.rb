@@ -1,7 +1,11 @@
 class PostsController < ApplicationController
 
   def index
-    @posts = Post.all
+    if tag_filter_params[:tag_filter]
+      @posts = Post.with_tag(tag_filter_params[:tag_filter])
+    else
+      @posts = Post.order(:created_at => :desc)
+    end
   end
 
   def show
@@ -69,6 +73,10 @@ class PostsController < ApplicationController
 
     def tag_params
       params.permit(:tags)
+    end
+
+    def tag_filter_params
+      params.permit(:tag_filter)
     end
 
 end

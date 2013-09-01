@@ -11,5 +11,11 @@
   <div class="post-body">
     <%= post.body %>
   </div>
+  <div class="tags">
+    <% tag_list = post.tags.map do |tag| %>
+      <% link_to "#{tag.name}", posts_path(:tag_filter => "#{tag.name}") %>
+    <% end %>
+    <%= tag_list.join(" | ").html_safe %>
+  </div>
   <hr>
 </div>

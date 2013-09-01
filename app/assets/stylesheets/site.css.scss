@@ -43,6 +43,16 @@ html{
   margin: -15px auto;
 }
 
+#content{
+  .tags{
+    margin-top: 10px;
+  }
+}
+
+#sidebar{
+  /*padding-left: 200px;*/
+}
+
 #footer{
   padding-bottom: 20px;
 }
@@ -61,6 +71,7 @@ html{
   .post-body{
     font-size: 15px;
     line-height: 24px;
+    margin: 10px auto;
   }
 }
 

@@ -1,8 +1,8 @@
 <div id="tags">
   <h2>Categories</h2>
   <ul>
-    <li>Startups</li>
-    <li>Life in General</li>
-    <li>The Blog Project</li>
+    <% Tag.all.each do |tag| %>
+      <li><%= link_to "#{tag.name}", posts_path(:tag_filter => "#{tag.name}") %></li>
+    <% end %>
   </ul>
 </div>

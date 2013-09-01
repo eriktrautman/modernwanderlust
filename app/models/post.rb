@@ -6,6 +6,10 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
+  def self.with_tag(tag)
+    Post.includes(:tags).where(['tags.name = ?', tag]).references(:tags).order(:created_at => :desc)
+  end
+
   # When editing an existing post or creating a new
   # post, we replace the whole tags
   # collection with the existing or newly created tags
