@@ -6,8 +6,11 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
+  # Why does will_paginate blow up if the
+  # order clause uses a hash? 
+  # Hell if I know.
   def self.with_tag(tag)
-    Post.includes(:tags).where(['tags.name = ?', tag]).references(:tags).order(:created_at => :desc)
+    Post.includes(:tags).where(['tags.name = ?', tag]).references(:tags).order("posts.created_at desc")
   end
 
   def self.most_recent(count)
