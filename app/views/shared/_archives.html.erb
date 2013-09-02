@@ -1,8 +1,13 @@
 <div id="archives">
   <h2>Archives</h2>
   <ul>
-    <li>August 2013</li>
-    <li>July 2013</li>
-    <li>June 2013</li>
+    <% Post.archives.each do |archive| %>
+      <li>
+        <%= archive.month.to_date.strftime('%m') %>
+        <a href="<%= posts_path(:filter_month => archive.month.to_date.strftime('%m'), :filter_year => archive.month.to_date.strftime('%Y')) %>">
+          <%= archive.month.to_date.strftime('%B %Y') %> (<%= archive.count %>)
+        </a>
+      </li>
+    <% end %>
   </ul>
 </div>

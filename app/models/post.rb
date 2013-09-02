@@ -14,6 +14,18 @@ class Post < ActiveRecord::Base
     Post.order(:created_at => :desc).limit(count)
   end
 
+  def self.archives
+    Post.select("date_trunc('month',created_at) as month","count(*) as count").group(:month)
+  end
+
+  # Not in use right now... ideally use the query string to 
+  # filter the index by year and month individually
+  def self.by_archive_date(month, year)
+    start = Time.new(year,month)
+    finish = start + 1.month 
+    Post.where(["created_at >= ? AND created_at < ?", start, finish]).order(:created_at => :desc)
+  end
+
   # When editing an existing post or creating a new
   # post, we replace the whole tags
   # collection with the existing or newly created tags

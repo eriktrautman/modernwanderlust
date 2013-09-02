@@ -3,6 +3,9 @@ class PostsController < ApplicationController
   def index
     if tag_filter_params[:tag_filter]
       @posts = Post.with_tag(tag_filter_params[:tag_filter])
+    elsif date_filter_params[:filter_month] && date_filter_params[:filter_year]
+      puts "\n\n\n\n IN THE ELSIF!! \n\n"
+      @posts = Post.by_archive_date(date_filter_params[:filter_month],date_filter_params[:filter_year])
     else
       @posts = Post.order(:created_at => :desc)
     end
@@ -77,6 +80,13 @@ class PostsController < ApplicationController
 
     def tag_filter_params
       params.permit(:tag_filter)
+    end
+
+    def date_filter_params
+      puts "\n\n\n params is: #{params.inspect}!"
+      newparams = params.permit(:filter_month, :filter_year)
+      puts "\n\n\n newparams is: #{newparams.inspect}!"
+      newparams
     end
 
 end
