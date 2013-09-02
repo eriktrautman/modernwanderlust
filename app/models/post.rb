@@ -14,11 +14,14 @@ class Post < ActiveRecord::Base
     Post.order(:created_at => :desc).limit(count)
   end
 
+  # Get back the count of posts for each month/year
+  # combination.  Currently not sorted (very very very
+  # very very annoying to try and implement that)
   def self.archives
     Post.select("date_trunc('month',created_at) as month","count(*) as count").group(:month)
   end
 
-  # Not in use right now... ideally use the query string to 
+  # Use the query string to 
   # filter the index by year and month individually
   def self.by_archive_date(month, year)
     start = Time.new(year,month)
