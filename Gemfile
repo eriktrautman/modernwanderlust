@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'pg'
 gem 'simple_form'
+gem 'will_paginate-bootstrap'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

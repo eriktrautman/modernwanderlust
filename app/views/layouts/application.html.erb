@@ -16,6 +16,9 @@
         <div id="content">
           <%= yield %>
         </div>
+        <% if @posts %>
+          <%= render "shared/pagination" %>
+        <% end %>
       </div>
       <div id="sidebar">
         <div class="col-md-4">

@@ -1,4 +1,4 @@
-
+/*@import "twitter/bootstrap";*/
 
 html{
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif !important;
@@ -51,6 +51,10 @@ html{
 
 #sidebar{
   /*padding-left: 200px;*/
+}
+
+#pagination_area{
+  text-align: center;
 }
 
 #footer{

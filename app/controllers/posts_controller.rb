@@ -2,12 +2,13 @@ class PostsController < ApplicationController
 
   def index
     if tag_filter_params[:tag_filter]
-      @posts = Post.with_tag(tag_filter_params[:tag_filter])
+      posts = Post.with_tag(tag_filter_params[:tag_filter])
     elsif date_filter_params[:filter_month] && date_filter_params[:filter_year]
-      @posts = Post.by_archive_date(date_filter_params[:filter_month],date_filter_params[:filter_year])
+      posts = Post.by_archive_date(date_filter_params[:filter_month],date_filter_params[:filter_year])
     else
-      @posts = Post.order(:created_at => :desc)
+      posts = Post.order(:created_at => :desc)
     end
+    @posts = posts.paginate(:page => params[:page], :per_page => 5)
   end
 
   def show

@@ -3,7 +3,6 @@
   <ul>
     <% Post.archives.reverse.each do |archive| %>
       <li>
-        <%= archive.month.to_date.strftime('%m') %>
         <a href="<%= posts_path(:filter_month => archive.month.to_date.strftime('%m'), :filter_year => archive.month.to_date.strftime('%Y')) %>">
           <%= archive.month.to_date.strftime('%B %Y') %> (<%= archive.count %>)
         </a>
