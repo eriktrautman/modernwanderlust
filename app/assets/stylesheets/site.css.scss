@@ -13,7 +13,8 @@ html{
     font-weight: bold;
     font-family: 'Adobe Garamond Pro', Garamond, Palatino, 'Palatino Linotype', serif;
     color: #111;
-    /*margin-bottom: -15px;*/
+    margin-top: 30px;
+    
   }
   h2{
     font-size: 21px;
@@ -34,13 +35,18 @@ html{
 }
 
 #topnav{
+  .nav-buttons{
+  margin-top: -15px;
+  margin-bottom: -15px;
+  height: 35px
+    
+  }
   a{
     text-decoration: none;
     color: #333;
     margin: 0px;
     width: 0px;
   }
-  margin: -15px auto;
 }
 
 #content{
@@ -51,6 +57,11 @@ html{
 
 #sidebar{
   /*padding-left: 200px;*/
+  #photo-box{
+    .main-photo{
+      padding: 20px;
+    }
+  }
 }
 
 #pagination_area{
@@ -59,6 +70,9 @@ html{
 
 #footer{
   padding-bottom: 20px;
+  .align-right{
+    padding-right: 60px;
+  }
 }
 
 .post{
