@@ -7,6 +7,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'will_paginate-bootstrap'
 gem 'rails_12factor'  # for heroku asset compilation
+gem 'devise' # for authentication of the admin user
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
