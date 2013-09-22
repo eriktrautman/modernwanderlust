@@ -1,1 +1,3 @@
-<%= link_to "edit", edit_post_path(post) %>
+<% if admin_signed_in? %>
+  <%= link_to "edit", edit_post_path(post) %>
+<% end %>
