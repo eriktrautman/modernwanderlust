@@ -112,6 +112,17 @@ img{
   }
 }
 
+.post-form{
+  input{
+    max-width: 100%;
+    width: 100%;
+  }
+  textarea{
+    width: 100%;
+    height: 15em;
+  }
+}
+
 .align-right{
   display: block;
   text-align: right;

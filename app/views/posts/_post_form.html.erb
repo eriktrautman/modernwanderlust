@@ -1,20 +1,21 @@
+<div class="post-form">
+  <%= simple_form_for post do |f| %>
 
-<%= simple_form_for post do |f| %>
+    <%= f.input :title %>
+    <%= f.input :created_at, :as => :string %>
+    <%= f.input :body %>
 
-  <%= f.input :title %>
-  <%= f.input :created_at, :as => :string %>
-  <%= f.input :body %>
+    <label for="tags">
+      Enter Tags (separated by commas)
+    </label>
+    <br>
+    <input type="text" name="tags" value="<%= @tags %>">
+    <br>
 
-  <label for="tags">
-    Enter Tags (separated by commas)
-  </label>
-  <br>
-  <input type="text" name="tags" value="<%= @tags %>">
-  <br>
+    <%= f.submit %>
+    <% unless f.object.new_record? %>
+      <%= link_to "Delete Post", post_path(post), :method => "DELETE" %>
+    <% end %>
 
-  <%= f.submit %>
-  <% unless f.object.new_record? %>
-    <%= link_to "Delete Post", post_path(post), :method => "DELETE" %>
   <% end %>
-
-<% end %>
+</div>
