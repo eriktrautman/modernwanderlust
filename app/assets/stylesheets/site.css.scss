@@ -7,6 +7,11 @@ html{
   line-height: 125% !important;
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 #titlebar{
   h1{
     font-size: 46px;
@@ -90,6 +95,20 @@ html{
     font-size: 15px;
     line-height: 24px;
     margin: 10px auto;
+  }
+  img{
+    padding: 5px 10px;
+  }
+  img.center{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+  img.right{
+    float: right;
+  }
+  img.left{
+    float: left;
   }
 }
 
