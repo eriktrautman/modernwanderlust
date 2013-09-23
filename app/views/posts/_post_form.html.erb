@@ -2,6 +2,7 @@
 <%= simple_form_for post do |f| %>
 
   <%= f.input :title %>
+  <%= f.input :created_at, :as => :string %>
   <%= f.input :body %>
 
   <label for="tags">
