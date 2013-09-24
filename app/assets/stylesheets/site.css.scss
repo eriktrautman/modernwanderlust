@@ -110,6 +110,10 @@ img{
   img.left{
     float: left;
   }
+  img.border-thick-black{
+    border: 5px solid black;
+    padding: none;
+  }
 }
 
 #prev-next{
