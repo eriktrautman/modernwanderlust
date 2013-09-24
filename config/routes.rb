@@ -12,6 +12,7 @@ Modernwanderlust::Application.routes.draw do
 
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
+  get "show_post" => "redirects#old_site"
 
   resources :posts
 end
