@@ -1,21 +1,21 @@
 <div id="prev-next">
   <% unless @prev.empty? %>
     <span class="prev">
-      <%= link_to "<< Previous", @prev[0] %>
+      <%= link_to "&laquo; Previous".html_safe, @prev[0] %>
     </span>
   <% else %>
     <span class="prev disabled">
-      << Previous
+      &laquo; Previous
     </span>
   <% end %>
   
   <% unless @next.empty? %>
     <span class="next">
-      <%= link_to "Next >>", @next[0], :class => "right" %>
+      <%= link_to "Next &raquo;".html_safe, @next[0], :class => "right" %>
     </span>
   <% else %>
     <span class="next disabled right">
-      Next >>
+      Next &raquo;
     </span>
   <% end %>
 
