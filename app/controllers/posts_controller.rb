@@ -19,6 +19,8 @@ class PostsController < ApplicationController
   def show
     # build in the stub functionality
     @post = Post.find_by_id(params[:id])
+    @next = @post.next
+    @prev = @post.prev
   end
 
   def new

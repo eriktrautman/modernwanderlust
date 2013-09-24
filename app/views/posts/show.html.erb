@@ -1,1 +1,25 @@
+<div id="prev-next">
+  <% unless @prev.empty? %>
+    <span class="prev">
+      <%= link_to "<< Prev", @prev[0] %>
+    </span>
+  <% else %>
+    <span class="prev disabled">
+      << Prev
+    </span>
+  <% end %>
+  
+  <% unless @next.empty? %>
+    <span class="next">
+      <%= link_to "Next >>", @next[0], :class => "right" %>
+    </span>
+  <% else %>
+    <span class="next disabled right">
+      Next >>
+    </span>
+  <% end %>
+
+  <hr>
+
+</div>
 <%= render :partial => @post, :locals => { :show => true } %>

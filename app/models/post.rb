@@ -46,4 +46,18 @@ class Post < ActiveRecord::Base
     self.tags.map(&:name).join(", ")
   end
 
+  def next
+    # Must add that second because AR rounds off the seconds when
+    # building the query so it's not precise!!!
+
+    Post.where("posts.created_at > ?", self.created_at + 1.second).order(:created_at => :asc).limit(1)
+  end
+
+  def prev
+    # Must take off the second because AR rounds off the seconds when
+    # building the query so it's not precise!!!
+
+    Post.where("posts.created_at < ?", self.created_at - 1.second).order(:created_at => :desc).limit(1)
+  end
+
 end
