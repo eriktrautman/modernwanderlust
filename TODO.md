@@ -12,13 +12,11 @@ XXX Add categories/tags
 XXX Add pagination
 XXX Add devise user auth
   XXX Have the admin bar only appear if logged in once devise is installed
-
-Build title stubs (uniques only!)
-  string.stub
-  before_save create from title url safe
-  title stubs in post creation option? NO, edit only.
-  Display titles SEO optimized? 
+XXX Build title slugs (uniques only!)
+  XXX use friendly_id gem for slugging
 Add markdown rendering engine
+  new column -- md? T/F to decide if rendered
+  if rendered, display the post content as rendered
 Add GA tracking (fix rails turbolinks issues)
 Add disqus for commenting
 Heroku Add-ons
