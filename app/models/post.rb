@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
+  extend FriendlyId # to help with title slugging
+  friendly_id :title, :use => :slugged
 
-  validates_presence_of [:title, :body]
+  validates_presence_of [:title, :body, :slug]
   validates :title, :uniqueness => { :message => "This title has been used before, choose another" }
 
   has_many :taggings

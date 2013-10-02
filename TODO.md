@@ -14,8 +14,10 @@ XXX Add devise user auth
   XXX Have the admin bar only appear if logged in once devise is installed
 
 Build title stubs (uniques only!)
+  string.stub
+  before_save create from title url safe
   title stubs in post creation option? NO, edit only.
-  SEO titles 
+  Display titles SEO optimized? 
 Add markdown rendering engine
 Add GA tracking (fix rails turbolinks issues)
 Add disqus for commenting
