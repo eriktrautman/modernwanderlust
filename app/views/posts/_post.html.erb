@@ -9,7 +9,11 @@
   <h4><%= post.created_at %></h4>
   <%= render :partial => "admin_links", :locals => { :post => post } %>
   <div class="post-body">
-    <%= post.body.html_safe %>
+    <% if post.md %>
+      <%= md(post.body).html_safe %>
+    <% else %>
+      <%= post.body.html_safe %>
+    <% end %>
   </div>
   <div class="tags">
     <% tag_list = post.tags.map do |tag| %>
