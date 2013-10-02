@@ -23,5 +23,7 @@ Add GA tracking (fix rails turbolinks issues)
 Add disqus for commenting
 Heroku Add-ons
 Refactor
+  error handling for Post finds
+  remove puts'
 Add basic test coverage
 

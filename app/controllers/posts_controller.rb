@@ -18,7 +18,7 @@ class PostsController < ApplicationController
 
   def show
     # build in the stub functionality
-    @post = Post.find_by_id(params[:id])
+    @post = Post.friendly.find(params[:id])
     @next = @post.next
     @prev = @post.prev
   end
@@ -27,6 +27,7 @@ class PostsController < ApplicationController
     @post = Post.new
   end
 
+  # for refactoring: friendly find throws an exception, not T/F
   def create
     @post = Post.new(post_params)
     if @post.save
@@ -40,19 +41,22 @@ class PostsController < ApplicationController
   end
 
   def edit
-    @post = Post.find_by_id(params[:id])
+    @post = Post.friendly.find(params[:id])
     @tags = @post.tag_list
   end
 
+  # for refactoring: friendly find throws an exception, not T/F
   def update
-    post = Post.find_by_id(params[:id])
+    post = Post.friendly.find(params[:id])
     if post
       if post.update_attributes(post_params)
         post.replace_or_build_tags(tag_params[:tags])
+        post.slug = nil # because slugs only regenerate if nil
+        post.save!
         flash[:succes] = "Your post has been updated"
         redirect_to post
       else
-        flash.now[:error] = "There was a propblem updating your post, error messages: #{ post.errors.full_messages }!"
+        flash.now[:error] = "There was a problem updating your post, error messages: #{ post.errors.full_messages }!"
         render :edit
       end
     else
@@ -61,8 +65,9 @@ class PostsController < ApplicationController
     end
   end
 
+  # for refactoring: friendly find throws an exception, not T/F
   def destroy
-    @post = Post.find_by_id(params[:id])
+    @post = Post.friendly.find(params[:id])
     if @post
       if @post.delete
         flash[:success] = "Your @post has been deleted"

@@ -1,6 +1,6 @@
 class AddSlugToPosts < ActiveRecord::Migration
   def change
-    add_column :posts, :slug, :string, :null => false, :default => 1
+    add_column :posts, :slug, :string
 
     # since we have existing data, we need to make the column
     # for slugs unique for each post prior to adding the index

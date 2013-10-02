@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20131002020540) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "slug",       default: "1", null: false
+    t.string   "slug"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", unique: true, using: :btree
