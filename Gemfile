@@ -10,6 +10,7 @@ gem 'rails_12factor'  # for heroku asset compilation
 gem 'devise' # for authentication of the admin user
 gem 'friendly_id', '5.0.0.rc2' # for the post title slugs
 gem 'redcarpet' # for markdown rendering
+gem 'newrelic_rpm' # for newrelic uptime tracking and no-idle pinging
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
