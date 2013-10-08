@@ -17,18 +17,19 @@ XXX Build title slugs (uniques only!)
 XXX Add markdown rendering engine
   XXX new column -- md? T/F to decide if rendered
   XXX if rendered, display the post content as rendered
-Add GA tracking (fix rails turbolinks issues)
+XXX Add GA tracking (haven't needed to fix turbolinks yet)
+XXX Heroku Add-ons (newrelic, pgbackups)
 Add disqus for commenting
-Heroku Add-ons
 Refactor
   error handling for Post finds
   remove puts'
   clean up timestamps on _post partials
   fix wrap of pagination
+  FIX BLOODY ARCHIVES ORDERING!!!
 
 Add basic test coverage
 
 Additional fun stuff:
 Home page highlighting edu focus and photography
-Add design touches
+Add design touches... ok, friggin redesign everything.
 Add photo uploader directly to the proper S3 bucket
