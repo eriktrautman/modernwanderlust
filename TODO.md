@@ -23,5 +23,12 @@ Heroku Add-ons
 Refactor
   error handling for Post finds
   remove puts'
+  clean up timestamps on _post partials
+  fix wrap of pagination
+
 Add basic test coverage
 
+Additional fun stuff:
+Home page highlighting edu focus and photography
+Add design touches
+Add photo uploader directly to the proper S3 bucket
