@@ -1,3 +1,6 @@
 <% if admin_signed_in? %>
-  <%= link_to "edit", edit_post_path(post) %>
+  <div class="admin-links">
+    <%= link_to "New Post", new_post_path, :class => "new-post" %>
+    <%= link_to "Edit Post", edit_post_path(post), :class => "edit-post" %>
+  </div>
 <% end %>

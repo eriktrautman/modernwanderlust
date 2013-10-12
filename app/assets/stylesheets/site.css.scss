@@ -11,6 +11,40 @@ body{
   font-weight: 300 !important;
   line-height: 125% !important;
 }
+
+/* FONT SCALE */
+p{
+  font-size: 1.5em;
+  line-height: 1.75em;
+  margin: 1.5em 0;
+}
+h4{
+  font-size: 1.75em;
+  line-height: 1.5em;
+}
+h3{
+  font-size: 2em;
+  line-height: 1.5em;
+}
+h2{
+  font-size: 2.25em;
+  line-height: 1.5em;
+  margin-left: -.5em;
+  font-weight: bold;
+}
+p+h2, p+h3, p+h4, p+h5{
+  margin-top: 1.75em;
+}
+h1{
+  font-size: 3em;
+  line-height: 1.25em;
+  font-weight: bold;
+}
+li{
+  font-size: 1.5em;
+  line-height: 1.75em;
+}
+
 a{
   color: #2ba6cb;
   &:hover{
@@ -66,7 +100,7 @@ strong{
   margin: auto;
   text-align: center;
   border-bottom: 1px solid #ccc;
-  padding: 0 0 .5em 0;
+  padding: .5em 0 .5em 0;
   text-transform: uppercase;
 
   ul{
@@ -75,6 +109,7 @@ strong{
     padding: 0;
   }
   li{
+    font-size: 1em;
     display: inline-block;
     line-height: 1em;
     width: 7.5em;
@@ -118,6 +153,22 @@ strong{
   }
 }
 
+.admin-links{
+  display: block;
+  position: absolute;
+  width: 47em;
+  margin-top: -2em;
+  padding: 0 1em;
+  .new-post{
+    display: inline-block;
+  }
+  .edit-post{
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+  }
+}
+
 #content{
 }
 
@@ -125,36 +176,6 @@ strong{
 
   margin: 3em 0;
 
-  /* FONT SCALE */
-  p{
-    font-size: 1.5em;
-    line-height: 1.75em;
-    margin: 1.5em 0;
-  }
-  h4{
-    font-size: 1.75em;
-    line-height: 1.5em;
-  }
-  h3{
-    font-size: 2em;
-    line-height: 1.5em;
-  }
-  h2{
-    font-size: 2.25em;
-    line-height: 1.5em;
-    margin-left: -.5em;
-  }
-  p+h2, p+h3, p+h4, p+h5{
-    margin-top: 1.75em;
-  }
-  h1{
-    font-size: 3em;
-    line-height: 1.25em;
-  }
-  li{
-    font-size: 1.5em;
-    line-height: 1.75em;
-  }
 
   .post-title{
     width: 50em;
@@ -203,30 +224,34 @@ strong{
     padding: 0px;
   }
   .tags{
-    margin: 2em 0;
+    margin: 2.5em 0;
     font-style: italic;
     font-size: 1.25em;
   }
 }
 
-#sidebar{
-
+#recent-posts{
   color: #aaa ;
 
   li{
     list-style: none;
   }
-  #recent-posts{
-    
-    text-align: center;
-    margin: 2.5em 0;
+  
+  text-align: center;
+  margin: 2.5em 0;
 
-    .recent-post{
-      width: 40%;
-      text-align: center;
-      padding: 1em 2em;
-      height: 2em;
-      float: left;
+  h2{
+    margin: .5em 0;
+  }
+
+  .recent-post{
+    width: 40%;
+    text-align: center;
+    padding: 1em 2em;
+    height: 4em;
+    float: left;
+    li{
+      line-height: 1.25em;
     }
   }
 
@@ -253,15 +278,19 @@ strong{
   clear: both;
 }
 
-#pagination_area{
+#pagination-area{
   text-align: center;
+  margin: 1em 0;
+  ul{
+    padding: 0;
+  }
   li{
     font-size: 1.5em;
     line-height: 1.5em;
     font-weight: 400;
     list-style: none;
     display: inline-block;
-    width: 3em;
+    width: 2em;
   }
   li.prev{
     width: 6em;
@@ -274,7 +303,10 @@ strong{
 #footer{
   text-align: center;
   color: #aaa;
-  padding: 0.5em 0;
+  font-style: italic;
+  padding: 1em 0;
+  margin-top: 4em;
+  border-top: 1px solid #ccc;
 }
 .post-form{
   input{
@@ -284,6 +316,20 @@ strong{
   textarea{
     width: 100%;
     height: 15em;
+  }
+}
+#about, #contact{
+  margin: 4em 0 6em 0;
+  width: 50em;
+
+  .title{
+    text-align: center; 
+    margin: 4em auto;
+  }
+  .contact-methods{
+    font-size: 1.5em;
+    margin: 2em 0;
+    padding-left: 1em;
   }
 }
 

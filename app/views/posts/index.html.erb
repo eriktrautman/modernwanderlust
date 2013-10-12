@@ -1,6 +1,9 @@
 <div id="posts">
-  <% if admin_signed_in? %>
+
+  <!-- if there aren't posts, make sure we can create some! -->
+  <% if admin_signed_in? && @posts.nil? %>
     <%= link_to "New Post", new_post_path %>
   <% end %>
+  
   <%= render :partial => "post", :collection => @posts, :locals => { :show => false } %>
 </div>

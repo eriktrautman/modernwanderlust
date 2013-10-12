@@ -15,25 +15,14 @@
     
     <%= bootstrap_flash %>
 
-    <!-- <%= render "shared/titlebar" %> -->
-
     <div id="content">
       <%= yield %>
     </div>
-    
+
     <% if @posts %>
       <%= render "shared/pagination" %>
-      <hr>
     <% end %>
-    <div id="sidebar">
-      <%= render "shared/recent_posts" %>
-      <!-- <hr> -->
-      <!-- <%= render "shared/tags" %> -->
-      <!-- <hr>
-      <%= render "shared/archives" %> -->
-    </div>
   </div>
-    <hr>
     <%= render "shared/footer" %>
   <%= render "shared/ga" %>
 </body>

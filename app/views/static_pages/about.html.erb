@@ -1,10 +1,30 @@
-<h2>About</h2>
+<div id="about">
+  <div class="title">
+    <h1>About Me</h1>
+  </div>
 
-<p>My name is Erik Trautman and I’m a former energy analyst and trader turned entrepreneur. I had a great career but, in one of those “come-to-Jesus” moments that would have been called a mid-life crisis had it happened a few years later, I realized that I need to do something that engages both my analytical and creative sides and produces real value for the world. I describe that transition much better in my post 'Today I Quit My Job'.</p>
+  <p>
+    My name is Erik Trautman and I’m a former energy analyst and trader turned entrepreneur. I had a great career but, in one of those “come-to-Jesus” moments that would have been called a mid-life crisis had it happened a few years later, I realized that I need to do something that engages both my analytical and creative sides and produces real value for the world. I describe that transition much better in my post <%= link_to 'Today I Quit My Job', post_path('today-i-quit-my-job') %>.
+  </p>
 
-<p>The point is, I’m 1000 different things and doing my best to live consistently with all of them. That means that I’m a photographer, designer, developer, marketer, analyst, quoter of Super Troopers and lover of all things obscurely nerdy or beautifully artistic. I’m a geek with a passion for words and a highly competitive athlete in the body of a banged up former wrestler. I’m introspective and philosophical but extroverted among the genuine and the good. I’m an explorer and an adventurer with a burning curiosity about the world around me but the approximate memory of a goldfish. I've ridden a motorcycle across each of the lower 48 states... most during one epic trip before my move out to San Francisco.</p>
+  <p>
+    The point is, I’m 1000 different things and doing my best to live consistently with all of them. That means that I’m a photographer, designer, developer, marketer, analyst, quoter of Super Troopers and lover of all things obscurely nerdy or beautifully artistic. 
+  </p>
+  <p>
+    I’m a geek with a passion for words and a highly competitive athlete in the body of a banged up former wrestler. I’m introspective and philosophical but extroverted among the genuine and the good. I’m an explorer and an adventurer with a burning curiosity about the world around me but the approximate memory of a goldfish. I've ridden my Triumph across each of the lower 48 states... most during <%= link_to "one epic trip", posts_path(:tag_filter => "Motorcycle Trip 2012") %> before my move out to San Francisco.
+  </p>
 
-<p>This blog is designed to be a creative journey into the world of tech startups. It will track my own path of enlightenment and experience along the way but it’s really meant to highlight that middle ground between the technical and creative that has been the foundation of so many great enterprises. I’ll be showcasing some of my own work and reviewing the triumphs and failures of others. The entrepreneur’s journey is a central theme and so I’ll be highlighting how that has come about in those who I admire and how they have succeeded in a crowded marketplace. Most of all, I will be seeking out the pulse of innovation in the hopes of contributing to its onward flow. Come along for the ride.</p>
+  <p>
+    This blog is designed to be a creative journey into the world of tech startups. It tracks my own path of enlightenment and experience along the way but it’s really meant to highlight that middle ground between the technical and creative that has been the foundation of so many great enterprises. I’ll be showcasing some of my own work and reviewing the triumphs and failures of others.
+  </p>
+  <p>
+    The entrepreneur’s journey is a central theme and so I’ll be highlighting how that has come about in those who I admire and how they have succeeded in a crowded marketplace. Most of all, I will be seeking out the pulse of innovation in the hopes of contributing to its onward flow. Come along for the ride.
+  </p>
 
 
-<p>You’ve caught me at a very interesting time in my life.</p>
+  <p>You’ve caught me at a very interesting time in my life.</p>
+
+</div>
+
+<hr>
+<%= render "shared/recent_posts" %>
