@@ -19,18 +19,22 @@ XXX Add markdown rendering engine
   XXX if rendered, display the post content as rendered
 XXX Add GA tracking (haven't needed to fix turbolinks yet)
 XXX Heroku Add-ons (newrelic, pgbackups)
-Redesign
+Redesign:
   XXX Visual Heirarchy
-  Typography
   XXX Remove Bootstrap
   XXX Fix dates
   XXX Have previews for posts on index page
-Refactor
+  Contact Page
+  About Page
+  Typography
+  Hide edit/new buttons better when I'm logged in.
+  Fix flash now that bootstrap isn't there.
+Refactor:
+  XXX remove puts'
+  XXX clean up timestamps on _post partials
+  XXX fix wrap of pagination
+  XXX FIX BLOODY ARCHIVES ORDERING!!! -- fixed by ignoring
   error handling for Post finds
-  remove puts'
-  clean up timestamps on _post partials
-  fix wrap of pagination
-  FIX BLOODY ARCHIVES ORDERING!!!
   change from :id to a more symantec name for redirects param
 Add disqus for commenting
 

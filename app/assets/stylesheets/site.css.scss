@@ -4,7 +4,7 @@ html{
 }
 
 body{
-  font-size: 90%;
+  font-size: 85%;
   line-height: 1.5em;
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif !important;
   color: #444 !important;
@@ -25,7 +25,7 @@ hr{
   margin: .5em 0;
 }
 code{
-  font-size: .8em;
+  font-size: 1em;
   padding: .25em .5em;
   background-color: #eee;
   border-radius: .25em;
@@ -79,6 +79,7 @@ strong{
     line-height: 1em;
     width: 7.5em;
     margin: 0px .25em;
+    padding: .25em 0;
     list-style: none;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
@@ -128,6 +129,7 @@ strong{
   p{
     font-size: 1.5em;
     line-height: 1.75em;
+    margin: 1.5em 0;
   }
   h4{
     font-size: 1.75em;
@@ -135,12 +137,15 @@ strong{
   }
   h3{
     font-size: 2em;
-    line-height: 1.25em;
+    line-height: 1.5em;
   }
   h2{
-    font-size: 2.5em;
-    line-height: 1.25em;
+    font-size: 2.25em;
+    line-height: 1.5em;
     margin-left: -.5em;
+  }
+  p+h2, p+h3, p+h4, p+h5{
+    margin-top: 1.75em;
   }
   h1{
     font-size: 3em;
