@@ -1,12 +1,16 @@
 <div class="post">
-  <h1>
-    <% if show %>
-      <%= post.title %>
-    <% else %>
-      <%= link_to "#{ post.title }", post %>
-    <% end %>
-  </h1>
-  <h4 class="sub-box"><%= post.created_at %></h4>
+  <div class="post-title">
+    <h1>
+      <% if show %>
+        <%= post.title %>
+      <% else %>
+        <%= link_to "#{ post.title }", post %>
+      <% end %>
+    </h1>
+  </div>
+  <div class="post-date">
+    <%= post.created_at %>
+  </div>
   <%= render :partial => "admin_links", :locals => { :post => post } %>
   <div class="post-body">
     <% if post.md %>
