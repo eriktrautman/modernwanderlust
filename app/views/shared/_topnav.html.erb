@@ -1,7 +1,7 @@
 <div id="topnav">
   <% if @post && @post.new_record? == false %>
     <div class="prev-next">
-      <% unless @prev.empty? %>
+      <% unless @prev.nil? || @prev.empty? %>
         <span class="prev">
           <%= link_to "&laquo; Previous".html_safe, @prev[0], :class => "left" %>
         </span>
@@ -43,7 +43,7 @@
 
   <% if @post && @post.new_record? == false %>  
     <div class="prev-next">
-      <% unless @next.empty? %>
+      <% unless @next.nil? || @next.empty? %>
         <span class="next">
           <%= link_to "Next &raquo;".html_safe, @next[0], :class => "right" %>
         </span>
