@@ -4,15 +4,18 @@ html{
 }
 
 body{
-  font-size: 100%;
+  font-size: 90%;
   line-height: 1.5em;
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif !important;
-  color: #333 !important;
+  color: #444 !important;
   font-weight: 300 !important;
   line-height: 125% !important;
 }
 a{
   color: #2ba6cb;
+  &:hover{
+    color: #2284a1;
+  }
 }
 img{
   max-width: 100%;
@@ -28,6 +31,9 @@ code{
   border-radius: .25em;
   -moz-border-radius: .25em;
   -webkit-border-radius: .25em;
+}
+strong{
+  font-weight: bold;
 }
 
 .container{
@@ -59,9 +65,9 @@ code{
 #topnav{
   margin: auto;
   text-align: center;
-  // border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   padding: 0 0 .5em 0;
+  text-transform: uppercase;
 
   ul{
     display: inline-block;
@@ -85,14 +91,12 @@ code{
     text-decoration: none;
     color: #333;
     margin: 0px;
-    // width: 0px;
   }
   .active{
     font-weight: 500;
   }
   .prev-next{
     display: inline-block;
-    // font-weight: 400;
     width: 8em;
     line-height: 1em;
     margin-bottom: -.1em;
@@ -116,14 +120,14 @@ code{
 #content{
 }
 
-
-
 .post{
+
+  margin: 3em 0;
 
   /* FONT SCALE */
   p{
     font-size: 1.5em;
-    line-height: 1.5em;
+    line-height: 1.75em;
   }
   h4{
     font-size: 1.75em;
@@ -140,33 +144,43 @@ code{
   }
   h1{
     font-size: 3em;
-    line-height: 1.5em;
+    line-height: 1.25em;
+  }
+  li{
+    font-size: 1.5em;
+    line-height: 1.75em;
   }
 
   .post-title{
     width: 50em;
+    margin: 4em auto;
     text-align: center;
     a{
       text-decoration: none;
     }
   }
   .post-date{
-    width: 20em;
-    margin: 2em auto;
-    text-align: center;
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    font-size: 1.25em;
+    width: 15em;
+    color: #888;
+    font-size: 1.5em;
     line-height: 2em;
+    font-weight: 200;
+    padding: .5em 0;
+    margin: 2.5em auto;
+    text-align: center;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
   }
   .post-body{
     width: 42em;
-    font-size: 15px;
-    line-height: 24px;
-    margin: 10px auto;
+    margin: 1em auto;
+    // font-size: 16px;
+  }
+  p.read-more{
+    text-align: center;
   }
   img{
-    padding: 5px 10px;
+    padding: .25em .5em;
   }
   img.center{
     margin-left: auto;
@@ -184,27 +198,78 @@ code{
     padding: 0px;
   }
   .tags{
-    margin-top: 10px;
+    margin: 2em 0;
+    font-style: italic;
+    font-size: 1.25em;
   }
 }
 
 #sidebar{
+
+  color: #aaa ;
+
+  li{
+    list-style: none;
+  }
+  #recent-posts{
+    
+    text-align: center;
+    margin: 2.5em 0;
+
+    .recent-post{
+      width: 40%;
+      text-align: center;
+      padding: 1em 2em;
+      height: 2em;
+      float: left;
+    }
+  }
+
+  #tags{
+    
+    margin: 2.5em 0;
+
+    li{
+      display: inline-block;
+      height: 2em;
+      line-height: 1.5em;
+      padding: 0px .5em;
+    }
+  }
+
   #photo-box{
     .main-photo{
-      padding: 20px;
+      padding: 1.25em;
     }
   }
 }
 
+#clearfix{
+  clear: both;
+}
+
 #pagination_area{
   text-align: center;
+  li{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: 400;
+    list-style: none;
+    display: inline-block;
+    width: 3em;
+  }
+  li.prev{
+    width: 6em;
+  }
+  li.next{
+    width: 6em;
+  }
 }
 
 #footer{
-  padding-bottom: 20px;
-  .align-right{
-    padding-right: 60px;
-  }
+  text-align: center;
+  color: #aaa;
+  padding: 0.5em 0;
 }
 .post-form{
   input{
@@ -217,7 +282,20 @@ code{
   }
 }
 
-.align-right{
-  display: block;
-  text-align: right;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

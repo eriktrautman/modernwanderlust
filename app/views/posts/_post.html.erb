@@ -1,4 +1,5 @@
 <div class="post">
+  <%= render :partial => "admin_links", :locals => { :post => post } %>
   <div class="post-title">
     <h1>
       <% if show %>
@@ -9,21 +10,40 @@
     </h1>
   </div>
   <div class="post-date">
-    <%= post.created_at %>
+    <%= post.created_at.strftime("%B %-d, %Y") %>
   </div>
-  <%= render :partial => "admin_links", :locals => { :post => post } %>
+
+  <!-- render using markdown if that's specified by the post,
+        which it is for all new ones, otherwise we need to 
+        wrap the whole post in a <p> tag or the font sizing
+        won't work properly (it's all based on the <p> size) -->
   <div class="post-body">
     <% if post.md %>
-      <%= md(post.body).html_safe %>
+      <% post_body = md(post.body) %>
     <% else %>
-      <%= post.body.html_safe %>
+        <% post_body = "<p>" + post.body + "</p>" %>
+    <% end %>
+
+    <!-- If we're on the index page, render only previews -->
+    <% if show %> 
+      <%= post_body.html_safe %>
+    <% else %>
+      <%= show_preview(post_body).html_safe %>
+      <p class="read-more">
+        <%= link_to "Read More...", post %>
+      </p>
     <% end %>
   </div>
-  <div class="tags">
-    <% tag_list = post.tags.map do |tag| %>
-      <% link_to "#{tag.name}", posts_path(:tag_filter => "#{tag.name}") %>
-    <% end %>
-    <%= tag_list.join(" | ").html_safe %>
-  </div>
-  <hr>
+
+  <!-- only display tags on the individual post show pages -->
+  <% if show %>
+    <div class="tags">
+      Tags: &nbsp;
+      <% tag_list = post.tags.map do |tag| %>
+        <% link_to "#{tag.name}", posts_path(:tag_filter => "#{tag.name}") %>
+      <% end %>
+      <%= tag_list.join(" | ").html_safe %>
+    </div>
+  <% end %>
 </div>
+<hr>

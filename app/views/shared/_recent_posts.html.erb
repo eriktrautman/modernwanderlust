@@ -1,8 +1,11 @@
-<div id="recent_posts">
+<div id="recent-posts">
   <h2>Recent Posts</h2>
   <ul>
-    <% Post.most_recent(5).each do |post| %>
-      <li><%= link_to "#{post.title}", post %></li>
+    <% Post.most_recent(4).each do |post| %>
+      <div class="recent-post">
+        <li><%= link_to "#{post.title}", post %></li>
+      </div>
     <% end %>
   </ul>
+  <div id="clearfix"></div>
 </div>

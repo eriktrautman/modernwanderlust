@@ -8,12 +8,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <%= render "shared/topnav" %>
+  
   <div class="container">
     
     <%= bootstrap_flash %>
 
     <!-- <%= render "shared/titlebar" %> -->
-    <%= render "shared/topnav" %>
 
     <div id="content">
       <%= yield %>
@@ -21,17 +23,18 @@
     
     <% if @posts %>
       <%= render "shared/pagination" %>
+      <hr>
     <% end %>
     <div id="sidebar">
-      <hr>
       <%= render "shared/recent_posts" %>
-      <hr>
-      <%= render "shared/tags" %>
-      <hr>
-      <%= render "shared/archives" %>
+      <!-- <hr> -->
+      <!-- <%= render "shared/tags" %> -->
+      <!-- <hr>
+      <%= render "shared/archives" %> -->
     </div>
-    <%= render "shared/footer" %>
   </div>
+    <hr>
+    <%= render "shared/footer" %>
   <%= render "shared/ga" %>
 </body>
 </html>

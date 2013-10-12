@@ -1,5 +1,5 @@
 <div id="topnav">
-  <% if @post %>
+  <% if @post && @post.new_record? == false %>
     <div class="prev-next">
       <% unless @prev.empty? %>
         <span class="prev">
@@ -21,19 +21,19 @@
       </li>
     <% end %>
 
-    <%= link_to posts_path do%>
+    <%= link_to posts_path do %>
       <li class="<%= request.fullpath.include?(posts_path) ? 'active' : '' %>">
         Blog
       </li>
     <% end %>
     
-    <%= link_to about_path do%>
+    <%= link_to about_path do %>
       <li class="<%= request.fullpath == about_path ? 'active' : '' %>">
         About
       </li>
     <% end %>
 
-    <%= link_to contact_path do%>
+    <%= link_to contact_path do %>
       <li class="<%= request.fullpath == contact_path ? 'active' : '' %>">
         Contact
       </li>
@@ -41,7 +41,7 @@
 
   </ul> 
 
-  <% if @post %>  
+  <% if @post && @post.new_record? == false %>  
     <div class="prev-next">
       <% unless @next.empty? %>
         <span class="next">

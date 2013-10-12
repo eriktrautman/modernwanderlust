@@ -1,5 +1,5 @@
 <div id="tags">
-  <h2>Categories</h2>
+  <h2>Tags</h2>
   <ul>
     <% Tag.all.each do |tag| %>
       <li><%= link_to "#{tag.name}", posts_path(:tag_filter => "#{tag.name}") %></li>

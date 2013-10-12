@@ -20,10 +20,11 @@ XXX Add markdown rendering engine
 XXX Add GA tracking (haven't needed to fix turbolinks yet)
 XXX Heroku Add-ons (newrelic, pgbackups)
 Redesign
-  Visual Heirarchy
+  XXX Visual Heirarchy
   Typography
-  Remove Bootstrap
-  DO ITTTT
+  XXX Remove Bootstrap
+  XXX Fix dates
+  XXX Have previews for posts on index page
 Refactor
   error handling for Post finds
   remove puts'
