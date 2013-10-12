@@ -11,7 +11,9 @@ body{
   font-weight: 300 !important;
   line-height: 125% !important;
 }
-
+a{
+  color: #2ba6cb;
+}
 img{
   max-width: 100%;
   height: auto;
@@ -57,9 +59,9 @@ code{
 #topnav{
   margin: auto;
   text-align: center;
-  border-top: 1px solid #ccc;
+  // border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
-  padding: .25em 0;
+  padding: 0 0 .5em 0;
 
   ul{
     display: inline-block;
@@ -68,9 +70,16 @@ code{
   }
   li{
     display: inline-block;
-    margin: 0px;
-    width: 8em;
+    line-height: 1em;
+    width: 7.5em;
+    margin: 0px .25em;
     list-style: none;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    &:hover{
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+    }
   }
   a{
     text-decoration: none;
@@ -78,21 +87,36 @@ code{
     margin: 0px;
     // width: 0px;
   }
+  .active{
+    font-weight: 500;
+  }
+  .prev-next{
+    display: inline-block;
+    // font-weight: 400;
+    width: 8em;
+    line-height: 1em;
+    margin-bottom: -.1em;
+    a{
+      text-decoration: underline;
+      color: #2ba6cb;
+    }
+    .right{
+      float: right;
+    }
+    .left{
+      float: left;
+    }
+    .disabled{
+      text-decoration: none!important;
+      color: #ccc;
+    }
+  }
 }
 
 #content{
 }
 
 
-.prev-next{
-  display: inline;
-  .right{
-    float: right;
-  }
-  .left{
-    float: left;
-  }
-}
 
 .post{
 
@@ -122,15 +146,18 @@ code{
   .post-title{
     width: 50em;
     text-align: center;
+    a{
+      text-decoration: none;
+    }
   }
   .post-date{
     width: 20em;
-    margin: 1.5em auto;
+    margin: 2em auto;
     text-align: center;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     font-size: 1.25em;
-    line-height: 1.75em;
+    line-height: 2em;
   }
   .post-body{
     width: 42em;
