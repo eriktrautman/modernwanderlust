@@ -19,7 +19,11 @@ XXX Add markdown rendering engine
   XXX if rendered, display the post content as rendered
 XXX Add GA tracking (haven't needed to fix turbolinks yet)
 XXX Heroku Add-ons (newrelic, pgbackups)
-Add disqus for commenting
+Redesign
+  Visual Heirarchy
+  Typography
+  Remove Bootstrap
+  DO ITTTT
 Refactor
   error handling for Post finds
   remove puts'
@@ -27,6 +31,7 @@ Refactor
   fix wrap of pagination
   FIX BLOODY ARCHIVES ORDERING!!!
   change from :id to a more symantec name for redirects param
+Add disqus for commenting
 
 Style
   Make typography consistent and logical! (h1/h2/h3 in posts...)

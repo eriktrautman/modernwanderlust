@@ -1,4 +1,4 @@
-/*@import "twitter/bootstrap";*/
+
 
 html{
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif !important;
@@ -12,19 +12,24 @@ body{
   line-height: 1.5em;
 }
 p{
-  font-size: 1em;
+  font-size: 2em;
+  line-height: 1.5em;
 }
 h4{
-  font-size: 1.5em;
+  font-size: 2.5em;
+  line-height: 1.5em;
 }
 h3{
-  font-size: 2.25em;
+  font-size: 3em;
+  line-height: 1.25em;
 }
 h2{
-  font-size: 3em;
+  font-size: 3.5em;
+  line-height: 1.25em;
 }
 h1{
-  font-size: 3.75em;
+  font-size: 4em;
+  line-height: 1.25em;
 }
 
 img{
@@ -101,13 +106,13 @@ img{
 }
 
 .post{
-  h2{
-    font-size: 18px;
+  h1{
+    // font-size: 18px;
     font-weight: bold;
   }
   h4{
     color: #aaa;
-    font-size: 13px;
+    // font-size: 13px;
     font-style: italic;
     font-weight: 300;
   }
