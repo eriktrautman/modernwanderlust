@@ -1,17 +1,37 @@
 <div id="topnav">
-  <!-- <nav class="navbar navbar-default" role="navigation"> -->
-    <!-- <div class="collapse navbar-collapse navbar-ex1-collapse"> -->
-    <div class="btn-group nav-buttons">
-      <button type="button" class="btn btn-default" onclick="location.href='<%= posts_path %>'">
-        <%= link_to "Blog", posts_path %>
-      </button>
-      <button type="button" class="btn btn-default" onclick="location.href='<%= about_path %>'">
-        <%= link_to "About", about_path %>
-      </button>
-      <button type="button" class="btn btn-default" onclick="location.href='<%= contact_path %>'">
-        <%= link_to "Contact", contact_path %>
-      </button>
+  <% if @post %>
+    <div class="prev-next">
+      <% unless @prev.empty? %>
+        <span class="prev">
+          <%= link_to "&laquo; Previous".html_safe, @prev[0], :class => "left" %>
+        </span>
+      <% else %>
+        <span class="prev disabled">
+          &laquo; Previous
+        </span>
+      <% end %>
     </div>
-  </nav>
-  <hr>  
+  <% end %>
+  
+  <ul>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Blog", posts_path %></li>
+    <li><%= link_to "About", about_path %></li>
+    <li><%= link_to "Contact", contact_path %></li>
+  </ul> 
+
+  <% if @post %>  
+    <div class="prev-next">
+      <% unless @next.empty? %>
+        <span class="next">
+          <%= link_to "Next &raquo;".html_safe, @next[0], :class => "right" %>
+        </span>
+      <% else %>
+        <span class="next disabled right">
+          Next &raquo;
+        </span>
+      <% end %>
+    </div>
+  <% end %>
 </div>
+
