@@ -21,28 +21,35 @@ p{
 h4{
   font-size: 1.75em;
   line-height: 1.5em;
+  margin: 1em 0;
 }
 h3{
   font-size: 2em;
   line-height: 1.5em;
+  font-weight: 500;
+  margin: 1em 0;
 }
 h2{
-  font-size: 2.25em;
+  font-size: 2.5em;
   line-height: 1.5em;
-  margin-left: -.5em;
   font-weight: bold;
-}
-p+h2, p+h3, p+h4, p+h5{
-  margin-top: 1.75em;
+  margin: 1em 0;
 }
 h1{
   font-size: 3em;
   line-height: 1.25em;
   font-weight: bold;
+  margin: 1em 0;
 }
 li{
   font-size: 1.5em;
   line-height: 1.75em;
+}
+ol{
+  list-style: decimal;
+}
+ul{
+  list-style: disc;
 }
 
 a{
@@ -176,6 +183,20 @@ strong{
 
   margin: 3em 0;
 
+  p+h2, p+h3, p+h4, p+h5, ul+h2, ul+h3, ul+h4, ul+h5, ol+h2, ol+h3, ol+h4, ol+h5{
+    margin-top: 1.5em;
+  }
+
+  h2{
+    margin: 1em -1em 1em -1em;
+  }
+
+  ol,ul{
+    padding-left: 2em;
+  }
+  li{
+    margin: .5em 0;
+  }
 
   .post-title{
     width: 50em;
