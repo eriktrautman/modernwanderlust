@@ -1,5 +1,6 @@
 
 @import "colors";
+@import "mixins";
 
 html{
   font-size: 85%;
@@ -155,25 +156,11 @@ pre > code{
   .active{
     font-weight: 500;
   }
+}
+@media(max-width: 800px){
   .prev-next{
-    display: inline-block;
-    width: 8em;
-    line-height: 1em;
-    margin-bottom: -.1em;
-    a{
-      text-decoration: underline;
-      color: #2ba6cb;
-    }
-    .right{
-      float: right;
-    }
-    .left{
-      float: left;
-    }
-    .disabled{
-      text-decoration: none!important;
-      color: #ccc;
-    }
+  }
+  #topnav{
   }
 }
 
@@ -193,12 +180,61 @@ pre > code{
   }
 }
 
+.arrow{
+  font-size: 3rem;
+  text-align: center;
+  width: 1.25em;
+  height: 1.25em;
+  border: .2em solid $arrow_color; 
+  position: absolute;
+  top: .5em;
+  @include border-radius(1em);
+}
+.hover-arrow{
+  &:hover{
+    border-color: $arrow_highlight_color;
+    cursor: pointer;
+    .inner-arrow{
+      border-color: $arrow_highlight_color;
+    }
+  }
+}
+.disabled-arrow{
+  border-color: $arrow_disabled_color!important;
+  .inner-arrow{
+    border-color: $arrow_disabled_color!important;
+  }
+}
+.prev-arrow{
+  left: -2em; 
+}
+.next-arrow{
+  right: -2em;
+}
+.inner-arrow{
+  height: .5em;
+  width: .5em; 
+  border-left: .2em solid $arrow_color;
+  border-top: .2em solid $arrow_color;
+  position: absolute;
+  top: .25em;
+}
+.inner-prev-arrow{
+  @include rotate(-45deg);
+  left: .4em; 
+}
+.inner-next-arrow{
+  @include rotate(135deg);
+  right: .4em; 
+}
+
 #content{
 }
 
 .post{
 
-  margin: 3em 0;
+  margin: 4em 0 3em 0;
+  position: relative;
 
   p+h2, p+h3, p+h4, p+h5, ul+h2, ul+h3, ul+h4, ul+h5, ol+h2, ol+h3, ol+h4, ol+h5{
     margin-top: 1.5em;
@@ -217,8 +253,14 @@ pre > code{
 
   .post-title{
     max-width: 50em;
-    margin: 4em auto;
+    margin: 0 auto 4em auto;
     text-align: center;
+    position: relative;
+    h1{
+      display: inline-block;
+      margin: 0;
+      position: relative;
+    }
     a{
       text-decoration: none;
     }

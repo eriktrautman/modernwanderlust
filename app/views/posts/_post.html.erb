@@ -1,6 +1,24 @@
 <div class="post">
   <%= render :partial => "admin_links", :locals => { :post => post } %>
+
   <div class="post-title">
+
+    <% if @post && @post.new_record? == false %>
+      <% unless @prev.nil? || @prev.empty? %>
+        <%= link_to @prev[0], :class => "left", :title => "Previous Post" do %>
+          <div class="prev-arrow arrow hover-arrow">
+            <div class="inner-prev-arrow inner-arrow">
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="prev-arrow arrow disabled-arrow">
+          <div class="inner-prev-arrow inner-arrow">
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
     <h1>
       <% if show %>
         <%= post.title %>
@@ -8,7 +26,26 @@
         <%= link_to "#{ post.title }", post %>
       <% end %>
     </h1>
+
+    <% if @post && @post.new_record? == false %>  
+      <% unless @next.nil? || @next.empty? %>
+        <%= link_to @next[0], :class => "right", :title => "Next Post" do %>
+          <div class="next-arrow arrow hover-arrow">
+            <div class="inner-next-arrow inner-arrow">
+            </div>
+          </div>
+        <% end %>
+      <% else %>
+        <div class="next-arrow arrow disabled-arrow">
+          <div class="inner-next-arrow inner-arrow">
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
   </div>
+
+
   <div class="post-date">
     <%= post.created_at.strftime("%B %-d, %Y") %>
   </div>

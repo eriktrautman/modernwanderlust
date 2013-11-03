@@ -5,8 +5,9 @@ Erik's Blog
 
 Fixes and Tweaks:
 
-* Build Archive page with tags and chronology
 
+XXX Build icons for next / prev
+XXX Build Archive page with tags and chronology
 XXX update about page
 XXX Make sure there's an OPTION to update the slug if title changes and it defaults to false (warn how it messes with linkins!!!)
 XXX Also fix descender cutoff in <pre> tags
