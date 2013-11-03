@@ -3,6 +3,14 @@ modernwanderlust
 
 Erik's Blog
 
+Fixes:
+Make <em> tags work!
+Make <pre> tags work and not overlap with <code> tags! (follow TOP lead... spacings, font color, the works)
+Fix BG color to off white
+Make <p> tags inside lists not explode the font size... go to rems?  Anything that's potentially nested infinitely cannot be relative!!!
+Also fix descender cutoff in <pre> tags
+Make sure there's an OPTION to update the slug if title changes and it defaults to false (warn how it messes with linkins!!!)
+
 Roadmap:
 XXX Posts
 XXX Post creation interface
