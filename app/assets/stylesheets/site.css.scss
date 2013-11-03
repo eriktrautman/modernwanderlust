@@ -1,10 +1,11 @@
 
+@import "colors";
 
 html{
+  font-size: 85%;
 }
 
 body{
-  font-size: 85%;
   line-height: 1.5em;
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif !important;
   color: #444 !important;
@@ -65,16 +66,25 @@ img{
 hr{
   margin: .5em 0;
 }
-code{
-  font-size: 1em;
-  padding: .25em .5em;
-  background-color: #eee;
-  border-radius: .25em;
-  -moz-border-radius: .25em;
-  -webkit-border-radius: .25em;
+pre{
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  background-color: $code_bg_gray;
+  color: $code_text_gray;
+  margin: 1em inherit;
+  padding: 2px 4px;
 }
-strong{
-  font-weight: bold;
+code{
+  font-size: 1.25rem;
+  color: $code_text_gray;
+  background-color: $code_bg_gray;
+  border: 1px solid #ddd;
+  padding: 2px 4px;
+}
+pre > code{
+  font-size: 1.25rem;
+  line-height: 1.5em;
+  border: none;
 }
 
 .container{
