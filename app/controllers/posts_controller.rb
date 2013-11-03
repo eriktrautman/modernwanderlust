@@ -4,21 +4,24 @@ class PostsController < ApplicationController
   def index
     if tag_filter_params[:tag_filter]
       posts = Post.with_tag(tag_filter_params[:tag_filter])
-      puts "\n\n\n POSTS IS: #{posts.inspect}!!!"
+      # puts "\n\n\n POSTS IS: #{posts.inspect}!!!"
     elsif date_filter_params[:filter_month] && date_filter_params[:filter_year]
       posts = Post.by_archive_date(date_filter_params[:filter_month],date_filter_params[:filter_year])
-      puts "\n\n\n\n\n\n\n\n DATE FILTER POSTS IS: #{posts.inspect}!!!\n\n\n\n\n"
+      # puts "\n\n\n\n\n\n\n\n DATE FILTER POSTS IS: #{posts.inspect}!!!\n\n\n\n\n"
     else
       posts = Post.order(:created_at => :desc)
-      puts "\n\n\n\n\n\n\n\n REGULAR POSTS IS: #{posts.inspect}!!!\n\n\n\n\n"
+      # puts "\n\n\n\n\n\n\n\n REGULAR POSTS IS: #{posts.inspect}!!!\n\n\n\n\n"
     end
     @posts = posts.paginate(:page => params[:page], :per_page => 5)
-    puts "\n\n\n NOW @POSTS IS #{@posts.inspect}!! \n\n\n"
+    # puts "\n\n\n NOW @POSTS IS #{@posts.inspect}!! \n\n\n"
   end
 
   def show
     # build in the stub functionality
     @post = Post.friendly.find(params[:id])
+    if request.path != post_path(@post)
+      return redirect_to @post, :status => :moved_pernmanently
+    end
     @next = @post.next
     @prev = @post.prev
   end

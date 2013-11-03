@@ -1,11 +1,18 @@
 modernwanderlust
 ================
 
+DEPLOYMENT NOTES:
+1. MIGRATION
+2. need to Post.find_each(&:save) to regenerate the slugs in the history portion of the database
+3. 
+
+
 Erik's Blog
 
-Fixes:
-Make sure there's an OPTION to update the slug if title changes and it defaults to false (warn how it messes with linkins!!!)
+Fixes and Tweaks:
+* update about page
 
+XXX Make sure there's an OPTION to update the slug if title changes and it defaults to false (warn how it messes with linkins!!!)
 XXX Also fix descender cutoff in <pre> tags
 XXX Make <p> tags inside lists not explode the font size... go to rems?  Anything that's potentially nested infinitely cannot be relative!!!
 XXX Fix BG color to off white

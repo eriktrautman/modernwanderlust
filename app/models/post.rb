@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   extend FriendlyId # to help with title slugging
-  friendly_id :title, :use => :slugged
+  friendly_id :title, :use => [:slugged, :history]
 
   validates_presence_of [:title, :body, :slug]
   validates :title, :uniqueness => { :message => "This title has been used before, choose another" }
@@ -61,5 +61,9 @@ class Post < ActiveRecord::Base
 
     Post.where("posts.created_at < ?", self.created_at - 1.second).order(:created_at => :desc).limit(1)
   end
+
+  # def should_generate_new_friendly_id?
+  #   true #new_record?
+  # end
 
 end
