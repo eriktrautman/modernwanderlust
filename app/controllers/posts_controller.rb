@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:index, :show]
+  before_filter :authenticate_admin!, :except => [:index, :show, :archives]
   before_filter :set_blog_flag
 
   def index
