@@ -21,7 +21,12 @@
 
     <% if @posts %>
       <%= render "shared/pagination" %>
+      <div class="archive-link">
+        <%= link_to "View the Archives", archives_path %>
+      </div>
     <% end %>
+
+
   </div>
     <%= render "shared/footer" %>
   <%= render "shared/ga" %>

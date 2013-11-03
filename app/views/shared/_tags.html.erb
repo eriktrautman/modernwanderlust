@@ -1,8 +1,17 @@
-<div id="tags">
-  <h2>Tags</h2>
+<div class="tag-links">
+  <h2>By Tag</h2>
   <ul>
-    <% Tag.all.each do |tag| %>
-      <li><%= link_to "#{tag.name}", posts_path(:tag_filter => "#{tag.name}") %></li>
+    <% @tags.each do |tag| %>
+      <%= link_to posts_path(:tag_filter => "#{tag.name}") do %>
+        <li>
+          <div class="count">
+            <%=  tag.posts.count %>
+          </div>
+          <div class="name">
+            <%= tag.name %>
+          </div>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 </div>

@@ -1,12 +1,17 @@
-<div id="archives">
-  <h2>Archives</h2>
+<div class="archive-links">
+  <h2>By Date</h2>
   <ul>
-    <% Post.archives.reverse.each do |archive| %>
-      <li>
-        <a href="<%= posts_path(:filter_month => archive.month.to_date.strftime('%m'), :filter_year => archive.month.to_date.strftime('%Y')) %>">
-          <%= archive.month.to_date.strftime('%B %Y') %> (<%= archive.count %>)
-        </a>
-      </li>
+    <% @archives.keys.sort.reverse.each do |date| %>
+      <%= link_to posts_path(:filter_month => date.strftime('%m'), :filter_year => date.strftime('%Y')) do %>
+        <li>  
+          <div class="count">
+             <%= @archives[date] %>
+          </div>
+          <div class="name">
+            <%= date.strftime('%B %Y') %>
+          </div>
+        </li>
+      <% end %>
     <% end %>
   </ul>
 </div>

@@ -8,10 +8,10 @@ html{
 body{
   line-height: 1.5em;
   font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif !important;
-  color: #444 !important;
+  color: $text_color !important;
   font-weight: 300 !important;
   line-height: 125% !important;
-  background-color: #fcfdfa;
+  background-color: $background_color;
 }
 
 /* FONT SCALE */
@@ -87,9 +87,15 @@ pre > code{
   line-height: 1.5em;
   border: none;
 }
+.clearfix{
+  clear: both;
+}
+#clearfix{
+  clear: both;
+}
 
 .container{
-  width: 50em;
+  max-width: 50em;
   margin: auto; 
 }
 
@@ -210,7 +216,7 @@ pre > code{
   }
 
   .post-title{
-    width: 50em;
+    max-width: 50em;
     margin: 4em auto;
     text-align: center;
     a{
@@ -230,7 +236,7 @@ pre > code{
     border-bottom: 2px solid #ccc;
   }
   .post-body{
-    width: 42em;
+    max-width: 42em;
     margin: 1em auto;
     // font-size: 16px;
   }
@@ -286,29 +292,69 @@ pre > code{
       line-height: 1.25em;
     }
   }
+}
 
-  #tags{
-    
-    margin: 2.5em 0;
 
-    li{
-      display: inline-block;
-      height: 2em;
-      line-height: 1.5em;
-      padding: 0px .5em;
-    }
-  }
-
-  #photo-box{
-    .main-photo{
-      padding: 1.25em;
-    }
+#photo-box{
+  .main-photo{
+    padding: 1.25em;
   }
 }
 
-#clearfix{
-  clear: both;
+.archive-category{
+  float: left;
+  width: 46%;
+  margin: 0 2%;
+  min-width: 200px;
 }
+@media(max-width: 500px){
+  .archive-category{
+    width: 90%;
+  }
+}
+
+.tag-links, .archive-links{  
+  margin: 2.5em 0;
+  text-align: center;
+  a{
+    color: $text_color;
+    text-decoration: none;
+  }
+  li{
+    height: 2em;
+    line-height: 1.5em;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    // background-color: #eee;
+    &:hover{
+      background-color: #efefff;
+      font-weight: bold;
+    }
+  }
+
+  ul{
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .count, .name{
+    display: inline-block;
+    float: left;
+  }
+  .count{
+    text-align: center;
+    width: 2em;
+    border-right: 1px solid #ccc;
+    // font-weight: bold;
+  }
+  .name{
+    padding-left: 1em;
+  }
+}
+
 
 #pagination-area{
   text-align: center;
@@ -332,6 +378,14 @@ pre > code{
   }
 }
 
+.archive-link{
+  text-align: center;
+  font-size: 1rem;
+  a{
+    text-decoration: none;
+  }
+}
+
 #footer{
   text-align: center;
   color: #aaa;
@@ -350,9 +404,9 @@ pre > code{
     height: 15em;
   }
 }
-#about, #contact{
+#about, #contact, #archives{
   margin: 4em auto 6em auto;
-  width: 42em;
+  max-width: 42em;
 
   .title{
     text-align: center; 
@@ -367,7 +421,6 @@ pre > code{
     padding-left: 1em;
   }
 }
-
 
 
 

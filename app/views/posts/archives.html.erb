@@ -1,0 +1,19 @@
+<div id="archives">
+  <div class="title">
+    <h1>Archive of Posts</h1>
+  </div>
+
+  <p>
+    The 2012/20k motorcycle trip posts can be found <%= link_to "here", posts_path(:tag_filter => "Motorcycle Trip 2012") %>.
+  </p>
+
+  <div class="archive-category">
+    <%= render :partial => "shared/tags" %>
+  </div>
+
+  <div class="archive-category">
+    <%= render :partial => "shared/archives" %>
+  </div>
+
+  <div class="clearfix"></div>
+</div>  

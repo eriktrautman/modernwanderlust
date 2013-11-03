@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :authenticate_admin!, :except => [:index, :show]
+  before_filter :set_blog_flag
 
   def index
     if tag_filter_params[:tag_filter]
@@ -14,6 +15,11 @@ class PostsController < ApplicationController
     end
     @posts = posts.paginate(:page => params[:page], :per_page => 5)
     # puts "\n\n\n NOW @POSTS IS #{@posts.inspect}!! \n\n\n"
+  end
+
+  def archives
+    @tags = Tag.by_posts
+    @archives = Post.archives
   end
 
   def show
@@ -102,6 +108,10 @@ class PostsController < ApplicationController
       newparams = params.permit(:filter_month, :filter_year)
       puts "\n\n\n newparams is: #{newparams.inspect}!"
       newparams
+    end
+
+    def set_blog_flag
+      @blog = true
     end
 
 end

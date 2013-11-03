@@ -26,6 +26,15 @@
         Blog
       </li>
     <% end %>
+
+    <% if @blog == true %>
+    <% end %>
+
+      <%= link_to archives_path do %>
+        <li class="<%= request.fullpath.include?(archives_path) ? 'active' : '' %>">
+          Archive
+        </li>
+      <% end %>
     
     <%= link_to about_path do %>
       <li class="<%= request.fullpath == about_path ? 'active' : '' %>">

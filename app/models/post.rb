@@ -8,6 +8,7 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
+
   # Why does will_paginate blow up if the
   # order clause uses a hash? 
   # Hell if I know.
@@ -23,7 +24,7 @@ class Post < ActiveRecord::Base
   # combination.  Currently not sorted (very very very
   # very very annoying to try and implement that)
   def self.archives
-    Post.select("date_trunc('month',created_at) as month","count(*) as count").group(:month)
+    Post.group("date_trunc('month',created_at)").count
   end
 
   # Use the query string to 
