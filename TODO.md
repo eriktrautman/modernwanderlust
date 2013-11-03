@@ -1,12 +1,6 @@
 modernwanderlust
 ================
 
-DEPLOYMENT NOTES:
-1. MIGRATION
-2. need to Post.find_each(&:save) to regenerate the slugs in the history portion of the database
-3. 
-
-
 Erik's Blog
 
 Fixes and Tweaks:
