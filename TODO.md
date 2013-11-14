@@ -4,7 +4,22 @@ modernwanderlust
 Erik's Blog
 
 Fixes and Tweaks:
+Add a "sort" query string scope so, for instance, I can ask for the moto trip posts but in chron order.
+Remove the bootstrap flash styling for admin stuff
+Upload
+  error handling for Post finds
+  change from :id to a more symantec name for redirects param
+Add disqus for commenting
 
+Style
+  Make typography consistent and logical! (h1/h2/h3 in posts...)
+
+Add basic test coverage
+
+Additional fun stuff:
+Home page highlighting edu focus and photography
+Add design touches... ok, friggin redesign everything.
+Add photo uploader directly to the proper S3 bucket (paperclip or carrierwave gem and/or dropzone.js http://www.dropzonejs.com/)
 
 XXX Build icons for next / prev
 XXX Build Archive page with tags and chronology
@@ -47,19 +62,6 @@ Refactor:
   XXX clean up timestamps on _post partials
   XXX fix wrap of pagination
   XXX FIX BLOODY ARCHIVES ORDERING!!! -- fixed by ignoring
-  error handling for Post finds
-  change from :id to a more symantec name for redirects param
-Add disqus for commenting
-
-Style
-  Make typography consistent and logical! (h1/h2/h3 in posts...)
-
-Add basic test coverage
-
-Additional fun stuff:
-Home page highlighting edu focus and photography
-Add design touches... ok, friggin redesign everything.
-Add photo uploader directly to the proper S3 bucket (paperclip or carrierwave gem and/or dropzone.js http://www.dropzonejs.com/)
 
 
 
