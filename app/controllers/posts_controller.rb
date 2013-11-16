@@ -13,6 +13,11 @@ class PostsController < ApplicationController
       posts = Post.order(:created_at => :desc)
       # puts "\n\n\n\n\n\n\n\n REGULAR POSTS IS: #{posts.inspect}!!!\n\n\n\n\n"
     end
+    if params[:order] == "rev_chron"
+      posts = posts.order_rev_chron
+    elsif params[:order] == "chron"
+      posts = posts.order_chron
+    end
     @posts = posts.paginate(:page => params[:page], :per_page => 5)
     # puts "\n\n\n NOW @POSTS IS #{@posts.inspect}!! \n\n\n"
   end
