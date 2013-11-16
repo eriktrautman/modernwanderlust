@@ -15,6 +15,7 @@ Modernwanderlust::Application.routes.draw do
   get "show_post" => "redirects#old_site"
   get "archives" => "posts#archives"
   get "blog" => "posts#index"
+  get "index.php" => "posts#index"
 
   resources :posts
 

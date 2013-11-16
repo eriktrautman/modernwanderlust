@@ -4,6 +4,7 @@ modernwanderlust
 Erik's Blog
 
 Fixes and Tweaks:
+fix redirects from Modernwanderlust.com
 Add a "sort" query string scope so, for instance, I can ask for the moto trip posts but in chron order.
 Remove the bootstrap flash styling for admin stuff
 Upload
