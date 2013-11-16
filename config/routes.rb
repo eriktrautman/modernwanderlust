@@ -14,6 +14,9 @@ Modernwanderlust::Application.routes.draw do
   get "contact" => "static_pages#contact"
   get "show_post" => "redirects#old_site"
   get "archives" => "posts#archives"
+  get "blog" => "posts#index"
 
   resources :posts
+
+  get "sitemap.xml" => "sitemap#index", :as => "sitemap", :defaults => { :format => "xml" }
 end
