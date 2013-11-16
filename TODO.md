@@ -4,7 +4,6 @@ modernwanderlust
 Erik's Blog
 
 Fixes and Tweaks:
-Add a "sort" query string scope so, for instance, I can ask for the moto trip posts but in chron order.
 Remove the bootstrap flash styling for admin stuff
 Upload
   error handling for Post finds
@@ -20,6 +19,7 @@ Additional fun stuff:
 Home page highlighting edu focus and photography
 Add design touches... ok, friggin redesign everything.
 
+XXX Add a "sort" query string scope so, for instance, I can ask for the moto trip posts but in chron order.
 XXX redirects from Modernwanderlust.com
 XXX a sitemap for easy SEO indexing
 NOPE photo uploader directly to the proper S3 bucket (paperclip or carrierwave gem and/or dropzone.js http://www.dropzonejs.com/)
