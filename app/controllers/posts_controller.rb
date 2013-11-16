@@ -25,11 +25,11 @@ class PostsController < ApplicationController
   def show
     # build in the stub functionality
     @post = Post.friendly.find(params[:id])
-    if request.path != post_path(@post)
-      return redirect_to @post, :status => :moved_pernmanently
-    end
     @next = @post.next
     @prev = @post.prev
+    if request.path != post_path(@post)
+      redirect_to @post, :status => :moved_permanently
+    end
   end
 
   def new
