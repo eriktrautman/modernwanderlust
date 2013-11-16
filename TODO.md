@@ -4,6 +4,8 @@ modernwanderlust
 Erik's Blog
 
 Fixes and Tweaks:
+Add photo uploader directly to the proper S3 bucket (paperclip or carrierwave gem and/or dropzone.js http://www.dropzonejs.com/)
+Add a sitemap for easy SEO indexing
 Add a "sort" query string scope so, for instance, I can ask for the moto trip posts but in chron order.
 Remove the bootstrap flash styling for admin stuff
 Upload
@@ -19,7 +21,6 @@ Add basic test coverage
 Additional fun stuff:
 Home page highlighting edu focus and photography
 Add design touches... ok, friggin redesign everything.
-Add photo uploader directly to the proper S3 bucket (paperclip or carrierwave gem and/or dropzone.js http://www.dropzonejs.com/)
 
 XXX Build icons for next / prev
 XXX Build Archive page with tags and chronology
