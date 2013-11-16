@@ -8,8 +8,8 @@ class Post < ActiveRecord::Base
   has_many :taggings
   has_many :tags, :through => :taggings
 
-  scope :order_rev_chron, -> { order('created_at DESC') }
-  scope :order_chron, -> { order('created_at ASC') }
+  scope :order_rev_chron, -> { order('posts.created_at DESC') }
+  scope :order_chron, -> { order('posts.created_at ASC') }
 
   # Why does will_paginate blow up if the
   # order clause uses a hash? 
