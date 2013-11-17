@@ -4,8 +4,8 @@
   <div class="post-title">
 
     <% if @post && @post.new_record? == false %>
-      <% unless @prev.nil? || @prev.empty? %>
-        <%= link_to @prev[0], :class => "left", :title => "Previous Post" do %>
+      <% unless @prev.nil? %>
+        <%= link_to @prev, :class => "left", :title => "Previous Post: #{@prev.title}" do %>
           <div class="prev-arrow arrow hover-arrow">
             <div class="inner-prev-arrow inner-arrow">
             </div>
@@ -28,8 +28,8 @@
     </h1>
 
     <% if @post && @post.new_record? == false %>  
-      <% unless @next.nil? || @next.empty? %>
-        <%= link_to @next[0], :class => "right", :title => "Next Post" do %>
+      <% unless @next.nil? %>
+        <%= link_to @next, :class => "right", :title => "Next Post: #{@next.title}" do %>
           <div class="next-arrow arrow hover-arrow">
             <div class="inner-next-arrow inner-arrow">
             </div>
