@@ -8,7 +8,7 @@ Modernwanderlust::Application.routes.draw do
     get "/logout" => "devise/sessions#destroy"
   end
     
-  root :to => 'posts#index'
+  root :to => 'static_pages#home'
 
   get "about" => "static_pages#about"
   get "contact" => "static_pages#contact"
