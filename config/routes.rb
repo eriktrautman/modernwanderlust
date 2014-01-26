@@ -16,7 +16,7 @@ Modernwanderlust::Application.routes.draw do
   get "archives" => "posts#archives"
   get "blog" => "posts#index"
   get "index.php" => redirect("posts#index")
-  get "home" => redirect("posts#index")
+  get "home" => "static_pages#home"
 
   resources :posts
 
