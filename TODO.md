@@ -8,15 +8,15 @@ Slideshow2: http://coding.smashingmagazine.com/2011/06/16/five-useful-interactiv
 * Home page highlighting edu focus and photography
 
 Unnecessarily nit-picky fixes and tweaks:
-* Title sucks.  Fix it.
 * About Page: I can usually be found hiking biking geeking or trying out new things or something like that
-* H4 tags need to be weight 500
 * error handling for Post finds
 * change from :id to a more semantic name for redirects param
 * Add disqus for commenting
 * Make typography consistent and logical! (h1/h2/h3 in posts...)
 * Add basic test coverage
 
+XXX H4 tags need to be weight 500
+XXX Title sucks.  Fix it.
 XXX add flash close button javascript function
 XXX Add a "sort" query string scope so, for instance, I can ask for the moto trip posts but in chron order.
 XXX redirects from Modernwanderlust.com
