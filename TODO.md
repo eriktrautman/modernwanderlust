@@ -6,6 +6,8 @@ Slideshow: http://paulmason.name/item/simple-jquery-carousel-slider-tutorial
 Slideshow2: http://coding.smashingmagazine.com/2011/06/16/five-useful-interactive-css-jquery-techniques-deconstruted/
 
 * Home page highlighting edu focus and photography
+* Put titlebar above nav
+* Widen out the blog and fix the typography issues
 
 Unnecessarily nit-picky fixes and tweaks:
 * About Page: I can usually be found hiking biking geeking or trying out new things or something like that
