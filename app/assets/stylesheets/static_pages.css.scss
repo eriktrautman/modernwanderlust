@@ -8,13 +8,14 @@
 
 #home-page{
 
+  font-family: 'Lato', sans-serif;
+
   .container{
     max-width: 80rem;
   }
 
   #headline{
 
-    font-family: 'Lato', sans-serif;
     margin-top: 1rem;
     margin-bottom: 2.5rem;
 
@@ -58,6 +59,10 @@
       margin: 0 1rem; 
       min-width: 300px;
       display: inline-block;
+
+      p:first-child{
+        margin-top: 0;
+      }
       p{
         font-size: 1rem;
         color: $dark_gray;
@@ -72,6 +77,27 @@
     }
   }
 
+  #work-preview{
+    .project{
+      vertical-align: top;
+      display: inline-block;
+      width: 290px;
+      margin: 0 5px;
+      h3{
+        text-align: center;
+      }
+      img{
+        height: 300px;
+        width: 300px;
+        border: 1px solid $vlight_gray;
+      }
+      p{
+        font-size: 1rem;
+      }
+    }
+  }
 
-
+  h2.thanks{
+    text-align: center;
+  }
 }
