@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+@import "colors";
+@import "mixins";
+
 #home-page{
 
   .container{
@@ -11,38 +15,63 @@
   #headline{
 
     font-family: 'Lato', sans-serif;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+
     h1{
+      font-size: 4.5rem;
       font-weight: 300;
       margin-bottom: 1rem;
+      margin-top: 2rem;
     }
     h2{
+      color: $mid-gray;
       font-weight: 300;
-      font-size: 1.5rem;
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+  #top-content{
+    // position: relative;
+    #photo-carousel-container{
+      vertical-align: top;
+      display: inline-block;
+    }
+    .carousel{
+      height: 332px;
+      width: 550px;
+      margin: 1rem;
+    }
+    .img-wrapper{
+      width: 550px;
+      height: 330px;
+      border: 1px solid gray;
+      text-align: center;
+      position: absolute;
+    }
+    .img-wrapper img{
+      height: 100%;
+    }
+
+    #main-description{
+      width: 350px;
+      margin: 0 1rem; 
+      min-width: 300px;
+      display: inline-block;
+      p{
+        font-size: 1rem;
+        color: $dark_gray;
+      }
+      .links{
+        a{
+          display: inline-block;
+          width: 30%;
+          text-align: center;
+        }
+      }
     }
   }
 
-  .img-wrapper{
-    width: 500px;
-    height: 300px;
-    border: 1px solid gray;
-    float:left;
-    text-align: center;
-    /*z-index: -100;*/
-    position: absolute;
-  }
-  .img-wrapper img{
-    /*width: 100%;*/
-    height: 100%;
-    /*margin: 0px auto;*/
-  }
-  .carousel{
-    position: relative;
-    height: 302px;
-    width: 500px;
-    margin: 0 auto;
-  }
-  .photo-carousel-container{
-    text-align: center;
-  }
+
 
 }
