@@ -1,0 +1,116 @@
+<div id="home-page">
+  <div class="container">
+    
+    <div id="headline">
+      <h1>
+        From the Mind of Erik Trautman
+      </h1>
+      <h2>
+        A happy intersection of startups, design, and web development with a healthy dose of random and a touch of creativity.
+      </h2>
+    </div>
+
+    <div class="photo-carousel-container">
+      <div class="carousel">
+        <div class="img-wrapper">
+          <a href="#"><img src="https://modernwanderlust.s3.amazonaws.com/posts/New%20England%20and%20Upstate%20NY/20120927%20lighthouse-small.jpg" class="carousel-img"></a>
+        </div>
+        <div class="img-wrapper">
+          <a href="#"><img src="https://modernwanderlust.s3.amazonaws.com/posts/Arches%20and%20Canyonlands%20National%20Parks/20120903%20night-arch-small.jpg" class="carousel-img"></a>
+        </div>
+        <div class="img-wrapper">
+          <a href="#"><img src="https://modernwanderlust.s3.amazonaws.com/posts/Yosemite%20Death%20Valley%20Vegas/20120827%20yosemite-tree-small.jpg" class="carousel-img"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-description">
+      <p>
+        Hi! My name is Erik Trautman and I'm a dreamer living at the intersection of big ideas, rigorous execution, and creativity.  
+      </p>
+      <p>
+        I'm currently building The Odin Project to provide a scalable solution for people around the world to realize their dreams of building great web applications.  
+      </p>
+      <p>   
+        I hike a lot, take tons of photos, and consume knowledge like it's my job.  I'm interested in how the lessons learned in the consumer web can be used to transform online education and how the arc of technology can drive improvements in health and happiness via the quantified self.
+      </p>
+      <p>
+        I blog regularly and both my artistic and professional portfolios can be viewed below.
+      </p>
+      <div class="links">
+        <a href="<%= blog_path %>" title="Blog">Blog</a>
+        <a href="#" title="Photography">Photography</a>
+        <a href="#" title="Portfolio">Portfolio</a>
+      </div>
+    </div>
+
+    <div id="blog-preview">
+      <h2>Blog</h2>
+      <p>
+        I blog regularly about the wide range of topics that interest me, from business and startups and product management to personal development and travel.
+      </p>
+      <div class="post-preview">
+        <h3>Latest Post:</h3>
+        <%= render :partial => "posts/post", :locals => { :post => Post.last, :show => false } %>
+      </div>
+    </div>
+
+    <div id="work-preview">
+      <h2>Work</h2>
+      <p>
+        I build websites for fun and to support the causes and organizations I'm involved with.  Everything I've built is [open sourced on Github] (including this site).
+      </p>
+      <div class="projects">
+        <div class="project">
+          <h3>The Odin Project</h3>
+          <img class="project-screenshot" src="#">
+          <p>
+            [The Odin Project](http://theodinproject.com) is a free and open source curriculum for anyone around the world to learn web development.  I founded the project and have led its development.
+          </p>
+        </div>
+        <div class="project">
+          <h3>Coding School Alumni</h3>
+          <img class="project-screenshot" src="#">
+          <p>
+            The Coding School Alumni Association is a social and professional network for graduates of fulltime intensive coding schools like [App Academy](http://appacademy.io), [Dev Bootcamp](http://www.devbootcamp.com), [General Assembly](http://www.generalassemb.ly), [Hackbright Academy](http://www.hackbrightacademy.com) and [Hack Reactor](http://www.hackreactor.com).  I founded the organization and have led its development.
+          </p>
+        </div>
+        <div class="project">
+          <h3>Rails Weekend Workshop</h3>
+          <img class="project-screenshot" src="#">
+          <p>
+            The Ruby on Rails Weekend Workshop was an intensive workshop designed to take complete beginners to Rails and guide them through deploying an application in a single weekend.  I built the site, organized the workshop and cotaught with Daniel Kehoe (of [RailsApps](http://railsapps.org)).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <h3>
+      Thanks for stopping by!
+    </h3>
+
+  </div>
+</div>
+
+<script>
+  $(function() {
+    console.log("HIHIHI");
+    carousel = $("#carousel");
+    // carousel_width = 0;
+    // $(".img-wrapper").each(function(i,img){
+    //   width = $(img).width();
+    //   console.log($(img));
+    //   console.log(width);
+    //   carousel_width += width+5;
+    // });
+    // carousel.width(carousel_width);
+    // console.log(carousel_width);
+    // film_roll = new FilmRoll({
+    //      container: '#film_roll',
+    //      prev: '#left_button_id',
+    //      next: '#right_button_id',
+    //      height: 400,
+    //      // start_height: 400px;
+    //    });
+  })
+</script>
