@@ -1,9 +1,14 @@
-<div id="posts">
 
-  <!-- if there aren't posts, make sure we can create some! -->
-  <% if admin_signed_in? && @posts.nil? %>
-    <%= link_to "New Post", new_post_path %>
-  <% end %>
-  
-  <%= render :partial => "post", :collection => @posts, :locals => { :show => false } %>
+<div id="post-pages">
+  <div class="container">
+    <div id="posts">
+
+      <!-- if there aren't posts, make sure we can create some! -->
+      <% if admin_signed_in? && @posts.nil? %>
+        <%= link_to "New Post", new_post_path %>
+      <% end %>
+      
+      <%= render :partial => "post", :collection => @posts, :locals => { :show => false } %>
+    </div>
+  </div>
 </div>

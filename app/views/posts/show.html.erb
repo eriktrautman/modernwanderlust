@@ -1,5 +1,8 @@
-<%= render :partial => @post, :locals => { :show => true } %>
-<div id="sidebar">
-  <%= render "shared/recent_posts" %>
+<div id="post-pages">
+  <div class="container">
+    <%= render :partial => @post, :locals => { :show => true } %>
+    <div id="sidebar">
+      <%= render "shared/recent_posts" %>
+    </div>
+  </div>
 </div>
-    
