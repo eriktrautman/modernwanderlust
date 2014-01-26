@@ -2,23 +2,22 @@ modernwanderlust
 ================
 
 Erik's Blog
+Slideshow: http://paulmason.name/item/simple-jquery-carousel-slider-tutorial
+Slideshow2: http://coding.smashingmagazine.com/2011/06/16/five-useful-interactive-css-jquery-techniques-deconstruted/
 
-Fixes and Tweaks:
-Remove the bootstrap flash styling for admin stuff
-Upload
-  error handling for Post finds
-  change from :id to a more symantec name for redirects param
-Add disqus for commenting
+* Home page highlighting edu focus and photography
 
-Style
-  Make typography consistent and logical! (h1/h2/h3 in posts...)
+Unnecessarily nit-picky fixes and tweaks:
+* Title sucks.  Fix it.
+* About Page: I can usually be found hiking biking geeking or trying out new things or something like that
+* H4 tags need to be weight 500
+* error handling for Post finds
+* change from :id to a more semantic name for redirects param
+* Add disqus for commenting
+* Make typography consistent and logical! (h1/h2/h3 in posts...)
+* Add basic test coverage
 
-Add basic test coverage
-
-Additional fun stuff:
-Home page highlighting edu focus and photography
-Add design touches... ok, friggin redesign everything.
-
+XXX add flash close button javascript function
 XXX Add a "sort" query string scope so, for instance, I can ask for the moto trip posts but in chron order.
 XXX redirects from Modernwanderlust.com
 XXX a sitemap for easy SEO indexing
@@ -32,7 +31,6 @@ XXX Make <p> tags inside lists not explode the font size... go to rems?  Anythin
 XXX Fix BG color to off white
 XXX Make <pre> tags work and not overlap with <code> tags! (follow TOP lead... spacings, font color, the works)
 XXX Make <em> tags work!
-
 Roadmap:
 XXX Posts
 XXX Post creation interface
@@ -54,11 +52,11 @@ Redesign:
   XXX Remove Bootstrap
   XXX Fix dates
   XXX Have previews for posts on index page
-  Contact Page
-  About Page
-  Typography
-  Hide edit/new buttons better when I'm logged in.
-  Fix flash now that bootstrap isn't there.
+  XXX Contact Page
+  XXX About Page
+  XXX Typography
+  XXX Hide edit/new buttons better when I'm logged in.
+  XXX Fix flash now that bootstrap isn't there.
 Refactor:
   XXX remove puts'
   XXX clean up timestamps on _post partials
