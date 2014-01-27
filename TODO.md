@@ -12,6 +12,7 @@ Unnecessarily nit-picky fixes and tweaks:
 * change from :id to a more semantic name for redirects param
 * Add disqus for commenting
 * Add basic test coverage
+* Add an overflow-scroll to pre elements
 
 XXX Make typography consistent and logical! (h1/h2/h3 in posts...)
 XXX About Page: I can usually be found hiking biking geeking or trying out new things or something like that
