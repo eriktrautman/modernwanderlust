@@ -71,7 +71,7 @@ $(function() {
   $slideNextNav = $slideshow.find('#slideshow-next');
   $activeNavItem = $slideshow.find('#active-nav-item');
   slideWidth = $('#slideshow').width();
-  slideTimeoutDuration = 5000;
+  slideTimeoutDuration = 8000;
   navItems = $('.nav-item');
   navWidth = navItems.width();
   
