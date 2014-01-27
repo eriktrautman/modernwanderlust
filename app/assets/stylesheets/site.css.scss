@@ -324,13 +324,14 @@ pre > code{
 
 #recent-posts{
   color: #aaa ;
+  max-width: $text_box_width;
+  margin: 2.5em auto;
+  text-align: center;
 
   li{
     list-style: none;
   }
   
-  text-align: center;
-  margin: 2.5em 0;
 
   h2{
     margin: .5em 0;
