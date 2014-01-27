@@ -97,6 +97,19 @@
       right: 0;
       border-left-color: #fff;
     }
+    #slideshow-nav{
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      width: 100%;
+      .nav-item{
+        display: inline-block;
+        text-decoration: none;
+        text-color: black;
+        width: 20%;
+        font-size: 40px;
+      }
+    }
     .slide img{
       height: 100%;
       width: 100%;

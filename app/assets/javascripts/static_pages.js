@@ -1,23 +1,25 @@
 // Based on the example provided at http://coding.smashingmagazine.com/2011/06/16/five-useful-interactive-css-jquery-techniques-deconstruted/
 $(function() {
   function changeSlide( newSlide ) {
-    console.log("CHANGING SLIDE!! newSlide: "+newSlide+" !!!");
     // cancel any timeout
     clearTimeout( slideTimeout );
     
+    // make sure the newSlide value is not too low or high
+    if ( newSlide > maxSlide ) newSlide = 0;
+    else if ( newSlide < 0 ) newSlide = maxSlide;
+    
+    // Advance the Nav seeds
+    changeNav( newSlide );
+
     // change the currSlide value
     currSlide = newSlide;
     
-    // make sure the currSlide value is not too low or high
-    if ( currSlide > maxSlide ) currSlide = 0;
-    else if ( currSlide < 0 ) currSlide = maxSlide;
-    
-    console.log("CHANGING SLIDE!! newSlide: "+newSlide+" !!!");
 
     // animate the slide reel
     $slideReel.animate({
         left : currSlide * -slideWidth
     }, 400, 'swing', function() {
+
       // hide / show the arrows depending on which frame it's on
       if ( currSlide == 0 ) $slidePrevNav.hide();
       else $slidePrevNav.show();
@@ -29,10 +31,27 @@ $(function() {
       if ( activeSlideshow ) slideTimeout = setTimeout(nextSlide, slideTimeoutDuration);
     });
     
+
     // animate the navigation indicator
-    $activeNavItem.animate({
-      left : currSlide * 150
-    }, 400, 'swing');
+    // OBSOLETE -- Not used in this slideshow!
+    // $activeNavItem.animate({
+    //   left : currSlide * 150
+    // }, 400, 'swing');
+  }
+
+  function changeNav( newSlide ){
+
+    console.log("CURR is " + currSlide);
+    console.log("ENW is " + newSlide);
+
+    // remove the active item from the current nav
+    $(navItems[currSlide]).html("&#9675;");
+
+    // change current slide
+    // currSlide = newSlide;
+
+    // add the active ID to the new nav
+    $(navItems[newSlide]).html("&#9679;");
   }
   
   function nextSlide() {
@@ -51,6 +70,8 @@ $(function() {
   $activeNavItem = $slideshow.find('#active-nav-item');
   slideWidth = $('#slideshow').width();
   slideTimeoutDuration = 3000;
+  navItems = $('.nav-item');
+  navWidth = navItems.width();
   
   // set navigation click events
   
