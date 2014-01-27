@@ -13,6 +13,7 @@ Unnecessarily nit-picky fixes and tweaks:
 * Add disqus for commenting
 * Add basic test coverage
 * Add an overflow-scroll to pre elements
+* Set intelligent breakpoints for home page
 
 XXX Make typography consistent and logical! (h1/h2/h3 in posts...)
 XXX About Page: I can usually be found hiking biking geeking or trying out new things or something like that

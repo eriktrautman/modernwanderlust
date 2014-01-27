@@ -54,7 +54,7 @@
       box-sizing:content-box;
       -moz-box-sizing:content-box;
       -webkit-box-sizing:content-box;
-      margin: 1rem 1rem 1rem 0;
+      margin: 1rem 1rem 3rem 0;
     }
     #slideshow{
       height: 330px;
@@ -174,7 +174,12 @@
 
   #blog-preview{
     .post-preview{
-      // font-size: 55%;
+    }
+    .post{
+      padding: 6em;
+      border: 1px solid $off_white;
+      position: relative;
+      font-size: 60%;
     }
   }
 
