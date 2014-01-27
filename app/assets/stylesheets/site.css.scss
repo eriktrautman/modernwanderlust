@@ -132,7 +132,7 @@ pre > code{
 #topnav{
   margin: auto;
   text-align: center;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid $off_white;
   padding: .5em 0 .5em 0;
   text-transform: uppercase;
 
@@ -158,11 +158,12 @@ pre > code{
   }
   a{
     text-decoration: none;
-    color: #333;
+    color: $vlight_gray;
     margin: 0px;
   }
   .active{
-    font-weight: 500;
+    // font-weight: 500;
+    color: $mid_gray;
   }
 }
 @media(max-width: 800px){
@@ -443,11 +444,11 @@ pre > code{
 
 #footer{
   text-align: center;
-  color: #aaa;
+  color: $vlight_gray;
   font-style: italic;
   padding: 1em 0;
   margin-top: 4em;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid $off_white;
 }
 .post-form{
   input{
