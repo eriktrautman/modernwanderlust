@@ -6,16 +6,16 @@ Slideshow: http://paulmason.name/item/simple-jquery-carousel-slider-tutorial
 Slideshow2: http://coding.smashingmagazine.com/2011/06/16/five-useful-interactive-css-jquery-techniques-deconstruted/
 
 * Home page highlighting edu focus and photography
-* Put titlebar above nav
 
 Unnecessarily nit-picky fixes and tweaks:
-* About Page: I can usually be found hiking biking geeking or trying out new things or something like that
 * error handling for Post finds
 * change from :id to a more semantic name for redirects param
 * Add disqus for commenting
-* Make typography consistent and logical! (h1/h2/h3 in posts...)
 * Add basic test coverage
 
+XXX Make typography consistent and logical! (h1/h2/h3 in posts...)
+XXX About Page: I can usually be found hiking biking geeking or trying out new things or something like that
+NOPE Put titlebar above nav NOPE
 XXX Widen out the blog and fix the typography issues
 XXX Fix width issues for about pages
 XXX H4 tags need to be weight 500
