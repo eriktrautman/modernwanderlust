@@ -15,6 +15,12 @@ Unnecessarily nit-picky fixes and tweaks:
 * Add an overflow-scroll to pre elements
 * Set intelligent breakpoints for home page
 
+## PHOTOGRAPHY PORTFOLIO
+
+* Create new DB items for each photo with metadata attached and a link to the photo's URL on S3
+* Prooobably want to implement some sort of S3 uploading functionality here...
+* Look to 500px for inspiration.  Giant main photo, ability to locate other photos.  Store albums?  At least have tagging available.
+
 XXX Make typography consistent and logical! (h1/h2/h3 in posts...)
 XXX About Page: I can usually be found hiking biking geeking or trying out new things or something like that
 NOPE Put titlebar above nav NOPE
