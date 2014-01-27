@@ -7,7 +7,6 @@ Slideshow2: http://coding.smashingmagazine.com/2011/06/16/five-useful-interactiv
 
 * Home page highlighting edu focus and photography
 * Put titlebar above nav
-* Widen out the blog and fix the typography issues
 
 Unnecessarily nit-picky fixes and tweaks:
 * About Page: I can usually be found hiking biking geeking or trying out new things or something like that
@@ -17,6 +16,8 @@ Unnecessarily nit-picky fixes and tweaks:
 * Make typography consistent and logical! (h1/h2/h3 in posts...)
 * Add basic test coverage
 
+XXX Widen out the blog and fix the typography issues
+XXX Fix width issues for about pages
 XXX H4 tags need to be weight 500
 XXX Title sucks.  Fix it.
 XXX add flash close button javascript function

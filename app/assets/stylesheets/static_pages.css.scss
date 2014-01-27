@@ -5,10 +5,11 @@
 
 @import "colors";
 @import "mixins";
+@import "variables";
 
 #home-page{
 
-  font-family: 'Lato', sans-serif;
+  font-family: $main-font-family;
   
   p{
     color: $mid_gray;
@@ -87,7 +88,9 @@
   }
 
   #blog-preview{
-
+    .post-preview{
+      // font-size: 55%;
+    }
   }
 
   #work-preview{

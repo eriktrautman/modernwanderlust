@@ -1,6 +1,7 @@
 
 @import "colors";
 @import "mixins";
+@import "variables";
 
 html{
   font-size: 85%;
@@ -8,7 +9,7 @@ html{
 
 body{
   line-height: 1.5em;
-  font-family: 'Helvetica Neue', HelveticaNeue, Helvetica, sans-serif !important;
+  font-family: $main-font-family;
   color: $text_color !important;
   font-weight: 300 !important;
   line-height: 125% !important;
@@ -18,30 +19,30 @@ body{
 
 /* FONT SCALE */
 p{
-  font-size: 1.5rem;
+  font-size: 1.35rem;
   line-height: 1.75em;
   margin: 1.5em 0;
 }
 h4{
   font-size: 1.75rem;
   line-height: 1.5em;
-  font-weight: 400;
+  font-weight: 300;
   margin: 1em 0;
 }
 h3{
   font-size: 2rem;
   line-height: 1.5em;
-  font-weight: 500;
+  font-weight: 300;
   margin: 1em 0;
 }
 h2{
   font-size: 2.5rem;
   line-height: 1.5em;
-  font-weight: bold;
+  font-weight: 400;
   margin: 1em 0;
 }
 h1{
-  font-size: 3rem;
+  font-size: 3.25rem;
   line-height: 1.25em;
   font-weight: bold;
   margin: 1em 0;
@@ -86,8 +87,8 @@ code{
   padding: 2px 4px;
 }
 pre > code{
-  font-size: 1.25rem;
-  line-height: 1.5em;
+  font-size: 1.5rem;
+  line-height: 1.75em;
   border: none;
 }
 .clearfix{
@@ -110,7 +111,7 @@ pre > code{
     font-weight: 200;
     // font-family: 'Adobe Garamond Pro', Garamond, Palatino, 'Palatino Linotype', serif;
     color: #111;
-    margin: 0em; 
+    margin: 0em;
   }
 }
 
@@ -169,7 +170,7 @@ pre > code{
 .admin-links{
   display: block;
   position: absolute;
-  width: 47em;
+  width: 56em;
   margin-top: -2em;
   padding: 0 1em;
   .new-post{
@@ -183,7 +184,7 @@ pre > code{
 }
 
 .arrow{
-  font-size: 3rem;
+  font-size: 4rem;
   text-align: center;
   width: 1.25em;
   height: 1.25em;
@@ -235,15 +236,21 @@ pre > code{
 
 .post{
 
-  margin: 4em 0 3em 0;
+  margin: 4em auto 3em auto;
   position: relative;
+  max-width: $text-box-width;
+  font-family: $blog-font-family;
 
   p+h2, p+h3, p+h4, p+h5, ul+h2, ul+h3, ul+h4, ul+h5, ol+h2, ol+h3, ol+h4, ol+h5{
     margin-top: 1.5em;
   }
 
+  h1{
+    font-weight: 400;
+  }
+
   h2{
-    margin: 1em -1em 1em -1em;
+    // margin: 1em -1em 1em -1em;
   }
 
   ol,ul{
@@ -254,8 +261,7 @@ pre > code{
   }
 
   .post-title{
-    max-width: 50em;
-    margin: 0 auto 4em auto;
+    margin: 0 auto 5em auto;
     text-align: center;
     position: relative;
     h1{
@@ -280,9 +286,8 @@ pre > code{
     border-bottom: 2px solid #ccc;
   }
   .post-body{
-    max-width: 42em;
+    max-width: 52em;
     margin: 1em auto;
-    // font-size: 16px;
   }
   p.read-more{
     text-align: center;
@@ -450,7 +455,7 @@ pre > code{
 }
 #about, #contact, #archives{
   margin: 4em auto 6em auto;
-  max-width: 42em;
+  max-width: $text-box-width;
 
   .title{
     text-align: center; 
