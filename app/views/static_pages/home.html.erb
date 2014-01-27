@@ -11,33 +11,54 @@
     </div>
 
     <div id="top-content">
-      <div id="photo-carousel-container">
-        <div class="carousel">
-<!--           <div class="img-wrapper">
-            <a href="#"><img src="https://modernwanderlust.s3.amazonaws.com/posts/New%20England%20and%20Upstate%20NY/20120927%20lighthouse-small.jpg" class="carousel-img"></a>
-          </div>
-          <div class="img-wrapper">
-            <a href="#"><img src="https://modernwanderlust.s3.amazonaws.com/posts/Arches%20and%20Canyonlands%20National%20Parks/20120903%20night-arch-small.jpg" class="carousel-img"></a>
-          </div>
-          <div class="img-wrapper">
-            <a href="#"><img src="https://modernwanderlust.s3.amazonaws.com/posts/Yosemite%20Death%20Valley%20Vegas/20120827%20yosemite-tree-small.jpg" class="carousel-img"></a>
-          </div> -->
-          <div class="img-wrapper">
+      <div id="slideshow">
+        <div id="slideshow-reel">
+          <div class="slide">
             <a href="#">
               <img src="http://modernwanderlust.s3.amazonaws.com/posts/The%20Tetons/20120812%20teton-triumph.jpg" class="carousel-img">
               <div class="caption">
                 <ul>
-                  <!-- <li>Triumph</li> -->
                   <li>Grand Tetons National Park</li>
-                  <li>July 2012</li>
+                  <li>August 2012</li>
                   <li>24mm &nbsp; f11 &nbsp; 1/800s &nbsp; ISO800</li>
                 </ul>
               </div>
             </a>
           </div>
-          
+          <div class="slide">
+            <a href="#">
+              <img src="https://modernwanderlust.s3.amazonaws.com/posts/Arches%20and%20Canyonlands%20National%20Parks/20120903%20night-arch-small.jpg" class="carousel-img">
+              <div class="caption">
+                <ul>
+                  <li>Arches National Park</li>
+                  <li>September 2012</li>
+                  <li>35mm &nbsp; f2.8 &nbsp; 5s &nbsp; ISO6400</li>
+                </ul>
+              </div>
+            </a>
+          </div>
+          <div class="slide">
+            <a href="#">
+              <img src="https://modernwanderlust.s3.amazonaws.com/posts/New%20England%20and%20Upstate%20NY/20120927%20lighthouse-small.jpg" class="carousel-img">
+              <div class="caption">
+                <ul>
+                  <li>Portland Head Light</li>
+                  <li>September 2012</li>
+                  <li>24mm &nbsp; f20 &nbsp; 1/60s &nbsp; ISO100</li>
+                </ul>
+              </div>
+            </a>
+          </div>
         </div>
+        <a href="#" id="slideshow-prev"></a>
+        <a href="#" id="slideshow-next"></a>
       </div>
+
+          <!-- <div class="slide">
+            <a href="#">
+              <img src="https://modernwanderlust.s3.amazonaws.com/posts/Yosemite%20Death%20Valley%20Vegas/20120827%20yosemite-tree-small.jpg" class="carousel-img">
+            </a>
+          </div> -->
 
       <div id="main-description">
         <p>
@@ -121,7 +142,7 @@
     console.log("HIHIHI");
     carousel = $("#carousel");
     // carousel_width = 0;
-    // $(".img-wrapper").each(function(i,img){
+    // $(".slide").each(function(i,img){
     //   width = $(img).width();
     //   console.log($(img));
     //   console.log(width);
