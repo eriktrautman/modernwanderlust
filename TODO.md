@@ -14,6 +14,7 @@ Unnecessarily nit-picky fixes and tweaks:
 * Add basic test coverage
 * Add an overflow-scroll to pre elements
 * Set intelligent breakpoints for home page
+* Sitemap for crawlability
 
 ## PHOTOGRAPHY PORTFOLIO
 
