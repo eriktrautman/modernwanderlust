@@ -3,11 +3,8 @@
     
     <div id="headline">
       <h1>
-        From the Mind of Erik Trautman
+        Startups, Code and Creativity
       </h1>
-      <h2>
-        A healthy blend of startups, code and creativity.
-      </h2>
     </div>
 
     <div id="top-content">
@@ -136,22 +133,12 @@
       </div>
       <div id="main-description">
         <p>
-          Hi! My name is Erik Trautman and I live at the intersection of big ideas and rigorous execution.  
-        </p>
-        <p>   
-          I hike a lot, take tons of photos, and consume knowledge like it's my job.  I'm interested in how the lessons learned in the consumer web can be used to transform online education and how the arc of technology can drive improvements in health and happiness via the quantified self.
+          Hi!  My name is Erik Trautman and I want to transform online education by leveraging the power of small groups in a way that's never been done before.
         </p>
         <p>
-          I'm currently building <a href="http://theodinproject.com" title="The Odin Project">The Odin Project</a> to provide a scalable solution for people around the world to realize their dreams of building great web applications.  
+          I founded <a href="http://www.vikingcodeschool.com">Viking Code School</a>, the first fully online coding bootcamp where you can work directly with other students in your cohort and still keep your day job.  This follows my work on <a href="http://theodinproject.com" title="The Odin Project">The Odin Project</a>, a free and open-source curriculum for learning web development.  
         </p>
-        <p>
-          I blog regularly and both my artistic and professional portfolios can be viewed below.
-        </p>
-        <div class="links">
-          <a href="<%= blog_path %>" title="Blog">Blog</a>
-          <a href="#" title="Photography">Photography</a>
-          <a href="#" title="Portfolio">Portfolio</a>
-        </div>
+
       </div>
     </div>
 
@@ -159,9 +146,7 @@
 
     <div id="blog-preview">
       <h2>Writing</h2>
-      <p>
-        I blog regularly about the wide range of topics that interest me, from business and startups and product management to personal development and travel.
-      </p>
+
       <div class="post-preview">
         <%= render :partial => "posts/post", :locals => { :post => Post.last, :show => false } %>
       </div>
@@ -202,33 +187,11 @@
         </div>
       </div>
     </div>
-
-    <h2 class="thanks">
-      Thanks for stopping by!
-    </h2>
-
   </div>
 </div>
 
 <script>
   $(function() {
-    console.log("HIHIHI");
     carousel = $("#carousel");
-    // carousel_width = 0;
-    // $(".slide").each(function(i,img){
-    //   width = $(img).width();
-    //   console.log($(img));
-    //   console.log(width);
-    //   carousel_width += width+5;
-    // });
-    // carousel.width(carousel_width);
-    // console.log(carousel_width);
-    // film_roll = new FilmRoll({
-    //      container: '#film_roll',
-    //      prev: '#left_button_id',
-    //      next: '#right_button_id',
-    //      height: 400,
-    //      // start_height: 400px;
-    //    });
   })
 </script>
