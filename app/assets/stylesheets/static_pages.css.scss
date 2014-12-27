@@ -14,6 +14,9 @@
   p{
     color: $mid_gray;
   }
+  h1,h2{
+    text-align: center;
+  }
   h2{
     font-size: 3rem;
   }
@@ -160,7 +163,7 @@
         margin-top: 0;
       }
       p{
-        font-size: 1rem;
+        font-size: 1.25rem;
       }
       .links{
         a{
