@@ -1,0 +1,9 @@
+<div id="blog-preview">
+  <h2>Writing</h2>
+  <p>
+    I blog regularly about the wide range of topics that interest me, from business and startups and product management to personal development and travel.
+  </p>
+  <div class="post-preview">
+    <%= render :partial => "posts/post", :locals => { :post => Post.last, :show => false } %>
+  </div>
+</div>
