@@ -110,6 +110,9 @@ pre > code{
   margin: auto; 
 }
 
+
+
+
 #titlebar{
   text-align: center;
   h1{
@@ -121,6 +124,8 @@ pre > code{
     margin: 0em;
   }
 }
+
+
 
 #tagline{
   h2{
@@ -175,6 +180,8 @@ pre > code{
   }
 }
 
+
+
 .admin-links{
   display: block;
   position: absolute;
@@ -191,6 +198,8 @@ pre > code{
   }
 }
 
+
+
 .arrow{
   font-size: 4rem;
   text-align: center;
@@ -201,6 +210,8 @@ pre > code{
   top: 0em;
   @include border-radius(1em);
 }
+
+
 .hover-arrow{
   &:hover{
     border-color: $arrow_highlight_color;
@@ -210,18 +221,26 @@ pre > code{
     }
   }
 }
+
+
 .disabled-arrow{
   border-color: $arrow_disabled_color!important;
   .inner-arrow{
     border-color: $arrow_disabled_color!important;
   }
 }
+
+
 .prev-arrow{
   left: -2.5em; 
 }
+
+
 .next-arrow{
   right: -2.5em;
 }
+
+
 .inner-arrow{
   height: .5em;
   width: .5em; 
@@ -230,17 +249,23 @@ pre > code{
   position: absolute;
   top: .25em;
 }
+
+
 .inner-prev-arrow{
   @include rotate(-45deg);
   left: .4em; 
 }
+
+
 .inner-next-arrow{
   @include rotate(135deg);
   right: .4em; 
 }
 
+
 #content{
 }
+
 
 .post{
 
@@ -325,6 +350,8 @@ pre > code{
   }
 }
 
+
+
 #recent-posts{
   color: #aaa ;
   max-width: $text_box_width;
@@ -353,11 +380,14 @@ pre > code{
 }
 
 
+
 #photo-box{
   .main-photo{
     padding: 1.25em;
   }
 }
+
+
 
 .archive-category{
   float: left;
@@ -370,6 +400,8 @@ pre > code{
     width: 90%;
   }
 }
+
+
 
 .tag-links, .archive-links{  
   margin: 2.5em 0;
@@ -414,6 +446,7 @@ pre > code{
 }
 
 
+
 #pagination-area{
   text-align: center;
   margin: 1em 0;
@@ -436,6 +469,8 @@ pre > code{
   }
 }
 
+
+
 .archive-link{
   text-align: center;
   font-size: 1rem;
@@ -443,6 +478,8 @@ pre > code{
     text-decoration: none;
   }
 }
+
+
 
 #footer{
   text-align: center;
@@ -452,6 +489,9 @@ pre > code{
   margin-top: 4em;
   border-top: 1px solid $off_white;
 }
+
+
+
 .post-form{
   input{
     max-width: 100%;
@@ -462,6 +502,9 @@ pre > code{
     height: 15em;
   }
 }
+
+
+
 #about, #contact, #archives{
   margin: 4em auto 6em auto;
   max-width: $text_box_width;
@@ -477,6 +520,12 @@ pre > code{
     font-size: 1.5em;
     margin: 2em 0;
     padding-left: 1em;
+  }
+
+  .profile-photo {
+    float: left;
+    padding-right: 24px;
+    padding-top: 10px;
   }
 }
 
