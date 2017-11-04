@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:index, :show, :archives]
-  before_filter :set_blog_flag
+  before_action :authenticate_admin!, :except => [:index, :show, :archives]
+  before_action :set_blog_flag
 
   def index
     if tag_filter_params[:tag_filter]
