@@ -110,15 +110,12 @@ Rails.application.configure do
     :path => "/:class/:id/:style/:filename",
     # ---------------------
 
-    # NOT SURE WHAT THIS WAS, GOT FROM INTERNET
-    # :s3_host_alias => 's3-us-west-2.amazonaws.com/nutilesblog',
-
     # Normal Credentials
     :s3_credentials => {
 
       # put your host name here if needed
-      :s3_host_name => "s3-us-west-2.amazonaws.com",
-      :s3_region => "us-west-2",
+      :s3_host_name => "s3-us-west-1.amazonaws.com",
+      :s3_region => "us-west-1",
 
       # NOTE: these lines are changed to use secrets.yml
       # from the examples (which use ENV vars instead)
