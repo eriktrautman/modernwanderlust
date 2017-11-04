@@ -3,35 +3,35 @@ ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails',                    '5.1.4'  # Nov 2017
-gem 'pg'
-gem 'simple_form'
-gem 'will_paginate-bootstrap'
+gem 'pg',                       '~> 0.21.0'
+gem 'simple_form',              '~> 3.5.0'
+gem 'will_paginate-bootstrap',  '~> 1.0.1'
 gem 'rails_12factor'  # for heroku asset compilation
-gem 'devise' # for authentication of the admin user
-gem 'friendly_id',               '>= 5.0.0.rc2' # for the post title slugs
-gem 'redcarpet' # for markdown rendering
-gem 'newrelic_rpm' # for newrelic uptime tracking and no-idle pinging
+gem 'devise',                   '~> 4.3.0' # for authentication of the admin user
+gem 'friendly_id',              '>= 5.0.0.rc2' # for the post title slugs
+gem 'redcarpet',                '~> 3.4.0' # for markdown rendering
+gem 'newrelic_rpm',             '~> 4.5.0.337' # for newrelic uptime tracking and no-idle pinging
 
 # Use SCSS for stylesheets
-gem 'sass-rails'
+gem 'sass-rails',               '~> 5.0.6'
 
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier'
+gem 'uglifier',                 '~> 3.2.0'
 
 # Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails'
+gem 'coffee-rails',             '~> 4.2.2'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
-gem 'jquery-rails'
+gem 'jquery-rails',             '~> 4.3.1'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+gem 'turbolinks',               '~> 5.0.1'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder'
+gem 'jbuilder',                 '~> 2.7.0'
 
 group :development do
   gem 'listen'

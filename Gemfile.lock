@@ -222,24 +222,24 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   capybara
-  coffee-rails
-  devise
+  coffee-rails (~> 4.2.2)
+  devise (~> 4.3.0)
   friendly_id (>= 5.0.0.rc2)
-  jbuilder
-  jquery-rails
+  jbuilder (~> 2.7.0)
+  jquery-rails (~> 4.3.1)
   listen
-  newrelic_rpm
-  pg
+  newrelic_rpm (~> 4.5.0.337)
+  pg (~> 0.21.0)
   rails (= 5.1.4)
   rails_12factor
-  redcarpet
+  redcarpet (~> 3.4.0)
   rspec-rails
-  sass-rails
+  sass-rails (~> 5.0.6)
   sdoc
-  simple_form
-  turbolinks
-  uglifier
-  will_paginate-bootstrap
+  simple_form (~> 3.5.0)
+  turbolinks (~> 5.0.1)
+  uglifier (~> 3.2.0)
+  will_paginate-bootstrap (~> 1.0.1)
 
 RUBY VERSION
    ruby 2.3.3p222
