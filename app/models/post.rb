@@ -12,7 +12,7 @@ class Post < ActiveRecord::Base
   scope :order_chron, -> { order('posts.created_at ASC') }
 
   # Why does will_paginate blow up if the
-  # order clause uses a hash? 
+  # order clause uses a hash?
   # Hell if I know.
   def self.with_tag(tag)
     Post.includes(:tags).where(['tags.name = ?', tag]).references(:tags).order("posts.created_at desc")
@@ -29,11 +29,11 @@ class Post < ActiveRecord::Base
     Post.group("date_trunc('month',created_at)").count
   end
 
-  # Use the query string to 
+  # Use the query string to
   # filter the index by year and month individually
   def self.by_archive_date(month, year)
     start = Time.new(year,month)
-    finish = start + 1.month 
+    finish = start + 1.month
     Post.where(["created_at >= ? AND created_at < ?", start, finish]).order(:created_at => :desc)
   end
 
@@ -43,7 +43,7 @@ class Post < ActiveRecord::Base
   def replace_or_build_tags(tags_string)
     tags = tags_string.split(",")
     self.tags = tags.map do |tag|
-      tag = Tag.find_or_create_by_name(tag.strip)
+      tag = Tag.find_or_create_by(name: tag.strip)
     end
   end
 

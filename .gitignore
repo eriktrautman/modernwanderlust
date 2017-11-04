@@ -17,3 +17,5 @@
 
 # Ignore database dump files
 *.dump
+# Ignore application configuration
+/config/application.yml

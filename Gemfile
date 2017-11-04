@@ -11,10 +11,12 @@ gem 'devise',                   '~> 4.3.0' # for authentication of the admin use
 gem 'friendly_id',              '>= 5.0.0.rc2' # for the post title slugs
 gem 'redcarpet',                '~> 3.4.0' # for markdown rendering
 gem 'newrelic_rpm',             '~> 4.5.0.337' # for newrelic uptime tracking and no-idle pinging
+gem 'figaro'
 
 # The blog post creation editor.  Need the Github version (slow to upversion gem)
 gem 'ckeditor', github: 'galetahub/ckeditor'
 gem 'paperclip'
+gem 'aws-sdk',                  '~> 2.3.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails',               '~> 5.0.6'
