@@ -6,5 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+Post.destroy_all
 Post.create!(:title=>"foo", :body=>"bar", :slug=>"foobar")
+Admin.create!(email: "admin@example.com", password:"foobarfoobar")

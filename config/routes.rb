@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  # The file editor engine for our blog post creation
+  mount Ckeditor::Engine => '/ckeditor'
 
   devise_for :admins do
   end

@@ -1,9 +1,30 @@
 <div class="post-form">
+
+  <!-- <%= form_for post do |f| %>
+    <%= f.label :title do %>
+      Title
+      <%= f.text_field :title %>
+    <% end %>
+
+    <%= f.label :created_at do %>
+      Created at
+      <%= f.text_field :created_at %>
+    <% end %>
+
+    <%= f.label :body do %>
+      Body
+      <%= f.cktext_area :body, value: 'Default value', id: 'sometext',
+                        ckeditor: { uiColor: '#AADC6E', toolbar: 'mini' } %>
+    <% end %>
+  <% end %> -->
+
+<br><br><br><hr><br><br><br>
+
   <%= simple_form_for post do |f| %>
 
     <%= f.input :title %>
     <%= f.input :created_at, :as => :string %>
-    <%= f.input :body %>
+    <%= f.input :body, as: :ckeditor, input_html: { ckeditor: { uiColor: "#AADC6E"} } %>
     <%= f.input :md, :label => "Render with Mardown?" %>
     <br>
     <label for="tags">
