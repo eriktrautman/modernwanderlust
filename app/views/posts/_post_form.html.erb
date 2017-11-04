@@ -9,17 +9,13 @@
 
     <%# CKEditor hates how we stored markdown in the DB before... %>
     <% if post.md %>
-      NOTE: CKEditor hates markdown (it stores posts as HTML) so you can't use it for this one... <br>
-      Uncheck the "Render with Markdown?" checkbox to get CKEditor but note that it'll yak on trying <br>
-      to render .md files.<br><br>
-      
-      <%= f.input :body %>
-    <% else %>
-      <%= f.input :body, as: :ckeditor, input_html: { ckeditor: { uiColor: "#AADC6E", height: 600} } %>
+      <strong>WARNING:</strong> CKEditor stores posts as HTML.  Since you're editing a post that has been flagged as Markdown, you'll need to cut the content, enable the Markdown portion of the editor, paste the content there, make your edits, then go back to the main editor, where it will be rendered as HTML.  If you don't, all the markdown you see now will be escaped and saved directly... YUCK!
     <% end %>
 
+    <%= f.input :body, as: :ckeditor, input_html: { ckeditor: { uiColor: "#AADC6E", height: 600} } %>
+
     <br>
-    <%= f.input :md, :label => "Render with Mardown?" %>
+    <%= f.input :md, :label => "Render with Mardown? (use FALSE if unsure)" %>
     <br>
     <label for="tags">
       Enter Tags (separated by commas)
