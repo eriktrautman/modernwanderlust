@@ -3,21 +3,21 @@
 <head>
   <title>Erik Trautman's world of startups, creativity and code</title>
   <meta name="Description" CONTENT="The personal website of Erik Trautman -- A happy intersection of startups, design, and web development with a healthy dose of random and a touch of creativity.">
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 
   <!-- Google web fonts -->
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,300italic,400,700' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700,300italic' rel='stylesheet' type='text/css'>
-  
+
 </head>
 <body data-no-turbolink = "true" >
 
   <%= render "shared/topnav" %>
-  
+
   <div class="container">
-    
+
     <%= bootstrap_flash %>
 
     <div id="content">
