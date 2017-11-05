@@ -1,0 +1,26 @@
+<div class="post-preview-mini">
+
+  <%= link_to post do %>
+    <div class = "square-preview-wrapper">
+      <% if post.header_image.exists? %>
+        <%= image_tag paperclip_url_builder( post.header_image.path(:square)), size: "200x200" %>
+      <% else %>
+        <%= image_tag paperclip_url_builder("/placeholders/placeholder-square.png"), size: "200x200" %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <div class="post-title-wrapper">
+
+    <h1>
+      <%= link_to "#{ post.title }", post %>
+    </h1>
+
+
+    <div class="post-preview-date">
+      <time datetime="<%=post.created_at%>"><%= post.created_at.strftime("%B %-d, %Y") %></time>
+    </div>
+
+  </div>
+
+</div>

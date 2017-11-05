@@ -207,40 +207,6 @@ pre > code{
 
 
 
-#content{
-}
-
-
-
-
-#recent-posts{
-  color: #aaa ;
-  max-width: $text_box_width;
-  margin: 2.5em auto;
-  text-align: center;
-
-  li{
-    list-style: none;
-  }
-
-
-  h2{
-    margin: .5em 0;
-  }
-
-  .recent-post{
-    width: 40%;
-    text-align: center;
-    padding: 1em 2em;
-    height: 4em;
-    float: left;
-    li{
-      line-height: 1.25em;
-    }
-  }
-}
-
-
 
 #photo-box{
   .main-photo{
@@ -366,14 +332,30 @@ pre > code{
 
 
 
+.page-title-container{
+  max-width: $text_box_width;
+  margin: 40px auto 30px;
+}
+h1.page-title{
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0 0 20px;
+}
+p.page-subhead{
+  font-size: 18px;
+  margin: 0;
+}
+
+
+
 #about, #contact, #archives{
-  margin: 4em auto 6em auto;
+  margin: 0 auto 6em auto;
   max-width: $text_box_width;
 
-  .title{
-    text-align: center;
-    margin: 4em auto;
-  }
+  // .title{
+  //   text-align: center;
+  //   margin: 4em auto;
+  // }
   li{
     line-height: 2em;
   }

@@ -1,11 +1,9 @@
-<div id="recent-posts">
+<div class="recent-posts">
   <h2>Recent Posts</h2>
-  <ul>
-    <% Post.most_recent(4).each do |post| %>
-      <div class="recent-post">
-        <li><%= link_to "#{post.title}", post %></li>
-      </div>
+  <div class="post-preview-wrapper">
+    <% Post.most_recent(6).each do |post| %>
+      <%= render partial: "shared/post_preview_mini", locals: {post: post} %>
     <% end %>
-  </ul>
+  </div>
   <div id="clearfix"></div>
 </div>
