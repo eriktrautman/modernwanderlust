@@ -5,6 +5,14 @@ class Post < ActiveRecord::Base
   validates_presence_of [:title, :body, :slug]
   validates :title, :uniqueness => { :message => "This title has been used before, choose another" }
 
+  has_attached_file :header_image, styles: {
+              banner: '720x240#',   # used in large indexes
+              thumb: '118x100#',    # used in the file browser window
+              square: '400x400#',   # used in compressed indexes
+              squarelg: '800x800#',
+            }
+  validates_attachment_content_type :header_image, content_type: /\Aimage\/.*\z/
+
   has_many :taggings
   has_many :tags, :through => :taggings
 

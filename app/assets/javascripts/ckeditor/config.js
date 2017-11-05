@@ -79,6 +79,10 @@ CKEDITOR.editorConfig = function( config )
     { name: 'insert', items: [ 'Image', 'Table', 'HorizontalRule', 'SpecialChar' ] }
   ];
 
+  config.toolbar_image = [
+    { name: 'insert', items: [ 'Image' ] }
+  ]
+
   config.extraPlugins = 'markdown';
 
 };

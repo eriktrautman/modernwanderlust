@@ -46,6 +46,7 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
@@ -57,6 +58,7 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
 
+  # config.action_controller.asset_host = 'https://modernwanderlust-dev.s3.amazonaws.com'
   # Paperclip for ckeditor
   # DEVELOPMENT
   config.paperclip_defaults = {

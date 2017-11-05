@@ -50,6 +50,10 @@
     Published on <time datetime="<%=post.created_at%>"><%= post.created_at.strftime("%B %-d, %Y") %></time>
   </div>
 
+
+  <%= image_tag paperclip_url_builder( post.header_image.path(:banner)) if post.header_image.exists? %>
+
+
   <!-- render using markdown if that's specified by the post,
         which it is for all new ones, otherwise we need to
         wrap the whole post in a <p> tag or the font sizing

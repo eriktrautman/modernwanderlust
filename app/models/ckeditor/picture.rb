@@ -16,9 +16,6 @@ class Ckeditor::Picture < Ckeditor::Asset
                         content: '800>',      # The default used in the post
                         contentlg: '1600>',
                         thumb: '118x100#',    # used in the file browser window
-                        square: '400x400#',
-                        squarelg: '800x800#',
-                        banner: '720x240#',
                         # 'original' is always present and uncropped.
                     }
 

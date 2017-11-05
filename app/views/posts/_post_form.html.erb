@@ -7,6 +7,11 @@
     <%= f.input :created_at, :as => :string %>
     <br>
 
+    <%# Can't use CKEditor here :( will have to upload each time... %>
+    <%#= f.input :header_image, as: :ckeditor, input_html: { ckeditor: { toolbar: 'image' } } %>
+    <%= f.input :header_image, as: :file %>
+
+
     <%# CKEditor hates how we stored markdown in the DB before... %>
     <% if post.md %>
       <strong>WARNING:</strong> CKEditor stores posts as HTML.  Since you're editing a post that has been flagged as Markdown, you'll need to cut the content, enable the Markdown portion of the editor, paste the content there, make your edits, then go back to the main editor, where it will be rendered as HTML.  If you don't, all the markdown you see now will be escaped and saved directly... YUCK!

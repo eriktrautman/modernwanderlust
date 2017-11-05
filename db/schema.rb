@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171104230102) do
+ActiveRecord::Schema.define(version: 20171105012132) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,10 @@ ActiveRecord::Schema.define(version: 20171104230102) do
     t.datetime "updated_at"
     t.string "slug", limit: 255
     t.boolean "md", default: false
+    t.string "header_image_file_name"
+    t.string "header_image_content_type"
+    t.integer "header_image_file_size"
+    t.datetime "header_image_updated_at"
     t.index ["slug"], name: "index_posts_on_slug", unique: true
   end
 
