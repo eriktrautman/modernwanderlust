@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     elsif params[:order] == "chron"
       posts = posts.order_chron
     end
-    @posts = posts.paginate(:page => params[:page], :per_page => 5)
+    @posts = posts.paginate(:page => params[:page], :per_page => 10)
     # puts "\n\n\n NOW @POSTS IS #{@posts.inspect}!! \n\n\n"
   end
 

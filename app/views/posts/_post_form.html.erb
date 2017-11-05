@@ -9,7 +9,10 @@
 
     <%# Can't use CKEditor here :( will have to upload each time... %>
     <%#= f.input :header_image, as: :ckeditor, input_html: { ckeditor: { toolbar: 'image' } } %>
-    <%= f.input :header_image, as: :file %>
+    Header Image<br>
+    <em>Upload an image that is square or wide (it will be cropped).</em>
+    <%= f.input :header_image, as: :file, label: false %>
+    <br>
 
 
     <%# CKEditor hates how we stored markdown in the DB before... %>
