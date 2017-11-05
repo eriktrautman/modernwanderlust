@@ -18,6 +18,7 @@ class Ckeditor::Picture < Ckeditor::Asset
                         thumb: '118x100#',    # used in the file browser window
                         square: '400x400#',
                         squarelg: '800x800#',
+                        banner: '720x240#',
                         # 'original' is always present and uncropped.
                     }
 
