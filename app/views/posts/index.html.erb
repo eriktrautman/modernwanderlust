@@ -3,11 +3,21 @@
   <div class="container">
     <div id="posts">
 
+      <div class = "page-title-container">
+        <h1 class = "page-title">
+          Writing
+        </h1>
+        <p class = "page-subhead">
+          I write about everything from entrepreneurship to philosophy to personal reflections to technical guides.  View the <%= link_to "full archive here", archives_path %>.
+        </p>
+      </div>
+
+
       <!-- if there aren't posts, make sure we can create some! -->
       <% if admin_signed_in? && @posts.nil? %>
         <%= link_to "New Post", new_post_path %>
       <% end %>
-      
+
       <%= render :partial => "post", :collection => @posts, :locals => { :show => false } %>
     </div>
   </div>

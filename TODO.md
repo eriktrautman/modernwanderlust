@@ -33,3 +33,10 @@ Unnecessarily nit-picky fixes and tweaks:
 * Create new DB items for each photo with metadata attached and a link to the photo's URL on S3
 * Prooobably want to implement some sort of S3 uploading functionality here...
 * Look to 500px for inspiration.  Giant main photo, ability to locate other photos.  Store albums?  At least have tagging available.
+
+
+## SCRATCH PAD
+
+sql = "SELECT * FROM ckeditor_assets ORDER BY ckeditor_assets.created_at DESC LIMIT 1"
+result = ActiveRecord::Base.connection.execute(sql)
+result.to_a

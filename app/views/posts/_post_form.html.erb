@@ -14,7 +14,7 @@
 
     <%# CKEditor hates how we stored markdown in the DB before... %>
     <% if post.md %>
-      <strong>WARNING:</strong> CKEditor stores posts as HTML.  Since you're editing a post that has been flagged as Markdown, you'll need to cut the content, enable the Markdown portion of the editor, paste the content there, make your edits, then go back to the main editor, where it will be rendered as HTML.  If you don't, all the markdown you see now will be escaped and saved directly... YUCK!
+      <strong>WARNING:</strong> CKEditor stores posts as HTML.  Since you're editing a post that has been flagged as Markdown, <strong>YOU WILL NOT BE ABLE TO EDIT IT.</strong>  It sucks, but it's true.  There was a workaround where you could cut the content, enable the Markdown portion of the editor, paste the content there, make your edits, then go back to the main editor, where it will be rendered as HTML.  Not anymore...
     <% end %>
 
     <%= f.input :body, as: :ckeditor, input_html: { ckeditor: { uiColor: "#AADC6E", height: 600} } %>

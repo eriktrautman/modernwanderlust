@@ -1,17 +1,28 @@
 <div class="post">
   <%= render :partial => "posts/admin_links", :locals => { :post => post } %>
 
-  <div class="post-title">
+
+  <% if post.header_image.exists? && !show %>
+    <%= link_to post do %>
+      <div class = "post-banner-index">
+        <%= image_tag paperclip_url_builder( post.header_image.path(:banner)) %>
+      </div>
+    <% end %>
+  <% end %>
+
+
+
+  <div class="post-title-wrapper">
 
     <% if @post && @post.new_record? == false %>
       <% unless @prev.nil? %>
         <%= link_to @prev, :class => "left", :title => "Previous Post: #{@prev.title}" do %>
-          <div class="prev-arrow arrow hover-arrow">
-            <div class="inner-prev-arrow inner-arrow">
-            </div>
+        <div class="prev-arrow arrow hover-arrow">
+          <div class="inner-prev-arrow inner-arrow">
           </div>
+        </div>
         <% end %>
-      <% else %>
+        <% else %>
         <div class="prev-arrow arrow disabled-arrow">
           <div class="inner-prev-arrow inner-arrow">
           </div>
@@ -43,24 +54,25 @@
       <% end %>
     <% end %>
 
+    <div class="post-date">
+      Published on <time datetime="<%=post.created_at%>"><%= post.created_at.strftime("%B %-d, %Y") %></time>
+    </div>
+
   </div>
 
 
-  <div class="post-date">
-    Published on <time datetime="<%=post.created_at%>"><%= post.created_at.strftime("%B %-d, %Y") %></time>
-  </div>
 
-  <% if post.header_image.exists? %>
+  <% if post.header_image.exists? && show %>
     <div class = "post-banner">
-      <%= image_tag paperclip_url_builder( post.header_image.path(:banner)) %>
+      <%= image_tag paperclip_url_builder( post.header_image.path(:original)) %>
     </div>
   <% end %>
 
 
-  <!-- render using markdown if that's specified by the post,
+  <%# render using markdown if that's specified by the post,
         which it is for all new ones, otherwise we need to
         wrap the whole post in a <p> tag or the font sizing
-        won't work properly (it's all based on the <p> size) -->
+        won't work properly (it's all based on the <p> size) %>
   <div class="post-body">
     <% if post.md %>
       <% post_body = md(post.body) %>
@@ -68,7 +80,7 @@
         <% post_body = "<p>" + post.body + "</p>" %>
     <% end %>
 
-    <!-- If we're on the index page, render only previews -->
+    <%# If we're on the index page, render only previews %>
     <% if show %>
       <%= post_body.html_safe %>
     <% else %>
@@ -79,7 +91,7 @@
     <% end %>
   </div>
 
-  <!-- only display tags on the individual post show pages -->
+  <%# only display tags on the individual post show pages %>
   <% if show %>
     <div class="tags">
       Tags: &nbsp;

@@ -13,6 +13,20 @@
     margin: auto;
   }
 
+  .page-title-container{
+    max-width: $text_box_width;
+    margin: 40px auto 30px;
+  }
+  h1.page-title{
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 20px;
+  }
+  p.page-subhead{
+    font-size: 18px;
+    margin: 0;
+  }
+
   .post{
 
     margin: 4em auto 4em auto;
@@ -25,6 +39,10 @@
 
     p+h2, p+h3, p+h4, p+h5, ul+h2, ul+h3, ul+h4, ul+h5, ol+h2, ol+h3, ol+h4, ol+h5{
       margin-top: 1.5em;
+    }
+
+    h1>a, h2>a, h3>a, h4>a, h5>a, h6>a {
+      color: $text_color;
     }
 
     h1{
@@ -110,6 +128,8 @@
     }
 
 
+
+
     // ******* IMAGES *******
     img{
       padding: 5px 10px;
@@ -136,10 +156,29 @@
     }
 
     .post-banner {
-      width: 100%;
-      height: 220px;  // so DOM loads without jumps waiting for img
+      $extra_width: .3;
+      width: $text_box_width*(1 + $extra_width);
+      // height: $text_box_width*.75;  // so DOM loads without jumps waiting for img
+      margin-left: -$text_box_width*($extra_width/2);
+      margin-right: -$text_box_width*($extra_width/2);
+      margin-top: 1.5em;
+      margin-bottom: 1.5em;
+      // max-height: 400px;
+      overflow: hidden;
       img{
         padding: 0;
+        max-width: 100%;
+        max-height: 480px;
+      }
+    }
+
+    .post-banner-index {
+      width: $text_box_width - 4px;
+      height: 214px;  // so DOM loads without jumps waiting for img
+      margin: 1.5em 0;
+      img{
+        padding: 0;
+        border: 2px solid #666;
       }
     }
 
@@ -155,7 +194,12 @@
 
     // ********* BREAKS ********
     hr{
+      display: block;
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #eee;
       margin: .5em 0;
+      padding: 0;
     }
     .clearfix{
       clear: both;
@@ -166,8 +210,8 @@
 
 
     //******** Sections **********
-    .post-title{
-      margin: 0 auto 0.5em auto;
+    .post-title-wrapper{
+      margin: 0 auto 1.5em auto;
       // text-align: center;
       position: relative;
       h1{
@@ -184,14 +228,14 @@
       color: #aaa;
       font-size: 1em;
       line-height: 1.5em;
-      margin: 0.5em auto 2em;
+      margin: 0.5em auto 0;
       text-align: left;
       font-style: italic;
     }
 
     .post-body{
       max-width: 52em;
-      margin: 1em auto;
+      margin: 1.5em auto;
     }
 
     p.read-more{

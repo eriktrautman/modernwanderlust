@@ -7,6 +7,7 @@ class Post < ActiveRecord::Base
 
   has_attached_file :header_image, styles: {
               banner: '720x240#',   # used in large indexes
+              bannerfull: '1600x800#', # used in post headers
               thumb: '118x100#',    # used in the file browser window
               square: '400x400#',   # used in compressed indexes
               squarelg: '800x800#',
