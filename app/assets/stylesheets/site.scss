@@ -187,9 +187,9 @@ pre > code{
 .admin-links{
   display: block;
   position: absolute;
-  width: $text_box_width - 3*$font_size_base;
+  width: 100%;
   margin-top: -2em;
-  padding: 0 1em;
+  padding: 0;
   .new-post{
     display: inline-block;
   }
@@ -200,69 +200,6 @@ pre > code{
   }
 }
 
-
-
-.arrow{
-  font-size: 4rem;
-  text-align: center;
-  width: 1.25em;
-  height: 1.25em;
-  border: .2em solid $arrow_color;
-  position: absolute;
-  top: 0em;
-  @include border-radius(1em);
-}
-
-
-.hover-arrow{
-  &:hover{
-    border-color: $arrow_highlight_color;
-    cursor: pointer;
-    .inner-arrow{
-      border-color: $arrow_highlight_color;
-    }
-  }
-}
-
-
-.disabled-arrow{
-  border-color: $arrow_disabled_color!important;
-  .inner-arrow{
-    border-color: $arrow_disabled_color!important;
-  }
-}
-
-
-.prev-arrow{
-  left: -2.5em;
-}
-
-
-.next-arrow{
-  right: -2.5em;
-}
-
-
-.inner-arrow{
-  height: .5em;
-  width: .5em;
-  border-left: .2em solid $arrow_color;
-  border-top: .2em solid $arrow_color;
-  position: absolute;
-  top: .25em;
-}
-
-
-.inner-prev-arrow{
-  @include rotate(-45deg);
-  left: .4em;
-}
-
-
-.inner-next-arrow{
-  @include rotate(135deg);
-  right: .4em;
-}
 
 
 #content{

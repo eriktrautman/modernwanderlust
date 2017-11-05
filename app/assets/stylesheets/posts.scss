@@ -15,7 +15,7 @@
 
   .post{
 
-    margin: 6em auto 4em auto;
+    margin: 4em auto 4em auto;
     position: relative;
     max-width: $text_box_width;
     font-family: $blog_font_family;
@@ -37,7 +37,7 @@
     h2{
       font-size: 1.65em; //2.5em;
       line-height: 1.5em;
-      font-weight: 400;
+      font-weight: 500;
       margin: 1em 0;
     }
     h3{
@@ -115,21 +115,32 @@
       padding: .25em .5em;
       max-width: 100%;  // PROBLEM: In-post images can get warped due to inline styles!
       // height: auto;
-    }
-    img.center{
+      display: block;
       margin-left: auto;
       margin-right: auto;
+      &.center{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      &.right{
+        float: right;
+      }
+      &.left{
+        float: left;
+      }
+      &.border-thick-black{
+        border: 5px solid black;
+        padding: 0px;
+      }
+    }
+    figcaption{
       display: block;
-    }
-    img.right{
-      float: right;
-    }
-    img.left{
-      float: left;
-    }
-    img.border-thick-black{
-      border: 5px solid black;
-      padding: 0px;
+      text-align: center; // Else it sticks out from smaller images
+      font-style: italic;
+      margin-top: -2em;
+      color: #888;
+      font-size: .8em;
     }
 
 
@@ -145,9 +156,9 @@
     }
 
 
-
+    //******** Sections **********
     .post-title{
-      margin: 0 auto 1em auto;
+      margin: 0 auto 0.5em auto;
       // text-align: center;
       position: relative;
       h1{
@@ -161,10 +172,10 @@
     }
 
     .post-date{
-      color: #999;
+      color: #aaa;
       font-size: 1em;
       line-height: 1.5em;
-      margin: 1em auto 2em;
+      margin: 0.5em auto 2em;
       text-align: left;
       font-style: italic;
     }
@@ -184,6 +195,71 @@
       font-style: italic;
       font-size: 1.25em;
     }
+  }
+
+
+  // ******* ARROWS ************
+
+  .arrow{
+    font-size: 2rem;
+    text-align: center;
+    width: 1.25em;
+    height: 1.25em;
+    border: .2em solid $arrow_color;
+    position: absolute;
+    top: 0.5em;
+    @include border-radius(1em);
+  }
+
+
+  .hover-arrow{
+    &:hover{
+      border-color: $arrow_highlight_color;
+      cursor: pointer;
+      .inner-arrow{
+        border-color: $arrow_highlight_color;
+      }
+    }
+  }
+
+
+  .disabled-arrow{
+    border-color: $arrow_disabled_color!important;
+    .inner-arrow{
+      border-color: $arrow_disabled_color!important;
+    }
+  }
+
+
+  .prev-arrow{
+    left: -3em;
+  }
+
+
+  .next-arrow{
+    right: -3em;
+  }
+
+
+  .inner-arrow{
+    height: .5em;
+    width: .5em;
+    border-left: .2em solid $arrow_color;
+    border-top: .2em solid $arrow_color;
+    position: absolute;
+    top: .25em;
+  }
+
+
+  .inner-prev-arrow{
+    @include rotate(-45deg);
+    left: .4em;
+  }
+
+
+  .inner-next-arrow{
+    @include rotate(135deg);
+    right: .4em;
   }
 
   // ********************************************************
