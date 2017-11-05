@@ -27,7 +27,7 @@
       <% end %>
     </h1>
 
-    <% if @post && @post.new_record? == false %>  
+    <% if @post && @post.new_record? == false %>
       <% unless @next.nil? %>
         <%= link_to @next, :class => "right", :title => "Next Post: #{@next.title}" do %>
           <div class="next-arrow arrow hover-arrow">
@@ -46,12 +46,12 @@
   </div>
 
 
-<!--   <div class="post-date">
-    <%= post.created_at.strftime("%B %-d, %Y") %>
-  </div> -->
+  <div class="post-date">
+    Published on <time datetime="<%=post.created_at%>"><%= post.created_at.strftime("%B %-d, %Y") %></time>
+  </div>
 
   <!-- render using markdown if that's specified by the post,
-        which it is for all new ones, otherwise we need to 
+        which it is for all new ones, otherwise we need to
         wrap the whole post in a <p> tag or the font sizing
         won't work properly (it's all based on the <p> size) -->
   <div class="post-body">
@@ -62,7 +62,7 @@
     <% end %>
 
     <!-- If we're on the index page, render only previews -->
-    <% if show %> 
+    <% if show %>
       <%= post_body.html_safe %>
     <% else %>
       <%= show_preview(post_body).html_safe %>

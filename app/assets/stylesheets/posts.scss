@@ -2,12 +2,191 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "colors";
+@import "mixins";
+@import "variables";
+
 #post-pages{
 
   .container{
-    // max-width: 60em;
-    // margin: auto;
+    max-width: 960px;
+    margin: auto;
   }
+
+  .post{
+
+    margin: 6em auto 4em auto;
+    position: relative;
+    max-width: $text_box_width;
+    font-family: $blog_font_family;
+    font-size: $font_size_base;
+
+    // *********************  General Post Styles *******************************
+
+    p+h2, p+h3, p+h4, p+h5, ul+h2, ul+h3, ul+h4, ul+h5, ol+h2, ol+h3, ol+h4, ol+h5{
+      margin-top: 1.5em;
+    }
+
+    h1{
+      // font-weight: 400;
+      font-size: 1.8em; //3.25em;
+      line-height: 1.25em;
+      font-weight: bold;
+      margin: 1em 0;
+    }
+    h2{
+      font-size: 1.65em; //2.5em;
+      line-height: 1.5em;
+      font-weight: 400;
+      margin: 1em 0;
+    }
+    h3{
+      font-size: 1.5em; //2em;
+      line-height: 1.5em;
+      font-weight: 400;
+      margin: 1em 0;
+    }
+    h4{
+      font-size: 1.25em; //1.75em;
+      line-height: 1.5em;
+      font-weight: 400;
+      margin: 1em 0;
+    }
+    p{
+      font-size: 1em; // set the <li>'s too if you change this!
+      line-height: $line_height_base;
+      font-weight: $font_weight_base;
+      margin: 1.5em 0;
+    }
+
+
+    ol,ul{
+      padding-left: 2em;
+    }
+    li{
+      margin: .5em 0;
+      font-size: $font_size_base;
+      line-height: $line_height_base;
+    }
+    ol{
+      list-style: decimal;
+    }
+    ul{
+      list-style: disc;
+    }
+
+    a{
+      color: #2ba6cb;
+      &:hover{
+        color: #2284a1;
+      }
+    }
+    pre{
+      font-size: 1.25em;
+      font-weight: 100;
+      font-family: $code_font_family;
+      background-color: $code_bg_gray;
+      color: $code_text_gray;
+      margin: 1em inherit;
+      padding: 8px 8px;
+      border: 1px solid #ddd;
+      white-space: pre;
+      word-wrap: normal;
+      overflow: auto;
+    }
+    code{
+      font-size: .9em;
+      color: $code_text_gray;
+      font-family: $code_font_family;
+      background-color: $code_bg_gray;
+      border: 1px solid #ddd;
+      padding: 2px 4px;
+      white-space: pre;
+    }
+    pre > code{
+      font-size: 1em;
+      line-height: 1.4em;
+      border: none;
+    }
+
+
+    // ******* IMAGES *******
+    img{
+      padding: .25em .5em;
+      max-width: 100%;  // PROBLEM: In-post images can get warped due to inline styles!
+      // height: auto;
+    }
+    img.center{
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+    img.right{
+      float: right;
+    }
+    img.left{
+      float: left;
+    }
+    img.border-thick-black{
+      border: 5px solid black;
+      padding: 0px;
+    }
+
+
+    // ********* BREAKS ********
+    hr{
+      margin: .5em 0;
+    }
+    .clearfix{
+      clear: both;
+    }
+    #clearfix{
+      clear: both;
+    }
+
+
+
+    .post-title{
+      margin: 0 auto 1em auto;
+      // text-align: center;
+      position: relative;
+      h1{
+        display: inline-block;
+        margin: 0;
+        position: relative;
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+
+    .post-date{
+      color: #999;
+      font-size: 1em;
+      line-height: 1.5em;
+      margin: 1em auto 2em;
+      text-align: left;
+      font-style: italic;
+    }
+
+    .post-body{
+      max-width: 52em;
+      margin: 1em auto;
+    }
+
+    p.read-more{
+      text-align: center;
+    }
+
+
+    .tags{
+      margin: 2.5em 0;
+      font-style: italic;
+      font-size: 1.25em;
+    }
+  }
+
+  // ********************************************************
 
 
 

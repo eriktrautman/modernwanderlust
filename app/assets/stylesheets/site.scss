@@ -4,35 +4,37 @@
 @import "variables";
 
 html{
-  font-size: 85%;
+  font-size: 14px;
 }
 
 body{
   line-height: 1.5em;
   font-family: $main_font_family;
   color: $text_color !important;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
   line-height: 125% !important;
   background-color: $background_color;
   margin: 0px 20px;
 }
 
 /* FONT SCALE */
+/* NOTE: Overridden for posts */
 p{
-  font-size: 1.35em; // set the <li>'s too if you change this!
-  line-height: 1.75em;
+  font-size: $font_size_base; // set the <li>'s too if you change this!
+  line-height: 1.58em;
+  font-weight: $font_weight_base;
   margin: 1.5em 0;
 }
 h4{
   font-size: 1.75em;
   line-height: 1.5em;
-  font-weight: 300;
+  font-weight: 400;
   margin: 1em 0;
 }
 h3{
   font-size: 2em;
   line-height: 1.5em;
-  font-weight: 300;
+  font-weight: 400;
   margin: 1em 0;
 }
 h2{
@@ -48,7 +50,7 @@ h1{
   margin: 1em 0;
 }
 li{
-  font-size: 1.35em;
+  font-size: $font_size_base;
   line-height: 1.75em;
 }
 ol{
@@ -107,7 +109,7 @@ pre > code{
 
 .container{
   max-width: 960px;
-  margin: auto; 
+  margin: auto;
 }
 
 
@@ -185,7 +187,7 @@ pre > code{
 .admin-links{
   display: block;
   position: absolute;
-  width: $text_box_width - 3em;
+  width: $text_box_width - 3*$font_size_base;
   margin-top: -2em;
   padding: 0 1em;
   .new-post{
@@ -205,7 +207,7 @@ pre > code{
   text-align: center;
   width: 1.25em;
   height: 1.25em;
-  border: .2em solid $arrow_color; 
+  border: .2em solid $arrow_color;
   position: absolute;
   top: 0em;
   @include border-radius(1em);
@@ -232,7 +234,7 @@ pre > code{
 
 
 .prev-arrow{
-  left: -2.5em; 
+  left: -2.5em;
 }
 
 
@@ -243,7 +245,7 @@ pre > code{
 
 .inner-arrow{
   height: .5em;
-  width: .5em; 
+  width: .5em;
   border-left: .2em solid $arrow_color;
   border-top: .2em solid $arrow_color;
   position: absolute;
@@ -253,102 +255,19 @@ pre > code{
 
 .inner-prev-arrow{
   @include rotate(-45deg);
-  left: .4em; 
+  left: .4em;
 }
 
 
 .inner-next-arrow{
   @include rotate(135deg);
-  right: .4em; 
+  right: .4em;
 }
 
 
 #content{
 }
 
-
-.post{
-
-  margin: 6em auto 4em auto;
-  position: relative;
-  max-width: $text_box_width;
-  font-family: $blog_font_family;
-
-  p+h2, p+h3, p+h4, p+h5, ul+h2, ul+h3, ul+h4, ul+h5, ol+h2, ol+h3, ol+h4, ol+h5{
-    margin-top: 1.5em;
-  }
-
-  h1{
-    font-weight: 400;
-  }
-
-  h2{
-    // margin: 1em -1em 1em -1em;
-  }
-
-  ol,ul{
-    padding-left: 2em;
-  }
-  li{
-    margin: .5em 0;
-  }
-
-  .post-title{
-    margin: 0 auto 5em auto;
-    text-align: center;
-    position: relative;
-    h1{
-      display: inline-block;
-      margin: 0;
-      position: relative;
-    }
-    a{
-      text-decoration: none;
-    }
-  }
-  .post-date{
-    width: 15em;
-    color: #888;
-    font-size: 1.5em;
-    line-height: 2em;
-    font-weight: 200;
-    padding: .5em 0;
-    margin: 2.5em auto;
-    text-align: center;
-    border-top: 2px solid #ccc;
-    border-bottom: 2px solid #ccc;
-  }
-  .post-body{
-    max-width: 52em;
-    margin: 1em auto;
-  }
-  p.read-more{
-    text-align: center;
-  }
-  img{
-    padding: .25em .5em;
-  }
-  img.center{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-  img.right{
-    float: right;
-  }
-  img.left{
-    float: left;
-  }
-  img.border-thick-black{
-    border: 5px solid black;
-    padding: 0px;
-  }
-  .tags{
-    margin: 2.5em 0;
-    font-style: italic;
-    font-size: 1.25em;
-  }
-}
 
 
 
@@ -361,7 +280,7 @@ pre > code{
   li{
     list-style: none;
   }
-  
+
 
   h2{
     margin: .5em 0;
@@ -403,7 +322,7 @@ pre > code{
 
 
 
-.tag-links, .archive-links{  
+.tag-links, .archive-links{
   margin: 2.5em 0;
   text-align: center;
   a{
@@ -510,7 +429,7 @@ pre > code{
   max-width: $text_box_width;
 
   .title{
-    text-align: center; 
+    text-align: center;
     margin: 4em auto;
   }
   li{
@@ -528,20 +447,3 @@ pre > code{
     padding-top: 10px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,6 +1,12 @@
 // All the necessary variables
 
-$text_box_width: 48em;
-$blog_font_family: 'Merriweather','Helvetica Neue', Helvetica, sans-serif !important;
-$main_font_family: 'Lato', 'Helvetica Neue', 'Helvetica', sans-serif !important;
+$text_box_width: 720px;
+$blog_font_family: 'Proxima Nova','Helvetica Neue', Helvetica, sans-serif !important;
+$main_font_family: 'Proxima Nova', 'Helvetica Neue', 'Helvetica', sans-serif !important;
 $code_font_family: Courier, Monospace!important;
+
+// Blog Fonts
+$font_size_base: 18px;
+$font_weight_base: 400;
+$font_color_base: #333;
+$line_height_base: 1.58em;
