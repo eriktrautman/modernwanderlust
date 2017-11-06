@@ -2,6 +2,9 @@ class Post < ActiveRecord::Base
   extend FriendlyId # to help with title slugging
   friendly_id :title, :use => [:slugged, :history]
 
+  # Allow us to delete header images
+  before_validation { header_image.clear if @delete_header_image }
+
   validates_presence_of [:title, :body, :slug]
   validates :title, :uniqueness => { :message => "This title has been used before, choose another" }
 
@@ -20,6 +23,16 @@ class Post < ActiveRecord::Base
 
   scope :order_rev_chron, -> { order('posts.created_at DESC') }
   scope :order_chron, -> { order('posts.created_at ASC') }
+
+
+  def delete_header_image
+    @delete_header_image ||= false
+  end
+
+  def delete_header_image=(value)
+    @delete_header_image  = !value.to_i.zero?
+  end
+
 
   # Why does will_paginate blow up if the
   # order clause uses a hash?

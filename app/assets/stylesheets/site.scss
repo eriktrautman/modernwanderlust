@@ -107,6 +107,12 @@ pre > code{
   border: none;
 }
 
+label {
+  cursor: pointer;
+  font-size: 1.25em;
+  line-height: 1.75em;
+}
+
 input[type=submit] {
   font-size: 1.5em;
   height: 2.5em;
@@ -119,6 +125,10 @@ input[type=submit] {
   &:hover{
     background-color: $button_hover_color;
   }
+}
+
+input[type=checkbox] {
+  width: 1em;
 }
 
 .clearfix{
@@ -290,12 +300,26 @@ input[type=submit] {
 }
 
 
-
+//************************************************
+//******             POST FORM             *******
+//************************************************
 .post-form{
   input{
     // max-width: 100%;
     width: 100%;
+
+    &[type=text] {
+      font-size: 1em;
+      height: 1.25em;
+      padding: .25em;
+    }
+
+    &[type=checkbox]{
+      width: 2em;
+      cursor: pointer;
+    }
   }
+
   textarea{
     width: 100%;
     height: 15em;

@@ -63,6 +63,7 @@ class PostsController < ApplicationController
   def update
     post = Post.friendly.find(params[:id])
     if post
+      puts "\n\n\n\ #{post_params} \n\n\n"
       if post.update_attributes(post_params)
         post.replace_or_build_tags(tag_params[:tags])
         post.slug = nil # because slugs only regenerate if nil
@@ -97,7 +98,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:body,:title,:created_at,:md,:header_image)
+      params.require(:post).permit(:body,:title,:created_at,:md,:header_image, :delete_header_image)
     end
 
     def tag_params
