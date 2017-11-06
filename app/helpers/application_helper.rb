@@ -23,14 +23,12 @@ module ApplicationHelper
     preview_pos = post_text[min_chars..-1].index("</p>")
     num_extra_chars = min_chars + 3
     extra_chars = ""
-    puts "\n\n\n\ntried: </p>!"
 
     if preview_pos.nil? || preview_pos > max_chars
       # try looking for the first <br> tag
       preview_pos = post_text[min_chars..-1].index("<br")
       num_extra_chars = min_chars + 2
       extra_chars = ">"
-      puts "tried: <br>!"
 
       if preview_pos.nil? || preview_pos > max_chars
         # just look for the next closing tag so we don't
@@ -38,19 +36,15 @@ module ApplicationHelper
         preview_pos = post_text[min_chars..-1].index(">")
         num_extra_chars = min_chars
         extra_chars = "..."
-        puts "tried: >!"
 
         if preview_pos.nil? || preview_pos > max_chars
           preview_pos = max_chars
           num_extra_chars = 0
           extra_chars = "..."
-          puts "last resort..."
         end
       end
     end
-    puts "finished with pos #{preview_pos}, num #{num_extra_chars}, and extrachars #{extra_chars}!\n\n\n"
     preview = post_text[0..preview_pos+num_extra_chars]+extra_chars
-    puts "...and preview of: #{preview}!!!!!!!!\n\n\n\n"
     return preview
   end
 end
