@@ -7,15 +7,17 @@ class Ckeditor::Picture < Ckeditor::Asset
                     #    exceed the specified boundaries.  So '400x400' on a panoramic
                     #    1200x300 image would be reduced to 400x100.
                     # trailing # means will be centrally cropped to get dimensions
-                    # trailing > means will only reduce images if larger than this (ignores smaller)
+                    # trailing > means will only reduce images if larger than this,
+                    #    (ignores smaller) and will basically reduce to fit a box
+                    #    with that dimension (width only if no height given).
                     # trailing < means will only enlarge smaller images (ignore bigger)
                     # Can do % resizing too.
                     # General convention: WIDTH x HEIGHT
                     # For WAY more, see http://www.imagemagick.org/Usage/resize/
                     styles: {
                         content: '800>',      # The default used in the post
-                        contentlg: '1600>',
-                        thumb: '118x100#',    # used in the file browser window
+                        contentlg: '1600>',  # If we need a larger version
+                        thumb: '118x100#',        # used in the file browser window
                         # 'original' is always present and uncropped.
                     }
 
