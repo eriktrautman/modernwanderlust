@@ -1,0 +1,136 @@
+@import "colors";
+@import "mixins";
+@import "variables";
+
+$slideshow-width: 100%;
+$slideshow-height: 300px;
+$slideshow-nav-opacity: .6;
+$slideshow-nav-hover-opacity: .8;
+
+#slideshow-container{
+  height: $slideshow-height;
+  width: $slideshow-width;
+  position: relative;
+  vertical-align: top;
+  // border: 5px solid $vdark_gray; //$light_gray;
+  box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -webkit-box-sizing:content-box;
+  margin: 0 0 3rem 0;
+}
+
+#slideshow{
+  height: $slideshow-height;
+  width: $slideshow-width;
+  vertical-align: top;
+  display: inline-block;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  position: relative;
+}
+
+#slideshow-reel{
+  height: $slideshow-height;
+  width: $slideshow-width*8;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  .slide{
+    width: 100vw;
+    height: $slideshow-height;
+    float: left;
+    position: relative;
+    background-color: $background-color;
+    // text-align: center;
+    // position: absolute;
+
+    img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+#slideshow-prev, #slideshow-next {
+  display: block;
+  position: absolute;
+  top: 140px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 28px 21px;
+  border-color: transparent;
+  outline: none;
+  opacity: $slideshow-nav-opacity;
+  cursor: pointer;
+}
+
+#slideshow-prev:hover, #slideshow-next:hover {
+  opacity: $slideshow-nav-hover-opacity;
+  filter: alpha(opacity=50);
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+}
+
+#slideshow-prev {
+  left: 0;
+  border-right-color: #fff;
+}
+
+#slideshow-next {
+  right: 0;
+  border-left-color: #fff;
+}
+
+
+// *********************************
+// *****    NAV CIRCLES       ******
+// *********************************
+#slideshow-nav-container{
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  margin: -30px 0 0;
+}
+
+#slideshow-nav{
+  width: 80%;
+  max-width: 240px;
+  position: relative;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+
+
+  .nav-item{
+    text-decoration: none;
+    color: #fff;
+    opacity: $slideshow-nav-opacity;
+    font-size: 24px;
+
+    &:hover{
+      opacity: $slideshow-nav-hover-opacity;
+    }
+  }
+}
+
+
+.caption{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  color: $light_gray;
+  font-size: 8px;
+  margin: 0 18px 18px 0;
+  text-align: left;
+  padding: 12px;
+  border: 1px solid $vdark_gray;
+  li{
+    list-style: none;
+    &:first-child{
+      color: $vlight_gray;
+    }
+  }
+}

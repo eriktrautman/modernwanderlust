@@ -15,6 +15,12 @@
 
 
 $(function() {
+
+
+  // *****************************
+  // Define our functions
+  // *****************************
+
   function changeSlide( newSlide ) {
     // cancel any timeout
     clearTimeout( slideTimeout );
@@ -28,7 +34,6 @@ $(function() {
 
     // change the currSlide value
     currSlide = newSlide;
-
 
     // animate the slide reel
     $slideReel.animate({
@@ -47,6 +52,9 @@ $(function() {
     });
   }
 
+
+
+
   function changeNav( newSlide ){
 
     // remove the active item from the current nav
@@ -56,11 +64,18 @@ $(function() {
     $(navItems[newSlide]).html("&#9679;");
   }
 
+
+
   function nextSlide() {
     changeSlide( currSlide + 1 );
   }
 
+
+
+  // *****************************
   // define some variables / DOM references
+  // *****************************
+
   var activeSlideshow = true,
   currSlide = 0,
   slideTimeout,
@@ -75,7 +90,12 @@ $(function() {
   navItems = $('.nav-item');
   navWidth = navItems.width();
 
-  // set navigation click events
+
+
+
+  // *****************************
+  // Set navigation click events
+  // *****************************
 
   // left arrow
   $slidePrevNav.click(function(ev) {
@@ -98,6 +118,11 @@ $(function() {
     changeSlide( $(this).index() );
   });
 
-  // start the animation
+
+
+  // *****************************
+  // Start the animation
+  // *****************************
+
   slideTimeout = setTimeout(nextSlide, slideTimeoutDuration);
 });

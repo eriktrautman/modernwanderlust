@@ -17,19 +17,19 @@
   <%= render "shared/topnav" %>
 
   <div class="container">
-
     <%= bootstrap_flash %>
+  </div>
 
-    <div id="content">
-      <%= yield %>
+  <div id="content">
+    <%= yield %>
+  </div>
+
+  <% if @posts %>
+    <%= render "shared/pagination" %>
+    <div class="archive-link">
+      <%= link_to "View the Archives", archives_path %>
     </div>
-
-    <% if @posts %>
-      <%= render "shared/pagination" %>
-      <div class="archive-link">
-        <%= link_to "View the Archives", archives_path %>
-      </div>
-    <% end %>
+  <% end %>
 
 
   </div>
