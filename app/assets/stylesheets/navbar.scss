@@ -34,7 +34,7 @@ $topnav-fixed: false;  //logo is fixed regardless
 
   .logo {
     position: fixed;
-    left: $logo-height;
+    left: ($topnav-height - $logo-height)/2;
     font-size: $logo-height;
     height: $logo-height;
     margin-top: ($topnav-height - $logo-height)/2;

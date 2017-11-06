@@ -37,8 +37,8 @@ $(function() {
 
     // animate the slide reel
     $slideReel.animate({
-        left : currSlide * -slideWidth
-    }, 600, 'swing', function() {
+        left : slideLeftPos( currSlide )
+    }, 300, 'swing', function() {
 
       // hide / show the arrows depending on which frame it's on
       if ( currSlide == 0 ) $slidePrevNav.hide();
@@ -71,31 +71,53 @@ $(function() {
   }
 
 
+  // Get the right Left position for a given slide
+  // Important when resizing
+  function slideLeftPos( currSlide ) {
+    return currSlide * -slideWidth;
+  }
+
+
+  // Needs to be triggered on browser resize
+  function refreshWidths() {
+    slideWidth = $slideshow.width();
+
+    // ...pulling currSlide from global :/
+    var left = slideLeftPos( currSlide );
+    $slideReel.css("left", left);
+  }
+
+
 
   // *****************************
   // define some variables / DOM references
   // *****************************
 
-  var activeSlideshow = true,
-  currSlide = 0,
-  slideTimeout,
-  $slideshow = $('#slideshow'),
-  $slideReel = $slideshow.find('#slideshow-reel'),
-  maxSlide = $slideReel.children().length - 1,
-  $slidePrevNav = $slideshow.find('#slideshow-prev'),
-  $slideNextNav = $slideshow.find('#slideshow-next');
-  $activeNavItem = $slideshow.find('#active-nav-item');
-  slideWidth = $('#slideshow').width();
-  slideTimeoutDuration = 8000;
-  navItems = $('.nav-item');
-  navWidth = navItems.width();
+  var activeSlideshow = true;
+  var currSlide = 0;
+  var slideTimeout;
+  var $slideshow = $('#slideshow');
+  var $slideReel = $slideshow.find('#slideshow-reel');
+  var maxSlide = $slideReel.children().length - 1;
+  var $slidePrevNav = $slideshow.find('#slideshow-prev');
+  var $slideNextNav = $slideshow.find('#slideshow-next');
+
+  var $activeNavItem = $slideshow.find('#active-nav-item');
+  var slideWidth = $('#slideshow').width();
+  var slideTimeoutDuration = 5000;
+  var navItems = $('.nav-item');
+  var navWidth = navItems.width();
 
 
 
 
   // *****************************
-  // Set navigation click events
+  // Set listeners
   // *****************************
+
+  window.addEventListener("resize",function(){
+    refreshWidths();
+  })
 
   // left arrow
   $slidePrevNav.click(function(ev) {
