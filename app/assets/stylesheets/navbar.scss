@@ -7,15 +7,23 @@ $topnav-max-width: 600px;
 $topnav-text-size: 14px;
 $topnav-border-width: 0px;
 $logo-height: 20px;
+$topnav-fixed: false;  //logo is fixed regardless
 
 #topnav-spacer{
-  height: $topnav-height;
+  @if $topnav-fixed{
+    height: $topnav-height;
+  }
+  @else{
+    display: none;
+  }
 }
 
 #topnav{
-  z-index: 10;
-  position: fixed;
-  width: 100%;
+  @if $topnav-fixed{
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+  }
   height: $topnav-height;
   margin: auto;
   text-align: center;
