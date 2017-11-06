@@ -4,36 +4,26 @@
   </div>
 
   <p>
-    I love hearing new ideas and meeting good people, though I don't always have the bandwidth to respond to contact requests.  A lot of people reach out based on my <%= link_to "App Academy Student Journey", "http://www.eriktrautman.com/posts/the-app-academy-student-journey" %> and <%= link_to "Maximizing Your Bootcamp Experience", "http://www.eriktrautman.com/posts/maximizing-your-bootcamp-experience" %> posts.  If you're applying to an in-person bootcamp, they are your best bet for information and I'm afraid I can't help with the application process.
-  </p>
-  <p>
-    If you're open to a different experience to a similar end, I encourage you to check out the <%= link_to "Viking Code School", "http://www.vikingcodeschool.com" %>.  It addresses many things you don't get with a typical bootcamp and there's nothing else quite like it.
-  </p>
-  <p>
-    If you're just getting started with your journey, you really need to check out <%= link_to "The Odin Project", "http://www.theodinproject.com" %>
+    I don't always have the bandwidth to respond to contact requests but I'll get to all that I can.
   </p>
 
-  <p>
-    I'm also on the Interwebs in the following places:
-  </p>
-
-  <ul class="contact-methods">
-    <li>
-      <a href="http://github.com/eriktrautman">Github</a>
-    </li>
-    <li>
-      <a href="http://www.facebook.com/profile.php?id=605114">Facebook</a>
-    </li>
-    <li>
-      <a href="http://twitter.com/#!/ErikTrautman">Twitter</a>
-    </li>
-    <li>
-      <a href="http://www.linkedin.com/pub/erik-trautman/39/3a3/3b9">LinkedIn</a>
-    </li>
-  </ul>
-
-  <p>...Or just do it the old fashioned way and email me at modernwanderlust [at] gmail [dot] com.</p>
-
+  <div class="contact-methods">
+    <div>
+      <%= link_to "http://github.com/eriktrautman" do %>
+        <%= image_tag "https://s3.us-west-1.amazonaws.com/modernwanderlust/contact/github_logo.svg", size: "40x40" %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to "http://twitter.com/#!/ErikTrautman" do %>
+        <%= image_tag "https://s3.us-west-1.amazonaws.com/modernwanderlust/contact/twitter_logo.svg", size: "40x40" %>
+      <% end %>
+    </div>
+    <div>
+      <%= link_to "http://www.linkedin.com/pub/erik-trautman/39/3a3/3b9" do %>
+        <%= image_tag "https://s3.us-west-1.amazonaws.com/modernwanderlust/contact/linkedin_logo.svg", size: "40x40" %>
+      <% end %>
+    </div>
+  </div>
 </div>
 
 <hr>
