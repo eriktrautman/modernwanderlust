@@ -1,0 +1,72 @@
+@import "colors";
+@import "mixins";
+@import "variables";
+
+$topnav-height: 40px;
+$topnav-max-width: 600px;
+$topnav-text-size: 14px;
+$topnav-border-width: 0px;
+$logo-height: 20px;
+
+#topnav-spacer{
+  height: $topnav-height;
+}
+
+#topnav{
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  height: $topnav-height;
+  margin: auto;
+  text-align: center;
+  border-bottom: 1px solid $off_white;
+  background-color: white;
+  text-transform: uppercase;
+
+
+  .logo {
+    position: fixed;
+    left: $logo-height;
+    font-size: $logo-height;
+    height: $logo-height;
+    margin-top: ($topnav-height - $logo-height)/2;
+    color: $mid_gray;
+    opacity: .5;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $topnav-height;
+    max-width: $topnav-max-width;
+    margin: auto;
+    padding: 0;
+  }
+
+  li{
+    font-size: $topnav-text-size;
+    display: inline-block;
+    line-height: 1em;
+    list-style: none;
+  }
+  a{
+    text-decoration: none;
+    color: $mid_gray;
+    opacity: .5;
+    margin: 0px;
+    &:hover{
+      opacity: 1;
+    }
+  }
+}
+@media(max-width: 800px){
+  .prev-next{
+  }
+  #topnav{
+  }
+}

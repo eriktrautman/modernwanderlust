@@ -1,43 +1,47 @@
-<div id="topnav">
+<div id = "topnav">
 
-  
-  <ul>
-    
-    <%= link_to root_path do %>
-      <li class="<%= request.fullpath == root_path ? 'active' : '' %>">
-        Home
-      </li>
+  <div class = "container">
+
+    <%= link_to root_path, class: "logo" do %>
+      <div>
+        EST
+      </div>
     <% end %>
 
-    <%= link_to posts_path do %>
-      <li class="<%= request.fullpath.include?(posts_path) ? 'active' : '' %>">
-        Blog
-      </li>
-    <% end %>
+    <ul>
 
-    <% if @blog == true %>
-    <% end %>
-
-      <%= link_to archives_path do %>
-        <li class="<%= request.fullpath.include?(archives_path) ? 'active' : '' %>">
-          Archive
+      <%= link_to posts_path  do %>
+        <li>
+          Blog
         </li>
       <% end %>
-    
-    <%= link_to about_path do %>
-      <li class="<%= request.fullpath == about_path ? 'active' : '' %>">
-        About
-      </li>
-    <% end %>
 
-    <%= link_to contact_path do %>
-      <li class="<%= request.fullpath == contact_path ? 'active' : '' %>">
-        Contact
-      </li>
-    <% end %>
+      <% if @blog == true %>
+      <% end %>
 
-  </ul> 
+      <%= link_to archives_path  do %>
+        <li>
+            Archive
+          </li>
+        <% end %>
+
+        <%= link_to about_path  do %>
+          <li>
+          About
+        </li>
+      <% end %>
+
+      <%= link_to contact_path  do %>
+        <li>
+          Contact
+        </li>
+      <% end %>
+
+    </ul>
 
 
+  </div>
 </div>
 
+
+<div id = "topnav-spacer"></div>

@@ -8,6 +8,7 @@ html{
 }
 
 body{
+  position: relative;
   line-height: 1.5em;
   font-family: $main_font_family;
   color: $text_color !important;
@@ -140,50 +141,6 @@ pre > code{
     font-weight: 200;
     margin: 0px;
     color: #555;
-  }
-}
-
-#topnav{
-  margin: auto;
-  text-align: center;
-  border-bottom: 1px solid $off_white;
-  padding: .5em 0 .5em 0;
-  text-transform: uppercase;
-
-  ul{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-  }
-  li{
-    font-size: 1em;
-    display: inline-block;
-    line-height: 1em;
-    width: 7.5em;
-    margin: 0px .25em;
-    padding: .25em 0;
-    list-style: none;
-    border-top: 1px solid transparent;
-    border-bottom: 1px solid transparent;
-    &:hover{
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-    }
-  }
-  a{
-    text-decoration: none;
-    color: $vlight_gray;
-    margin: 0px;
-  }
-  .active{
-    // font-weight: 500;
-    color: $mid_gray;
-  }
-}
-@media(max-width: 800px){
-  .prev-next{
-  }
-  #topnav{
   }
 }
 
