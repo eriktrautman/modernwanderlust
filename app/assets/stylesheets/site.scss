@@ -306,7 +306,7 @@ p.page-subhead{
 
 
 #about, #contact, #archives{
-  margin: 0 auto 6em auto;
+  margin: 0 auto 10em auto;
   max-width: $text_box_width;
 
   // .title{
@@ -316,9 +316,14 @@ p.page-subhead{
   li{
     line-height: 2em;
   }
+
+  .contact-me {
+    text-align: center;
+  }
+
   .contact-methods{
     width: 200px;
-    margin: auto;
+    margin: 5em auto;
     display: flex;
     justify-content: space-between;
 
@@ -334,6 +339,8 @@ p.page-subhead{
   }
 
   .profile-photo {
+    // width: 150px;
+    // height: 150px;
     float: left;
     padding-right: 24px;
     padding-top: 10px;
