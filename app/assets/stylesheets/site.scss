@@ -314,14 +314,19 @@ input[type=checkbox] {
 //******             POST FORM             *******
 //************************************************
 .post-form{
+
+  margin-left: 20px;
+  margin-right: 20px;
+
   input{
     // max-width: 100%;
+    box-sizing: border-box;
     width: 100%;
 
     &[type=text] {
       font-size: 1em;
-      height: 1.25em;
-      padding: .25em;
+      height: 2em;
+      padding: 0 .5em;
     }
 
     &[type=checkbox]{

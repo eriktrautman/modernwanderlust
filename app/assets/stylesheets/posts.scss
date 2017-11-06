@@ -146,6 +146,7 @@
     .post-banner {
       $extra_width: .3;
       width: $text_box_width*(1 + $extra_width)+2;
+      max-width: (100% + $extra_width*100%);
       // height: $text_box_width*.75;  // so DOM loads without jumps waiting for img
       margin-left: -$text_box_width*($extra_width/2);
       margin-right: -$text_box_width*($extra_width/2);
@@ -153,10 +154,13 @@
       margin-bottom: 1.5em;
       // max-height: 400px;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+
       img{
         display: block;
         padding: 0;
-        max-width: $text_box_width*(1 + $extra_width);
+        // max-width: $text_box_width*(1 + $extra_width);
         max-height: 480px;
         border: 1px solid #888;
         margin: 0 auto;
