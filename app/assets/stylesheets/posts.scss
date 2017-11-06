@@ -154,11 +154,12 @@
       // max-height: 400px;
       overflow: hidden;
       img{
+        display: block;
         padding: 0;
         max-width: $text_box_width*(1 + $extra_width);
         max-height: 480px;
         border: 1px solid #888;
-        margin:0;
+        margin: 0 auto;
       }
     }
 

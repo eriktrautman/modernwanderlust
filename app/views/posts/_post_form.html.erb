@@ -23,7 +23,7 @@
     <%= f.input :body, as: :ckeditor, input_html: { ckeditor: { uiColor: "#AADC6E", height: 600} } %>
 
     <br>
-    <%= f.input :md, :label => "Render with Mardown? (use FALSE if unsure)" %>
+    <%= f.input :md, :label => "Render with Mardown? (UNCHECK if unsure)" %>
     <br>
     <label for="tags">
       Enter Tags (separated by commas)
@@ -34,7 +34,9 @@
 
     <%= f.submit %>
     <% unless f.object.new_record? %>
-      <%= link_to "Delete Post", post_path(post), :method => "DELETE" %>
+      <div class = "delete-link">
+        <%= link_to "Delete Post", post_path(post), :method => "DELETE" %>
+      </div>
     <% end %>
 
   <% end %>

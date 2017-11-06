@@ -11,6 +11,7 @@ class Post < ActiveRecord::Base
               thumb: '118x100#',    # used in the file browser window
               square: '400x400#',   # used in compressed indexes
               squarelg: '800x800#',
+              reduced: '800<'
             }
   validates_attachment_content_type :header_image, content_type: /\Aimage\/.*\z/
 
