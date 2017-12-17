@@ -169,8 +169,8 @@
 
     .post-banner-index {
       width: 100vw; //$text_box_width - 4px;
-      height: 34vw; //214px;  // so DOM loads without jumps waiting for img
-      // max-width: 100%;
+      // height: 34vw; //214px;  // so DOM loads without jumps waiting for img
+      max-width: 100%;
       margin: 1.5em 0;
       img{
         padding: 0;
