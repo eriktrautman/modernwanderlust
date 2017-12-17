@@ -162,18 +162,19 @@
         padding: 0;
         // max-width: $text_box_width*(1 + $extra_width);
         max-height: 480px;
-        border: 1px solid #888;
+        border: 1px solid #ccc;
         margin: 0 auto;
       }
     }
 
     .post-banner-index {
-      width: $text_box_width - 4px;
-      height: 214px;  // so DOM loads without jumps waiting for img
+      width: 100vw; //$text_box_width - 4px;
+      height: 34vw; //214px;  // so DOM loads without jumps waiting for img
+      // max-width: 100%;
       margin: 1.5em 0;
       img{
         padding: 0;
-        border: 1px solid #888;
+        border: 1px solid #ccc;
       }
     }
 
