@@ -16,14 +16,14 @@
 
     <% if @post && @post.new_record? == false %>
       <% unless @prev.nil? %>
-        <%= link_to @prev, :class => "left", :title => "Previous Post: #{@prev.title}" do %>
+        <%= link_to @prev, :class => "left mobile-hide", :title => "Previous Post: #{@prev.title}" do %>
         <div class="prev-arrow arrow hover-arrow">
           <div class="inner-prev-arrow inner-arrow">
           </div>
         </div>
         <% end %>
         <% else %>
-        <div class="prev-arrow arrow disabled-arrow">
+        <div class="prev-arrow arrow disabled-arrow mobile-hide">
           <div class="inner-prev-arrow inner-arrow">
           </div>
         </div>
@@ -40,14 +40,14 @@
 
     <% if @post && @post.new_record? == false %>
       <% unless @next.nil? %>
-        <%= link_to @next, :class => "right", :title => "Next Post: #{@next.title}" do %>
+        <%= link_to @next, :class => "right mobile-hide", :title => "Next Post: #{@next.title}" do %>
           <div class="next-arrow arrow hover-arrow">
             <div class="inner-next-arrow inner-arrow">
             </div>
           </div>
         <% end %>
       <% else %>
-        <div class="next-arrow arrow disabled-arrow">
+        <div class="next-arrow arrow disabled-arrow mobile-hide">
           <div class="inner-next-arrow inner-arrow">
           </div>
         </div>

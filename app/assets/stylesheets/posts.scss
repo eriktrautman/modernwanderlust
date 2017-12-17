@@ -150,6 +150,13 @@
       // height: $text_box_width*.75;  // so DOM loads without jumps waiting for img
       margin-left: -$text_box_width*($extra_width/2);
       margin-right: -$text_box_width*($extra_width/2);
+
+      @media screen and (max-width: $text_box_width*(1 + $extra_width)+2) {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
       margin-top: 1.5em;
       margin-bottom: 1.5em;
       // max-height: 400px;
@@ -321,6 +328,7 @@
 .recent-posts {
 
   width: $text_box_width;
+  max-width: 100%;
   margin: 4em auto;
 
   h1 {

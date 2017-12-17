@@ -32,14 +32,21 @@ $topnav-fixed: false;  //logo is fixed regardless
   text-transform: uppercase;
 
 
-  .logo {
+  .logo-wrapper {
+    // background-color: white;
     position: fixed;
     left: ($topnav-height - $logo-height)/2;
     font-size: $logo-height;
     height: $logo-height;
     margin-top: ($topnav-height - $logo-height)/2;
+    z-index: 1000;
+  }
+
+
+  .logo {
     // color: $mid_gray;
     opacity: .3;
+    display: block;
 
     &:hover{
       opacity: .6;
@@ -55,7 +62,7 @@ $topnav-fixed: false;  //logo is fixed regardless
     align-items: center;
     justify-content: space-between;
     height: $topnav-height;
-    width: 75%;
+    width: 70%;
     max-width: $topnav-max-width;
     margin: auto;
     padding: 0;
