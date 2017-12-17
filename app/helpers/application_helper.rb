@@ -14,7 +14,7 @@ module ApplicationHelper
     max_chars = 200
 
     # strip out image tags for this preview
-    post_text = sanitize(post_text, tags: %w(p li ol ul pre code div span br))
+    post_text = sanitize(post_text, tags: %w(p li ol ul div span br))
 
     return post_text if post_text.size < min_chars
 
