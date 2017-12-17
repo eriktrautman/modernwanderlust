@@ -3,9 +3,9 @@
   <%= link_to post do %>
     <div class = "square-preview-wrapper">
       <% if post.header_image.exists? %>
-        <%= image_tag paperclip_url_builder( post.header_image.path(:square)), size: "200x200" %>
+        <%= image_tag paperclip_url_builder( post.header_image.path(:square)) %>
       <% else %>
-        <%= image_tag paperclip_url_builder("/placeholders/placeholder-square.png"), size: "200x200" %>
+        <%= image_tag paperclip_url_builder("/placeholders/placeholder-square.png") %>
       <% end %>
     </div>
   <% end %>

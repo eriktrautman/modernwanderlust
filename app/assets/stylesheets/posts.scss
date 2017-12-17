@@ -229,7 +229,7 @@
 
     .post-date{
       color: #aaa;
-      font-size: 1em;
+      font-size: 0.9em;
       line-height: 1.5em;
       margin: 0.5em auto 0;
       text-align: left;
@@ -265,6 +265,12 @@
     position: absolute;
     top: 0.5em;
     @include border-radius(1em);
+
+    // Hacked 170 as the extra widths of the arrows
+    @media screen and (max-width: $text_box_width + 170) {
+      display: none;
+    }
+
   }
 
 
@@ -355,18 +361,26 @@
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   .post-preview-mini {
-    width: ($text_box_width - 150)/3;
-    margin: 25px 0px;
+    $preview_margin: 10px;
+    max-width: ($text_box_width - $preview_margin*6)/3;
+    width: 100%;
+    margin: 25px $preview_margin;
+
+    .post-title-wrapper {
+      padding: 0 4px;
+    }
+
   }
 
   .square-preview-wrapper {
-    height: 200px;
-    width: 200px;
+    max-height: 200px;
+    max-width: 200px;
   }
+
 
   .post-preview-date{
     color: #aaa;
