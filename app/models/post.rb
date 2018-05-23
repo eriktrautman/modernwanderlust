@@ -66,7 +66,8 @@ class Post < ActiveRecord::Base
   def replace_or_build_tags(tags_string)
     tags = tags_string.split(",")
     self.tags = tags.map do |tag|
-      tag = Tag.find_or_create_by(name: tag.strip)
+      # tag = Tag.find_or_create_by(name: tag.strip)
+      tag = Tag.where('lower(name) = ?', tag.strip.downcase).first_or_create(name: tag.strip)
     end
   end
 
