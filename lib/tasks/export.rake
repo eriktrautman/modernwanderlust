@@ -15,9 +15,16 @@ namespace :posts do
     headers = ["id","post_author","post_date","post_content","post_title","post_name","post_modified","post_category"]
     result << headers
 
-    # Prepare our CSV
+    # Reproduce our basic markdown renderer
+    def md(markdown_in)
+      markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+      markdown.render(markdown_in)
+    end
+
+    # Prepare our CSV.
+    # Render post as HTML not markdown.
     Post.limit(3).each do |p|
-      result << [p.id, 1, p.created_at, p.body, p.title, p.slug, p.updated_at, p.tags.map(&:name)]
+      result << [p.id, 1, p.created_at, md(p.body).to_json, p.title, p.slug, p.updated_at, p.tags.map(&:name)]
     end
 
     result.each do |row|
