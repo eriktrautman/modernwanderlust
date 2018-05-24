@@ -24,7 +24,7 @@ namespace :posts do
     # Prepare our CSV.
     # Render post as HTML not markdown.
     Post.limit(1).each do |p|
-      result << [p.id, 1, p.created_at, Base64.encode64(md(p.body)), p.title, p.slug, p.updated_at, p.tags.map(&:name)]
+      result << [p.id, 1, p.created_at, md(p.body), p.title, p.slug, p.updated_at, p.tags.map(&:name)]
     end
 
     result.each do |row|
