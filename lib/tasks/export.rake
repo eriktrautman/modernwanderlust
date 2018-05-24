@@ -5,7 +5,7 @@ namespace :posts do
 
     # Kill unnecessary logging
     loglevel = ActiveRecord::Base.logger.level
-    ActiveRecord::Base.logger.level = 1
+    ActiveRecord::Base.logger.level = 4
 
 
     require 'csv'
