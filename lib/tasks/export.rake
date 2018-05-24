@@ -27,9 +27,10 @@ namespace :posts do
       result << [p.id, 1, p.created_at, md(p.body), p.title, p.slug, p.updated_at, p.tags.map(&:name)]
     end
 
-    result.each do |row|
-      puts row.join(",")
-    end
+    puts result.to_csv
+    # result.each do |row|
+    #   puts row.join(",")
+    # end
 
     ActiveRecord::Base.logger.level = loglevel
     # puts "Creating CSV"
