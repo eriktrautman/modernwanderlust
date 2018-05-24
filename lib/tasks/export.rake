@@ -24,7 +24,7 @@ namespace :posts do
     # Prepare our CSV.
     # Render post as HTML not markdown.
     Post.limit(3).each do |p|
-      result << [p.id, 1, p.created_at, md(p.body).to_json, p.title, p.slug, p.updated_at, p.tags.map(&:name)]
+      result << [p.id, 1, p.created_at, {"body_json" => md(p.body)}.to_json, p.title, p.slug, p.updated_at, p.tags.map(&:name)]
     end
 
     result.each do |row|
