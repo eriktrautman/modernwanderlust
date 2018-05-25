@@ -21,8 +21,9 @@ namespace :posts do
       markdown.render(markdown_in)
     end
 
+    # Because wordpress for some reason renders these as just the letter "n" or "r"
     def clean_body(body)
-      body.gsub("\n","").gsub("\r","").gsub("\t","").gsub("\u009D","")
+      body.gsub("\u009D","") #.gsub("\n","").gsub("\r","").gsub("\t","")
     end
 
     # Prepare our CSV.
