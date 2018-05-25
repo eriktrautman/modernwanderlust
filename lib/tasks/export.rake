@@ -28,7 +28,7 @@ namespace :posts do
     # Prepare our CSV.
     # Render post as HTML not markdown.
     Post.order(created_at: "DESC").limit(5).each do |p|
-      result << [p.id.to_s, 1.to_s, p.created_at.to_s, clean_body(p.body), p.title.to_s, p.slug.to_s, p.updated_at.to_s, p.tags.map(&:name).to_s]
+      result << [p.id.to_s, 1.to_s, p.created_at.to_s, clean_body(p.body), p.title.to_s, p.slug.to_s, p.updated_at.to_s, p.tags.map(&:name).to_json]
     end
 
     csv_string = CSV.generate do |csv|
