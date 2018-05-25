@@ -21,13 +21,35 @@ namespace :posts do
       markdown.render(markdown_in)
     end
 
-    # Prepare our CSV.
-    # Render post as HTML not markdown.
-    Post.limit(1).each do |p|
-      result << [p.id, 1, p.created_at, md(p.body), p.title, p.slug, p.updated_at, p.tags.map(&:name)]
+    def clean_body(body)
+      body.gsub("\n","").gsub("\r","").gsub("\u009D","")
     end
 
-    puts result.to_csv
+    # Prepare our CSV.
+    # Render post as HTML not markdown.
+    Post.order(created_at: "DESC").limit(5).each do |p|
+      result << [p.id.to_s, 1.to_s, p.created_at.to_s, clean_body(p.body), p.title.to_s, p.slug.to_s, p.updated_at.to_s, p.tags.map(&:name).to_s]
+    end
+
+    csv_string = CSV.generate do |csv|
+      result.each do |row|
+        csv << row
+      end
+    end
+
+    # all I want is for each row to print with each item as a string...
+    result.each do |row|
+      row.each_index do |index|
+        print row[index].inspect
+        print "," if index != row.size-1
+      end
+      print "\n"
+      # print "\n"
+      # puts
+    end
+
+    # byebug
+    # p csv_string
     # result.each do |row|
     #   puts row.join(",")
     # end
