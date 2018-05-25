@@ -22,7 +22,7 @@ namespace :posts do
     end
 
     def clean_body(body)
-      body.gsub("\n","").gsub("\r","").gsub("\u009D","")
+      body.gsub("\n","").gsub("\r","").gsub("\t","").gsub("\u009D","")
     end
 
     # Prepare our CSV.

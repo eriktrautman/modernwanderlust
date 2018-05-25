@@ -20,3 +20,6 @@
 # Ignore application configuration
 /config/application.yml
 .DS_Store
+.byebug_history
+consoleoutput.csv
+post_imports_md.csv
