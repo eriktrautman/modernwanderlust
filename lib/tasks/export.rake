@@ -28,7 +28,7 @@ namespace :posts do
         body = md(post.body)
 
       # Run some quick cleanups
-      body.gsub("\u009D","") #.gsub("\n","").gsub("\r","").gsub("\t","")
+      body.gsub("\u009D","").gsub('\n',"\n").gsub('\r',"\r").gsub('\t',"\t")
     end
 
     # Prepare our CSV.
