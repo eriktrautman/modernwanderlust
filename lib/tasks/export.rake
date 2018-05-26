@@ -49,7 +49,7 @@ namespace :posts do
 
         # Treat the body differently... index 3 is the body
         if index == 3
-          print row[index]
+          print "\"" + row[index] + "\""
         else
           print row[index].inspect
         end
