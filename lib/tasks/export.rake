@@ -46,7 +46,13 @@ namespace :posts do
     # all I want is for each row to print with each item as a string...
     result.each do |row|
       row.each_index do |index|
-        print row[index].inspect
+
+        # Treat the body differently... index 3 is the body
+        if index == 3
+          print row[index]
+        else
+          print row[index].inspect
+        end
         print "," if index != row.size-1
       end
       print "\n"
