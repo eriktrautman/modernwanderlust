@@ -4,15 +4,21 @@
 
     <ul>
 
-      <%= link_to root_path  do %>
+      <!-- <%= link_to root_path  do %>
       <li>
         Home
       </li>
-      <% end %>
+      <% end %> -->
 
       <%= link_to writing_path  do %>
         <li>
           Writing
+        </li>
+      <% end %>
+
+      <%= link_to writing_path(tag_filter:"Travel")  do %>
+        <li>
+          Travel
         </li>
       <% end %>
 

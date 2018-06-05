@@ -38,7 +38,18 @@ class Post < ActiveRecord::Base
   # order clause uses a hash?
   # Hell if I know.
   def self.with_tag(tag)
-    Post.includes(:tags).where(['tags.name = ?', tag]).references(:tags).order("posts.created_at desc")
+    Post.includes(:tags).where(['tags.name = ?', tag]).references(:tags)
+  end
+
+  # Blacklist the posts with a particular tag first
+  # This avoids multiple-tag-overlap issues with typical SQL-based solutions
+  def self.without_tags(tag_names)
+
+    # First find the blacklisted Post IDs
+    blacklisted_ids = Post.includes(:tags).where(['tags.name IN (?)', tag_names]).pluck(:id)
+
+    #...then make sure to exclude them.
+    Post.includes(:tags).where.not(id: blacklisted_ids).references(:tags)
   end
 
   def self.most_recent(count)

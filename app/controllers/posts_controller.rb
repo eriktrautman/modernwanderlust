@@ -3,18 +3,26 @@ class PostsController < ApplicationController
   before_action :set_blog_flag
 
   def index
+
+    # Gather posts based on any tag filters
     if tag_filter_params[:tag_filter]
       posts = Post.with_tag(tag_filter_params[:tag_filter])
     elsif date_filter_params[:filter_month] && date_filter_params[:filter_year]
       posts = Post.by_archive_date(date_filter_params[:filter_month],date_filter_params[:filter_year])
     else
-      posts = Post.order(:created_at => :desc)
+      # Don't show personal posts on the main blog page
+      posts = Post.without_tags(["Travel"])
     end
-    if params[:order] == "rev_chron"
-      posts = posts.order_rev_chron
-    elsif params[:order] == "chron"
+
+    # If there's a request to order posts, apply it appropriately
+    if params[:order] == "chron"
       posts = posts.order_chron
+    else
+      posts = posts.order_rev_chron
     end
+
+    puts posts.inspect
+
     @posts = posts.paginate(:page => params[:page], :per_page => 10)
   end
 
