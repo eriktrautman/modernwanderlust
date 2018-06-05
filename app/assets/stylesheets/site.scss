@@ -387,7 +387,7 @@ p.page-subhead{
 
 
 
-#about, #contact, #archives{
+#about, #archives{
   margin: 0 auto 10em auto;
   max-width: $text_box_width;
 
@@ -399,10 +399,6 @@ p.page-subhead{
     line-height: 2em;
   }
 
-  .contact-me {
-    text-align: center;
-  }
-
   .contact-methods{
     width: 200px;
     margin: 5em auto;
@@ -412,10 +408,10 @@ p.page-subhead{
     div {
       width: 40px;
       height: 40px;
-      opacity: .8;
+      opacity: .65;
 
       &:hover {
-        opacity: 1;
+        opacity: .8;
       }
     }
   }

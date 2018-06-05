@@ -15,10 +15,12 @@ Rails.application.routes.draw do
   root :to => 'static_pages#home'
 
   get "about" => "static_pages#about"
-  get "contact" => "static_pages#contact"
+  get "contact" => redirect("about")
   get "show_post" => "redirects#old_site"
   get "archives" => "posts#archives"
-  get "blog" => "posts#index"
+  get "blog" => redirect("writing")
+  get "posts" => redirect("writing")
+  get "writing" => "posts#index"
   get "index.php" => redirect("posts#index")
   get "home" => "static_pages#home"
 

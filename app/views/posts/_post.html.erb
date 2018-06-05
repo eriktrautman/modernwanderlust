@@ -96,7 +96,7 @@
     <div class="tags">
       Tags: &nbsp;
       <% tag_list = post.tags.map do |tag| %>
-        <% link_to "#{tag.name}", posts_path(:tag_filter => "#{tag.name}") %>
+        <% link_to "#{tag.name}", writing_path(:tag_filter => "#{tag.name}") %>
       <% end %>
       <%= tag_list.join(" | ").html_safe %>
     </div>

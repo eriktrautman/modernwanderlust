@@ -2,7 +2,7 @@
   <h2>By Tag</h2>
   <ul>
     <% @tags.each do |tag| %>
-      <%= link_to posts_path(:tag_filter => "#{tag.name}") do %>
+      <%= link_to writing_path(:tag_filter => "#{tag.name}") do %>
         <li>
           <div class="count">
             <%=  tag.posts.count %>
