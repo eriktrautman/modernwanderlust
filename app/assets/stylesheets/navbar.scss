@@ -34,7 +34,7 @@ $topnav-fixed: false;  //logo is fixed regardless
 
   .logo-wrapper {
     // background-color: white;
-    position: fixed;
+    // position: fixed;
     left: ($topnav-height - $logo-height)/2;
     font-size: $logo-height;
     height: $logo-height;

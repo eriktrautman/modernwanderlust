@@ -146,9 +146,26 @@ input[type=checkbox] {
 }
 
 
+// The H1 and H2 for the whole site
+#titlebar {
+  text-align: center;
+
+  h1 {
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 16px;
+    font-style: italic;
+    color: #888;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
 
 
-#titlebar{
+#titlebar-old{
   text-align: center;
   h1{
     font-size: 1.25em;
@@ -352,8 +369,8 @@ input[type=checkbox] {
   max-width: $text_box_width;
   margin: 40px auto 30px;
 }
-h1.page-title{
-  font-size: 40px;
+h2.page-title{
+  font-size: 32px;
   font-weight: bold;
   margin: 0 0 20px;
 }

@@ -10,8 +10,8 @@ module ApplicationHelper
   # gets us over 100 characters
   def show_preview(post_text)
 
-    min_chars = 300
-    max_chars = 500
+    min_chars = 800
+    max_chars = 1400
 
     # strip out image tags for this preview
     post_text = sanitize(post_text, tags: %w(p li ol ul div span br))
