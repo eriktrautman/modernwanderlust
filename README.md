@@ -1,4 +1,7 @@
-Erik's Personal Site
+Erik Trautman's Personal Site
+http://www.eriktrautman.com
+
+Entrepreneurship, Business Strategy and Product Development in the Age of AI.
 
 Required:
 
