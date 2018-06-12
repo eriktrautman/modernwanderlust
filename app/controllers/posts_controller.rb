@@ -101,7 +101,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:body,:title,:created_at,:md,:header_image, :delete_header_image)
+      params.require(:post).permit(:body,:title,:created_at,:md,:header_image, :delete_header_image, :display_header_image_in_post)
     end
 
     def tag_params

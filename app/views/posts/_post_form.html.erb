@@ -24,12 +24,15 @@
     <% end %>
 
     <br>
+    <%= f.check_box :display_header_image_in_post %><%= f.label "Display header image in post?" %>
+
+    <br>
     <br>
 
 
     <%# CKEditor hates how we stored markdown in the DB before... %>
     <% if post.md %>
-      <strong>WARNING:</strong> CKEditor stores posts as HTML.  Since you're editing a post that has been flagged as Markdown, <strong>YOU WILL NOT BE ABLE TO EDIT IT.</strong>  It sucks, but it's true.  There was a workaround where you could cut the content, enable the Markdown portion of the editor, paste the content there, make your edits, then go back to the main editor, where it will be rendered as HTML.  Not anymore...
+      <strong>WARNING:</strong> CKEditor stores posts as HTML.  Since you're editing a post that has been flagged as Markdown, <strong>YOU WILL NOT BE ABLE TO EDIT IT.</strong>  It sucks, but it's true.  There was a workaround where you could cut the content, enable the Markdown portion of the editor, paste the content there, make your edits, then go back to the main editor, where it will be rendered as HTML.  Not anymore...  Now you need the original MD source code to essentially re-do the post from scratch. It sucks.
     <% end %>
 
     <%= f.input :body, as: :ckeditor, input_html: { ckeditor: { uiColor: "#AADC6E", height: 600} } %>

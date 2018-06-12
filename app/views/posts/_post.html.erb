@@ -62,7 +62,7 @@
 
 
 
-  <% if post.header_image.exists? && show %>
+  <% if post.header_image.exists? && show && post.display_header_image_in_post %>
     <div class = "post-banner">
       <%= image_tag paperclip_url_builder( post.header_image.path(:reduced)) %>
     </div>
