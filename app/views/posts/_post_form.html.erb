@@ -18,13 +18,13 @@
 
       <br>
 
-      <%= f.check_box :delete_header_image %><%= f.label :delete_header_image %>
+      <%= f.check_box :delete_header_image %><%= f.label :delete_header_image, "Delete header image?" %>
     <% else %>
       <%= f.input :header_image, as: :file, label: false %>
     <% end %>
 
     <br>
-    <%= f.check_box :display_header_image_in_post %><%= f.label "Display header image in post?" %>
+    <%= f.check_box :display_header_image_in_post %><%= f.label :display_header_image_in_post, "Display header image in post?" %>
 
     <br>
     <br>
