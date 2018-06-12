@@ -5,7 +5,7 @@
   <%= render :partial => "posts/admin_links", :locals => { :post => post } %>
 
 
-  <% if post.header_image.exists? && !show %>
+  <% if post.header_image.exists? && !show && post.display_header_image_in_post %>
     <%= link_to post do %>
       <div class = "post-banner-index">
         <%= image_tag paperclip_url_builder( post.header_image.path(:banner)) %>
