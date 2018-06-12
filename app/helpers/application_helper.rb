@@ -1,5 +1,10 @@
 module ApplicationHelper
 
+  # Allow dynamic updating of page titles by post
+  def page_title( text )
+    content_for :page_title, text
+  end
+
   # uses the redcarpet gem to render the markdown as html
   def md(markdown_in)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
