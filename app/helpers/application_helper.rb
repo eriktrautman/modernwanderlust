@@ -5,6 +5,12 @@ module ApplicationHelper
     content_for :page_title, text
   end
 
+  # Allow dynamic updating of the main image for sharing purposes
+  def page_image_url( url )
+    content_for :page_image_url, url
+  end
+
+
   # uses the redcarpet gem to render the markdown as html
   def md(markdown_in)
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)

@@ -1,5 +1,6 @@
 <%# Meta information for the post <head> section %>
 <% page_title post.title %>
+<% page_image_url paperclip_url_builder( post.header_image.path(:banner) ) if post.header_image.exists?  %>
 
 <div class="post">
   <%= render :partial => "posts/admin_links", :locals => { :post => post } %>
