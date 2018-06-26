@@ -83,7 +83,9 @@
     }
 
     a{
-      color: $link_color;
+      color: $text_color; //$link_color;
+      text-decoration: none;
+      border-bottom: 1px dotted $link_hover_color;
       &:hover{
         color: $link_hover_color;
       }
