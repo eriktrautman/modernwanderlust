@@ -157,7 +157,7 @@ input[type=checkbox] {
 
   h1 {
     font-size: 32px;
-    margin-top: 20px;
+    margin-top: 0px; //20px;
     margin-bottom: 12px;
     color: #444;
   }
@@ -167,6 +167,10 @@ input[type=checkbox] {
     color: #888;
     margin-top: 0px;
     margin-bottom: 16px;
+  }
+
+  .titlebar-seal {
+    margin-top: 16px;
   }
 }
 

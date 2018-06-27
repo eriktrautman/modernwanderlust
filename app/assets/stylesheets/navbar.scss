@@ -19,6 +19,7 @@ $topnav-fixed: false;  //logo is fixed regardless
 }
 
 #topnav{
+  position: relative;
   @if $topnav-fixed{
     z-index: 10;
     position: fixed;
@@ -40,21 +41,6 @@ $topnav-fixed: false;  //logo is fixed regardless
     height: $logo-height;
     margin-top: ($topnav-height - $logo-height)/2;
     z-index: 1000;
-  }
-
-
-  .logo {
-    // color: $mid_gray;
-    opacity: .3;
-    display: block;
-
-    &:hover{
-      opacity: .6;
-    }
-
-    .logo-img {
-      height: $logo-height;
-    }
   }
 
   ul{
