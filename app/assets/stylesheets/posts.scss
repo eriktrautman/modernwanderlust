@@ -231,6 +231,7 @@
       }
       a{
         text-decoration: none;
+        border: none;
       }
     }
 
@@ -344,7 +345,7 @@
   margin: 4em auto;
 
   h1 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     font-family: $headline-font-family;
     margin: .5em 0 .25em;
