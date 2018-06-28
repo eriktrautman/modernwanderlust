@@ -16,8 +16,8 @@ gem 'rb-readline'               # Why? Goddamnit if I know but couldn't find the
 
 # The blog post creation editor.  Need the Github version (slow to upversion gem)
 gem 'ckeditor', github: 'galetahub/ckeditor'
-gem 'paperclip'
-gem 'aws-sdk',                  '~> 2.3.0'
+gem 'paperclip',                '~> 6.0'
+gem 'aws-sdk-s3',               '~> 1.0'
 
 # Use SCSS for stylesheets
 gem 'sass-rails',               '~> 5.0.6'
