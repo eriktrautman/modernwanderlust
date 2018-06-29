@@ -70,14 +70,27 @@
     ol,ul{
       padding-left: 2em;
     }
-    li{
-      margin: .5em 0;
-      font-size: $font_size_base;
-      line-height: $line_height_base;
+
+    ol {
+      counter-reset: my-counter;
+      list-style-type: decimal;
+
+      li{
+        margin: .5em 0;
+        font-size: $font_size_base;
+        line-height: $line_height_base;
+      }
+      ol {
+        list-style-type: upper-alpha;
+        ol {
+          list-style-type: lower-alpha;
+          ol {
+            list-style-type: lower-roman;
+          }
+        }
+      }
     }
-    ol{
-      list-style: decimal;
-    }
+
     ul{
       list-style: disc;
     }
