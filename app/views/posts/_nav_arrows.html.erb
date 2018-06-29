@@ -1,0 +1,33 @@
+<% if post && post.new_record? == false %>
+  <nav>
+    <% unless prev_post.nil? %>
+      <%= link_to prev_post, :class => "left mobile-hide", :title => "Previous Post: #{prev_post.title}" do %>
+        <div class="prev-arrow arrow hover-arrow">
+          <div class="inner-prev-arrow inner-arrow">
+          </div>
+        </div>
+        <% end %>
+      <% else %>
+        <div class="prev-arrow arrow disabled-arrow mobile-hide">
+          <div class="inner-prev-arrow inner-arrow">
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+    <% if post && post.new_record? == false %>
+      <% unless next_post.nil? %>
+      <%= link_to next_post, :class => "right mobile-hide", :title => "Next Post: #{next_post.title}" do %>
+        <div class="next-arrow arrow hover-arrow">
+          <div class="inner-next-arrow inner-arrow">
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <div class="next-arrow arrow disabled-arrow mobile-hide">
+        <div class="inner-next-arrow inner-arrow">
+        </div>
+      </div>
+    <% end %>
+  </nav>
+<% end %>

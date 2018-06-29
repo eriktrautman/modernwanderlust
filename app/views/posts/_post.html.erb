@@ -18,50 +18,23 @@
 
   <div class="post-title-wrapper">
 
-    <% if @post && @post.new_record? == false %>
-      <% unless @prev.nil? %>
-        <%= link_to @prev, :class => "left mobile-hide", :title => "Previous Post: #{@prev.title}" do %>
-        <div class="prev-arrow arrow hover-arrow">
-          <div class="inner-prev-arrow inner-arrow">
-          </div>
-        </div>
-        <% end %>
+    <%= render partial: "posts/nav_arrows", locals: { post: @post, prev_post: @prev, next_post: @next } %>
+
+    <header>
+      <h1>
+        <% if show %>
+          <%= post.title %>
         <% else %>
-        <div class="prev-arrow arrow disabled-arrow mobile-hide">
-          <div class="inner-prev-arrow inner-arrow">
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-
-    <h1>
-      <% if show %>
-        <%= post.title %>
-      <% else %>
-        <%= link_to "#{ post.title }", post %>
-      <% end %>
-    </h1>
-
-    <% if @post && @post.new_record? == false %>
-      <% unless @next.nil? %>
-        <%= link_to @next, :class => "right mobile-hide", :title => "Next Post: #{@next.title}" do %>
-          <div class="next-arrow arrow hover-arrow">
-            <div class="inner-next-arrow inner-arrow">
-            </div>
-          </div>
+          <%= link_to "#{ post.title }", post %>
         <% end %>
-      <% else %>
-        <div class="next-arrow arrow disabled-arrow mobile-hide">
-          <div class="inner-next-arrow inner-arrow">
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+      </h1>
 
-    <div class="post-date">
-      Published on <time datetime="<%=post.created_at%>"><%= post.created_at.strftime("%B %-d, %Y") %></time>
-    </div>
 
+      <div class="post-date">
+        Published on <time datetime="<%=post.created_at%>"><%= post.created_at.strftime("%B %-d, %Y") %></time>
+      </div>
+
+    </header>
   </div>
 
 
