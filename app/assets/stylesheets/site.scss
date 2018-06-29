@@ -288,11 +288,12 @@ input[type=checkbox] {
 #pagination-area{
   text-align: center;
   margin: 1em 0;
+  font-family: Arial;  // Because Freight Sans Pro numerals hang down in stupid ways.
   ul{
     padding: 0;
   }
   li{
-    font-size: 1.5em;
+    font-size: 1.25em;
     line-height: 1.5em;
     font-weight: 400;
     list-style: none;
