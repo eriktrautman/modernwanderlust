@@ -2,7 +2,7 @@
 <% page_title post.title if show %>
 <% page_image_url paperclip_url_builder( post.header_image.path(:banner) ) if post.header_image.exists?  %>
 
-<div class="post">
+<article class="post">
   <%= render :partial => "posts/admin_links", :locals => { :post => post } %>
 
 
@@ -105,5 +105,5 @@
       <%= tag_list.join(" | ").html_safe %>
     </div>
   <% end %>
-</div>
+</article>
 <hr>

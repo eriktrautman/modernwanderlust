@@ -1,48 +1,50 @@
-<div id = "topnav">
+<nav>
+  <div id = "topnav">
 
-  <div class = "container">
+    <div class = "container">
 
-    <ul>
+      <ul>
 
-      <!-- <%= link_to root_path  do %>
-      <li>
-        Home
-      </li>
-      <% end %> -->
-
-      <%= link_to writing_path  do %>
+        <!-- <%= link_to root_path  do %>
         <li>
-          Writing
+          Home
         </li>
-      <% end %>
+        <% end %> -->
 
-      <%= link_to writing_path(tag_filter:"Travel")  do %>
-        <li>
-          Travel
-        </li>
-      <% end %>
-
-      <% if @blog == true %>
-      <% end %>
-
-      <%= link_to archives_path  do %>
-        <li>
-            Archive
+        <%= link_to writing_path  do %>
+          <li>
+            Writing
           </li>
         <% end %>
 
-        <%= link_to about_path  do %>
+        <%= link_to writing_path(tag_filter:"Travel")  do %>
           <li>
-          About
-        </li>
-      <% end %>
+            Travel
+          </li>
+        <% end %>
+
+        <% if @blog == true %>
+        <% end %>
+
+        <%= link_to archives_path  do %>
+          <li>
+              Archive
+            </li>
+          <% end %>
+
+          <%= link_to about_path  do %>
+            <li>
+            About
+          </li>
+        <% end %>
 
 
-    </ul>
+      </ul>
 
 
+    </div>
   </div>
-</div>
 
 
-<div id = "topnav-spacer"></div>
+  <div id = "topnav-spacer"></div>
+</nav>
