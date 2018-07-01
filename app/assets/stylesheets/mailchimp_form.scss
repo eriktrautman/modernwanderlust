@@ -1,0 +1,83 @@
+@import "colors";
+@import "mixins";
+@import "variables";
+
+$mc-form-element-widths: 240px;
+
+#mc_embed_signup {
+  background:#fff;
+  clear:left;
+  text-align: center;
+  max-width: 600px;
+  margin: 34px auto 48px;
+  text-align: center;
+
+  h3 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 10px 0 20px;
+    text-align: center;
+    color: #444;
+  }
+
+  p {
+    text-align: center;
+    font-size: 16px;
+    font-style: italic;
+    margin: 10px 0;
+    color: #888;
+  }
+
+  input {
+    border: 1px solid #999;
+    -webkit-appearance: none;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  input.email {
+    font-size: 15px;
+    display: block;
+    padding: 0 0.4em;
+    margin: 0 auto 10px auto;
+    min-height: 32px;
+    max-width: $mc-form-element-widths;
+    min-width: 130px;
+  }
+
+  .clear {
+    clear: none;
+    display: inline;
+  }
+
+  input.button {
+    display: block;
+    width: 100%;
+    margin: 0 auto 10px auto;
+    min-width: 90px;
+    max-width: $mc-form-element-widths;
+  }
+
+  .button {
+    clear: both;
+    background-color: #aaa;
+    border: 0 none;
+    border-radius: 0px;
+    letter-spacing: .03em;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 5px 10px 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
+    transition: all 0.23s ease-in-out 0s;
+  }
+
+}
