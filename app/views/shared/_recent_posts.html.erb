@@ -1,7 +1,23 @@
+<%
+title_add = ""
+if defined? @post
+  if @post.professional?
+    recent_posts = Post.most_recent.professional_only[0..5]
+  elsif @post.travel?
+    title_add = "Travel"
+    recent_posts = Post.most_recent.travel_only[0..5]
+  else
+    recent_posts = Post.most_recent[0..5]
+  end
+else
+  recent_posts = Post.most_recent[0..5]
+end
+%>
+
 <div class="recent-posts">
-  <h2>Recent Posts</h2>
+  <h2>Recent <%= title_add %> Posts</h2>
   <div class="post-preview-wrapper">
-    <% Post.most_recent(6).each do |post| %>
+    <% recent_posts.each do |post| %>
       <%= render partial: "shared/post_preview_mini", locals: {post: post} %>
     <% end %>
   </div>

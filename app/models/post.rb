@@ -23,6 +23,10 @@ class Post < ActiveRecord::Base
 
   scope :order_rev_chron, -> { order('posts.created_at DESC') }
   scope :order_chron, -> { order('posts.created_at ASC') }
+  scope :travel_only, -> { with_tag('Travel')}
+  # Known issue: Used with .limit(), this behaves unpredictably
+  #   because the limit is applied at multiple steps in the process
+  scope :professional_only, -> { without_tags(['Travel']) }
 
 
   def delete_header_image
@@ -52,8 +56,13 @@ class Post < ActiveRecord::Base
     Post.includes(:tags).where.not(id: blacklisted_ids).references(:tags)
   end
 
+
   def self.most_recent(count)
     Post.order(:created_at => :desc).limit(count)
+  end
+
+  def self.most_recent
+    Post.order(created_at: :desc)
   end
 
   # Get back the count of posts for each month/year
@@ -69,6 +78,19 @@ class Post < ActiveRecord::Base
     start = Time.new(year,month)
     finish = start + 1.month
     Post.where(["created_at >= ? AND created_at < ?", start, finish]).order(:created_at => :desc)
+  end
+
+  # It's a professional post if it doesn't have the Travel tag
+  # This may change over time.
+  # To find not_professional? just negate with ! rather than
+  # specifying Travel. For extensibility reasons.
+  def professional?
+    self.tags.none? { |tag| tag.name == "Travel" }
+  end
+
+  # It's a travel post if it has the Travel tag
+  def travel?
+    self.tags.any? { |tag| tag.name == "Travel" }
   end
 
   # When editing an existing post or creating a new

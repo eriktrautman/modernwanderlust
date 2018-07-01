@@ -11,7 +11,7 @@ class PostsController < ApplicationController
       posts = Post.by_archive_date(date_filter_params[:filter_month],date_filter_params[:filter_year])
     else
       # Don't show personal posts on the main blog page
-      posts = Post.without_tags(["Travel"])
+      posts = Post.professional_only
     end
 
     # If there's a request to order posts, apply it appropriately
@@ -20,8 +20,6 @@ class PostsController < ApplicationController
     else
       posts = posts.order_rev_chron
     end
-
-    puts posts.inspect
 
     @posts = posts.paginate(:page => params[:page], :per_page => 10)
   end

@@ -80,6 +80,6 @@
   <% end %>
 </article>
 
-<%= render partial: "shared/email_form" if show %>
+<%= render partial: "shared/email_form" if show && post.professional? %>
 
 <hr>
