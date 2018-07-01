@@ -6,6 +6,7 @@ $slideshow-width: 100%;
 $slideshow-height: 300px;
 $slideshow-nav-opacity: .75;
 $slideshow-nav-hover-opacity: .9;
+$slideshow-num-slides: 9;
 
 #slideshow-container{
   height: $slideshow-height;
@@ -31,7 +32,7 @@ $slideshow-nav-hover-opacity: .9;
 
 #slideshow-reel{
   height: $slideshow-height;
-  width: $slideshow-width*8;
+  width: $slideshow-width*$slideshow-num-slides;
   position: absolute;
   top: 0;
   left: 0;
@@ -125,14 +126,15 @@ $slideshow-nav-hover-opacity: .9;
   // font-size: 8px;
   margin: 0 18px 18px 0;
   text-align: left;
-  padding: 12px;
+  padding: 4px 10px;
   border: 1px solid $vdark_gray;
   li{
     list-style: none;
     font-size: 14px;
+    line-height: 1.5em;
     &:first-child{
       color: $vlight_gray;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 }
