@@ -4,7 +4,7 @@
   <title>
     <%= if content_for?(:page_title) then yield(:page_title) + " | " end %>
     See the world, understand the world, improve the world.</title>
-  <meta name="Description" CONTENT="The personal website of Erik Trautman -- An exploration of entrepreneurship, business strategy and product development plus a whole lot more">
+  <meta name="Description" CONTENT="The personal website of Erik Trautman">
 
   <% if content_for?(:page_image_url) %>
     <meta property="og:image:url" content="<%= yield(:page_image_url) %>">
