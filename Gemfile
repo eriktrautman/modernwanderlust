@@ -4,7 +4,7 @@ ruby '2.6.7'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails',                    '5.1.7'  # Mar 2019. Rails 5.2 breaks Devize and Simple Form
 gem 'pg',                       '~> 0.21.0'
-gem 'simple_form',              '~> 3.5.0'
+gem 'simple_form',              '~> 5.0.3'
 gem 'will_paginate-bootstrap',  '~> 1.0.1'
 gem 'rails_12factor'  # for heroku asset compilation
 gem 'devise',                   '~> 4.4.0' # for authentication of the admin user
