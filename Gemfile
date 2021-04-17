@@ -7,7 +7,7 @@ gem 'pg',                       '~> 0.21.0'
 gem 'simple_form',              '~> 3.5.0'
 gem 'will_paginate-bootstrap',  '~> 1.0.1'
 gem 'rails_12factor'  # for heroku asset compilation
-gem 'devise',                   '~> 4.3.0' # for authentication of the admin user
+gem 'devise',                   '~> 4.4.0' # for authentication of the admin user
 gem 'friendly_id',              '>= 5.0.0.rc2' # for the post title slugs
 gem 'redcarpet',                '~> 3.4.0' # for markdown rendering
 gem 'newrelic_rpm',             '~> 4.5.0.337' # for newrelic uptime tracking and no-idle pinging
