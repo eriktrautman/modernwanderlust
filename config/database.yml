@@ -1,12 +1,10 @@
-# SQLite version 3.x
-#   gem install sqlite3
-#
-#   Ensure the SQLite 3 gem is defined in your Gemfile
-#   gem 'sqlite3'
 development:
   adapter: postgresql
   database: modernwanderlust
   host: localhost
+  username: eriktrautman
+  password: '12345678'
+  port: 5432
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -14,6 +12,9 @@ development:
 test:
   adapter: postgresql
   database: db/test
+  host: localhost
+  username: eriktrautman
+  password: '12345678'
   pool: 5
 
 production:
@@ -21,4 +22,3 @@ production:
   encoding: unicode
   database: db/production
   pool: 5
-

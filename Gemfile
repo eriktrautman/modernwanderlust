@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.2.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails',                    '5.1.4'  # Nov 2017
+gem 'rails',                    '5.1.7'  # Mar 2019. Rails 5.2 breaks Devize and Simple Form
 gem 'pg',                       '~> 0.21.0'
 gem 'simple_form',              '~> 3.5.0'
 gem 'will_paginate-bootstrap',  '~> 1.0.1'
@@ -13,10 +13,9 @@ gem 'redcarpet',                '~> 3.4.0' # for markdown rendering
 gem 'newrelic_rpm',             '~> 4.5.0.337' # for newrelic uptime tracking and no-idle pinging
 gem 'figaro'
 gem 'rb-readline'               # Why? Goddamnit if I know but couldn't find the right readline version before.
-
-# The blog post creation editor.  Need the Github version (slow to upversion gem)
-gem 'ckeditor', github: 'galetahub/ckeditor'
-gem 'paperclip',                '~> 6.0'
+gem 'puma',                      '~>5.2.2'
+gem 'ckeditor',                 '~> 4.2.4'  # The blog post creation editor.
+gem 'paperclip',                '~> 6.0'    # NOTE: DEPRECATED! See https://github.com/kreeti/kt-paperclip instead.
 gem 'aws-sdk-s3',               '~> 1.0'
 
 # Use SCSS for stylesheets

@@ -1,4 +1,4 @@
-class AddMdToPosts < ActiveRecord::Migration
+class AddMdToPosts < ActiveRecord::Migration[4.2]
   def change
     add_column :posts, :md, :boolean, :default => true
 

@@ -16,16 +16,16 @@ ActiveRecord::Schema.define(version: 20180629231500) do
   enable_extension "plpgsql"
 
   create_table "admins", id: :serial, force: :cascade do |t|
-    t.string "email", limit: 255, default: "", null: false
-    t.string "encrypted_password", limit: 255, default: "", null: false
-    t.string "reset_password_token", limit: 255
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
     t.integer "sign_in_count", default: 0, null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
-    t.string "current_sign_in_ip", limit: 255
-    t.string "last_sign_in_ip", limit: 255
+    t.string "current_sign_in_ip"
+    t.string "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["email"], name: "index_admins_on_email", unique: true
@@ -46,10 +46,10 @@ ActiveRecord::Schema.define(version: 20180629231500) do
   end
 
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
-    t.string "slug", limit: 255, null: false
+    t.string "slug", null: false
     t.integer "sluggable_id", null: false
     t.string "sluggable_type", limit: 50
-    t.string "scope", limit: 255
+    t.string "scope"
     t.datetime "created_at"
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
@@ -59,14 +59,14 @@ ActiveRecord::Schema.define(version: 20180629231500) do
 
   create_table "posts", id: :serial, force: :cascade do |t|
     t.text "body"
-    t.string "title", limit: 255
+    t.string "title"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string "slug", limit: 255
+    t.string "slug"
     t.boolean "md", default: true
     t.string "header_image_file_name"
     t.string "header_image_content_type"
-    t.integer "header_image_file_size"
+    t.bigint "header_image_file_size"
     t.datetime "header_image_updated_at"
     t.boolean "display_header_image_in_post", default: false
     t.index ["slug"], name: "index_posts_on_slug", unique: true
@@ -81,7 +81,7 @@ ActiveRecord::Schema.define(version: 20180629231500) do
   end
 
   create_table "tags", id: :serial, force: :cascade do |t|
-    t.string "name", limit: 255, null: false
+    t.string "name", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["name"], name: "index_tags_on_name", unique: true
