@@ -38,3 +38,11 @@ rails s
 ```
 
 When updating gems, well... good luck.
+
+To deploy once ready:
+
+```
+heroku login  // just once, obviously
+git remote add heroku https://git.heroku.com/eriktrautman.git
+git push heroku master
+```

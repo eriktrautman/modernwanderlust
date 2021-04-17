@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.2.2'
+ruby '2.6.7'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails',                    '5.1.7'  # Mar 2019. Rails 5.2 breaks Devize and Simple Form
@@ -17,6 +17,7 @@ gem 'puma',                      '~>5.2.2'
 gem 'ckeditor',                 '~> 4.2.4'  # The blog post creation editor.
 gem 'paperclip',                '~> 6.0'    # NOTE: DEPRECATED! See https://github.com/kreeti/kt-paperclip instead.
 gem 'aws-sdk-s3',               '~> 1.0'
+gem 'mimemagic', github: 'mimemagicrb/mimemagic', ref: '01f92d86d15d85cfd0f20dabd025dcbd36a8a60f' # because mimemagic was yanked
 
 # Use SCSS for stylesheets
 gem 'sass-rails',               '~> 5.0.6'
