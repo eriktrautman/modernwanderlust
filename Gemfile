@@ -13,7 +13,7 @@ gem 'redcarpet',                '~> 3.4.0' # for markdown rendering
 gem 'newrelic_rpm',             '~> 4.5.0.337' # for newrelic uptime tracking and no-idle pinging
 gem 'figaro'
 gem 'rb-readline'               # Why? Goddamnit if I know but couldn't find the right readline version before.
-gem 'puma',                      '~>5.2.2'
+gem 'puma',                      '~>5.6.2'
 gem 'ckeditor',                 '~> 4.2.4'  # The blog post creation editor.
 gem 'paperclip',                '~> 6.0'    # NOTE: DEPRECATED! See https://github.com/kreeti/kt-paperclip instead.
 gem 'aws-sdk-s3',               '~> 1.0'
