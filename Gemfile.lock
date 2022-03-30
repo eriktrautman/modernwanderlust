@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/mimemagicrb/mimemagic.git
+  remote: https://github.com/mimemagicrb/mimemagic.git
   revision: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
   ref: 01f92d86d15d85cfd0f20dabd025dcbd36a8a60f
   specs:
@@ -140,7 +140,7 @@ GEM
     minitest (5.14.4)
     multi_json (1.15.0)
     newrelic_rpm (4.5.0.337)
-    nio4r (2.3.1)
+    nio4r (2.5.8)
     nokogiri (1.9.1)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
@@ -152,7 +152,7 @@ GEM
       terrapin (~> 0.6.0)
     pg (0.21.0)
     public_suffix (3.1.1)
-    puma (5.2.2)
+    puma (5.6.4)
       nio4r (~> 2.0)
     rack (2.1.4)
     rack-test (1.1.0)
@@ -276,7 +276,7 @@ DEPENDENCIES
   newrelic_rpm (~> 4.5.0.337)
   paperclip (~> 6.0)
   pg (~> 0.21.0)
-  puma (~> 5.2.2)
+  puma (~> 5.6.4)
   rails (= 5.1.7)
   rails_12factor
   rb-readline
